@@ -1,0 +1,51 @@
+/*************************************************************************
+	> File Name: 391.oj.cpp
+	> Author: shubulan
+	> Mail: gaoyulong1996@163.com
+	> Created Time: Mon 02 Nov 2020 03:04:48 PM CST
+ ************************************************************************/
+
+#include <iostream>
+using namespace std;
+long long n, m;
+long long num[100005];
+long long func(long long len) {
+    int cnt = 0;
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        if (sum + num[i] > len) {
+            cnt++;
+            sum = num[i];
+        } else if (sum + num[i] == len) {
+            cnt++;
+            sum = 0;
+        } else {
+            sum += num[i];
+        }
+    }
+    if (sum) cnt++;
+
+    return cnt;
+}
+
+int main() {
+    long long l = 0, r = 0;
+    cin >> n >> m;
+    for (int i = 0; i < n; i++) {
+        cin >> num[i];
+        l = max(l, num[i]);
+        r += num[i];
+    }
+    while (l != r) {
+        long long mid = (r + l) / 2;
+        long long s = func(mid);
+        if (s <= m) {
+            r = mid;
+        } else {
+            l = mid + 1;
+        }
+    }
+    cout << l << endl;
+
+    return 0;
+}
