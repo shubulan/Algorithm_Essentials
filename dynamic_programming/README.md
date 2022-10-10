@@ -8,10 +8,12 @@
 1. 例题：切钢条       简写版公式
 2. 例题：最长公共子序列
 1. LeetCode: [面试题 17.09. 第 k 个数](https://leetcode.cn/problems/get-kth-magic-number-lcci/)  直白的递推
-2. 
 
 ## 区间DP
 1. 例题：矩阵链乘法     简写版公式
 2. 例题：最优二叉搜索树
+
+## 状态（机）DP
+1. 模板题[leetcode: 801. 使序列递增的最小交换次数](https://leetcode.cn/problems/minimum-swaps-to-make-sequences-increasing/)
 
 
