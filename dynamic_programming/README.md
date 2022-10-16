@@ -17,3 +17,6 @@
 1. 模板题[leetcode: 801. 使序列递增的最小交换次数](https://leetcode.cn/problems/minimum-swaps-to-make-sequences-increasing/)
 
 
+## 计数DP
+> 主要在于处理重复情况
+[程序设计竞赛 划分数]
