@@ -22,3 +22,11 @@
 [欧拉计划33](http://pe-cn.github.io/33/) 约分，最大公约数
 
 
+## 同余
+
+## 约数
+
+## 位运算
+
+## 倍增
+[252. 天才ACM](https://oj.haizeix.com/problem/252) 约分，最大公约数

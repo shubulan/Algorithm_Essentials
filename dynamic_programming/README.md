@@ -19,4 +19,15 @@
 
 ## 计数DP
 > 主要在于处理重复情况
-[程序设计竞赛 划分数]
+[程序设计竞赛 划分数])()
+[leetcode 940. 不同的子序列 II](https://leetcode.cn/problems/distinct-subsequences-ii/)[自己的题解]()
+
+## 环形DP
+[364. Naptime](https://oj.haizeix.com/problem/364)
+[365. 环路运输](https://oj.haizeix.com/problem/365)
+
+## 树形DP
+[361. 没有上司的舞会](https://oj.haizeix.com/problem/361)
+
+[362. 选课](https://oj.haizeix.com/problem/362)
+[363. Strategic_game](https://oj.haizeix.com/problem/363)

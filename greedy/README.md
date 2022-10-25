@@ -11,5 +11,8 @@
 > 标准的滑动窗口算法
 > 枚举右指针，将内容加入窗口。如果违背窗口规则，左移指针直到符合规则,然后更新答案
 
-## 双指针
+## 双指针：证明思路
 [6207. 统计定界子数组的数目](https://leetcode.cn/problems/count-subarrays-with-fixed-bounds/)
+
+## 贪心与其他问题的结合：考察证明
+[AcWing 1996. 打乱字母](https://www.acwing.com/activity/content/problem/content/6501/)
