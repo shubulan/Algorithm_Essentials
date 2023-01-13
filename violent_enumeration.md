@@ -22,10 +22,11 @@
 ## 组合枚举
 组合不同于全排列，是无序的。
 dfs实现与全排列的实现有所不同。
-也可以使用next_permutation来实现。这个思想就很接近二进制枚举了。
+也可以使用next_permutation来实现。这个思想就很接近二进制枚举了，而且速度不慢
 
 模板题
 * [P1157](brute-enumeration\P1157.cpp)
+* [P1036](brute-enumeration\P1036.cpp)
 
 ## 转换维度的枚举
 * [P3799](brute-enumeration\P3799.cpp)
