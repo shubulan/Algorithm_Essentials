@@ -1,0 +1,42 @@
+#include <iostream>
+#include <map>
+#include <unordered_map>
+#include <queue>
+#include <utility>
+#include <algorithm>
+#include <stack>
+#include <vector>
+#include <cmath>
+#include <string>
+/**
+ * 理解什么是线性复杂度优化：
+ *  就是一个非O(n)的算法，优化成O(n)算法
+ *  O(n)算法，n很大时，优化n的大小->离散化
+ * 学到了一个数组问题的分类：
+ * 题目是否是顺序无关的。
+ * 1. 如果是顺序无关的，说明题目要求跟集合相关。
+ *  很多问题可以重排序来、二分、双指针解决。例如：子序列问题、挑出两个数问题。
+ * 2. 如若是顺序相关的，则通常用滑动窗口来解决。例如：子数组问题
+ * 本题可以排序 + 双指针解决。
+*/
+using namespace std;
+typedef long long LL;
+typedef pair<int, int> PII;
+const int N = 200005;
+LL a[N];
+int n, c;
+LL res;
+int main() {
+  scanf("%d%d", &n, &c);
+  for (int i = 0; i < n; i++) scanf("%lld", &a[i]);
+  sort(a, a + n);
+  for (int i = 0, r1 = 0, r2 = 0; i < n; i++) {
+    LL x = a[i];
+    while (r2 < n && a[r2] <= x + c) r2++;
+    while (r1 < n && a[r1] < x + c) r1++;
+    res += r2 - r1;
+  }
+  printf("%lld\n", res);
+
+  return 0;
+}

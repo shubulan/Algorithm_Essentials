@@ -4,6 +4,7 @@
 
 ## 二分图
 [886. 可能的二分法](https://leetcode.cn/problems/possible-bipartition/) 二分图判定模板题
+[P1330](./P1330.cpp) 二分图简单应用
 
 ## 最短路 一般指带权的
 spfa算法：
