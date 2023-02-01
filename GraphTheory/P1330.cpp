@@ -28,14 +28,6 @@ bool dfs(int b, int c) {
   }
   return true;
 }
-int count() {
-  int res = 0;
-  for (int i = 1; i <= n; i++) {
-    if (color[i] == 1) res++;
-  }
-  int re2 = n - res;
-  return min(re2, res);
-}
 
 int main() {
   scanf("%d%d", &n, &m);
