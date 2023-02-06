@@ -1,0 +1,69 @@
+#include <iostream>
+#include <map>
+#include <unordered_set>
+#include <queue>
+#include <utility>
+#include <algorithm>
+#include <stack>
+#include <vector>
+#include <cmath>
+#include <string>
+#include <cstring>
+#include <climits>
+using namespace std;
+typedef long long LL;
+typedef pair<int, int> PII;
+const int N = 1500 * 2 + 10;
+char arr[N][N];
+int used[N][N][3];
+int n, m, tx, ty;
+
+int dir[5] = {0, 1, 0, -1, 0};
+struct node {
+  int x, y;
+};
+
+bool solve() {
+  queue<node> que;
+  memset(used, 0, sizeof(used));
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < m; j++) {
+      cin >> arr[i][j];
+      if (arr[i][j] == 'S') {
+        que.push({i, j});
+        used[i][j][0] = 1;
+        used[i][j][1] = i;
+        used[i][j][2] = j;
+        arr[i][j] = '.';
+      }
+    }
+  }
+  while (!que.empty()) {
+    node node = que.front(); que.pop();
+    for (int i = 0; i < 4; i++) {
+      int nx = node.x + dir[i];
+      int ny = node.y + dir[i + 1];
+      int ox = nx % n;
+      int oy = ny % m;
+      if (ox < 0) ox += n;
+      if (oy < 0) oy += m;
+      if (arr[ox][oy] == '#') continue;
+      if (used[ox][oy][0]) {
+        if (nx == used[ox][oy][1] &&
+          ny == used[ox][oy][2]) continue;
+        else return true;
+      }
+      used[ox][oy][0] = 1, used[ox][oy][1] = nx, used[ox][oy][2] = ny;
+      que.push({nx, ny});
+    }
+  }
+  return false;
+}
+
+int main() {
+  while (cin >> n >> m) {
+    if (solve()) printf("Yes\n");
+    else printf("No\n");
+  }
+  return 0;
+}
