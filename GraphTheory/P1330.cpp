@@ -15,19 +15,19 @@ typedef pair<int, int> PII;
 const int N = 10005;
 int n, m;
 vector<int> G[N];
-int color[N];
-int c1, c2, res;
-bool dfs(int b, int c) {
-  int iv = c == 1 ? -1 : 1;
-  color[b] = c;
-  if (c == 1) c1++;
-  else c2++;
-  for (int i = 0; i < G[b].size(); i++) {
-    if (color[G[b][i]] == c) return false;
-    if (color[G[b][i]] == 0 && !dfs(G[b][i], iv)) return false;
+int color[N], ct[3], res;
+bool dfs(int x, int c) {
+  color[x] = c;
+  ct[c]++;
+  int vc = -c + 3;
+  for (int i = 0; i < G[x].size(); i++) {
+    int nd = G[x][i];
+    if (color[nd] == c) return false;
+    if (!color[nd] && !dfs(nd, vc)) return false; 
   }
   return true;
 }
+
 
 int main() {
   scanf("%d%d", &n, &m);
@@ -39,13 +39,13 @@ int main() {
   }
   int flag = 0;
   for (int i = 1; i <= n; i++) {
-    c1 = c2 = 0;
-    if (color[i] != 0) continue;
+    ct[2] = ct[1] = 0;
+    if (color[i]) continue;
     if (!dfs(i, 1)) {
       flag = 1;
       break;
     }
-    res += min(c1, c2);
+    res += min(ct[1], ct[2]);
   }
   if (flag) printf("Impossible\n");
   else printf("%d\n", res);

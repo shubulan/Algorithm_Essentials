@@ -1,0 +1,49 @@
+#include <iostream>
+#include <map>
+#include <unordered_map>
+#include <queue>
+#include <utility>
+#include <algorithm>
+#include <stack>
+#include <vector>
+#include <cmath>
+#include <string>
+
+using namespace std;
+typedef long long LL;
+typedef pair<int, int> PII;
+
+const int N = 10005;
+vector<int> G[N];
+int T[N], used[N];
+int n, res;
+
+int dfs(int x) {
+  if (used[x]) return used[x];
+  int rt = 0;
+  for (int i = 0; i < G[x].size(); i++) {
+    int nd = G[x][i];
+    rt = max(rt, dfs(nd));
+  }
+  return used[x] = rt + T[x];
+}
+
+int main() {
+  scanf("%d", &n);
+  for (int i = 1; i <= n; i++) {
+    int a, c;
+    scanf("%d", &a);
+    scanf("%d", &T[a]);
+    do {
+      scanf("%d", &c);
+      if (c == 0) break;
+      G[a].push_back(c);
+    } while (1);
+  }
+  for (int i = 1; i <= n; i++) {
+    res = max(res, dfs(i));
+  }
+  printf("%d\n", res);
+
+  return 0;
+}
