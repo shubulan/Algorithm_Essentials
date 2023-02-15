@@ -60,7 +60,10 @@
 
 ## 个人补充
 > 综合应用: 主要是一些思维题，用到上面较多的知识点综合，
->  来源于：洛谷和leetcode
+>  来源于：洛谷、leetcode、acwing
 
-## 前缀和、单调性、二分 
+### 前缀和、单调性、二分 
 [1124. 表现良好的最长时间段](https://leetcode.cn/problems/longest-well-performing-interval)
+
+### 字符串哈希、二分
+[acwing 1460. 我在哪？](blue_bridge/3_bi_search/acwing1460.cpp)

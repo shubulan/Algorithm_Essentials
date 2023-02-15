@@ -9,7 +9,11 @@
 ## 哈希
 
 1. [P3370 【模板】字符串哈希](P3370.cpp)
+
 2. [P1102 A-B 数对](P1102.cpp)
 3. [P1918 保龄球](P1918.cpp)
 
 4. [P5250 【深基17.例5】木材仓库](GraphTheory\P5250.cpp)
+
+## 字符串哈希
+1. [acwing 1460. 我在哪？](blue_bridge/3_bi_search/acwing1460.cpp)
