@@ -67,3 +67,9 @@
 
 ### 字符串哈希、二分
 [acwing 1460. 我在哪？](blue_bridge/3_bi_search/acwing1460.cpp)
+
+### 扩展欧几里得应用题目
+[1250. 检查「好数组」](https://leetcode.cn/problems/check-if-it-is-a-good-array/description/)
+> 学过扩展欧几里得，猜到改题目跟这个知识点有关。剩下的就是猜出答案即可。证明也可以
+> 「裴蜀定理」
+> 解[1250. 检查「好数组」](./math/leetcode1250.cpp)

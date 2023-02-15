@@ -57,3 +57,64 @@ int main() {
   cout << l << endl;
   return 0;
 }
+
+/**
+ * @brief 
+ * 字符串哈希
+ * 1. 首先要知道原理，多想几遍
+ * 2. 找到比较通用的模板如下：
+ */
+typedef unsigned long long ULL;
+
+const int N = 110,P=131;
+
+int n;
+char str[N];
+ULL h[N],p[N];
+
+ULL get(int l, int r)  // 计算子串 str[l ~ r] 的哈希值
+{
+    return h[r] - h[l - 1] * p[r - l + 1];
+}
+
+bool check(int k)
+{
+    ULL l,r;
+    for(int i=1;i+k-1<=n;i++)
+    {
+        l=get(i,i+k-1);
+        for(int j=i+1;j+k-1<=n;j++)
+        {
+            r=get(j,j+k-1);
+            if(l==r)return false;
+        }
+    }
+
+    return true;
+}
+
+
+int main()
+{
+    cin >> n;
+    cin >> (str+1);
+
+    p[0]=1;
+    for(int i=1;i<=n;i++)
+    {
+        h[i]=h[i-1]*P+str[i];
+        p[i]=p[i-1]*P;
+    }
+
+    int l=1,r=100;
+    while(l<r)
+    {
+        int k=l+r>>1;
+        if(check(k))r=k;
+        else l=k+1;
+    }
+
+    printf("%d\n",l);
+
+    return 0;
+}
