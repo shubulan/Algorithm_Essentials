@@ -1,6 +1,6 @@
 # 高精度
 
-高精度加法模板
+## 高精度加法模板
 
 相关题目：
 * P1601
@@ -25,7 +25,10 @@ vector<int> add(const vector<int>& A, const vector<int> &B) {
 }
 
 ```
-高精度乘法模板
+## 高精度减法模板
+
+
+## 高精度乘法模板
 
 相关题目
 * P1303
@@ -64,6 +67,6 @@ vector<int> mul(vector<int>& A, vector<int>& B) {
   while(C.back() == 0 && C.size() > 1) C.pop_back();
   return C;
 }
-
-
 ```
+
+## 高精度除法模板

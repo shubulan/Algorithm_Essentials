@@ -1,6 +1,6 @@
 # 排序
 [洛谷题单](https://www.luogu.com.cn/training/107)
-# 快速排序
+## 快速排序
 快速排序模板
 * P117
 ```c++
@@ -55,3 +55,10 @@ int nth_element(vector<int> &arr, int l, int r, int k) {
 如果一个串是另一个串的前缀，则长的大
 * P1781
 * [P1012](greedy\P1012.cpp)  经典排序，考察贪心
+
+
+
+## 归并排序
+归并排序模板
+
+* [逆序堆的数量]
