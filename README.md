@@ -51,6 +51,8 @@
 
 
 ## 动态规划
+> 动态规划极其难想。给一个全新的动态规划问题，一般人很难想出来。
+> 所以还是尽快接触各种经典动态规划问题，多思考、证明、记忆才是王道。
 1. [动态规划引入](dynamic_program_1.md)
 2. [线性]
 3. [区间与环形]
@@ -94,4 +96,8 @@
 ### 前后缀分解 + 双指针
 > 对于子序列匹配问题，枚举大序列，比枚举小序列要容易一些
 [2565. 最少得分子序列](https://leetcode.cn/problems/subsequence-with-the-minimum-score/description/)
+
+### 二维前缀和 二维预处理
+> 常见的二维预处理技巧
+[1139. 最大的以 1 为边界的正方形](https://leetcode.cn/problems/largest-1-bordered-square/description/)
 
