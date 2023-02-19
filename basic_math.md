@@ -7,6 +7,10 @@
 ## 位运算
 1. [P1100 高低位交换](math/P1100.cpp)
 2. [P1469 找筷子](./math/P1469.cpp)
+
+或运算
+1. [6360. 最小无法得到的或值](https://leetcode.cn/problems/minimum-impossible-or/description/)
+   > 加深对二进制数与或运算的理解
 ## 计数问题
 > 往往排序后更好解决
 1. [P1866 编号](math/P1866.cpp)

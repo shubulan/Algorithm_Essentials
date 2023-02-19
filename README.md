@@ -38,7 +38,7 @@
 
 ## 数据结构 二
 1. [二叉堆与st表](st_table.md)
-2. [线段树与树状数组](线段树)
+2. [线段树与树状数组](line_tree.md)
 3. 
 
 ## 图论
@@ -57,7 +57,7 @@
 2. [线性]
 3. [区间与环形]
 4. [树上与图上]
-5. [状态压缩]
+5. [状态压缩](./state_compression.md)
 6. 补充
    1. [计数类]
    2. [数位统计]
@@ -78,7 +78,7 @@
 ### 字符串哈希、二分
 [acwing 1460. 我在哪？](blue_bridge/3_bi_search/acwing1460.cpp)
 
-## 排序 + 二分
+### 排序 + 二分
 > 给到一个数组，数组内容的顺序不重要时考虑
 >
 * [2563. 统计公平数对的数目](https://leetcode.cn/problems/count-the-number-of-fair-pairs/)
@@ -95,3 +95,8 @@
 > 常见的二维预处理技巧
 [1139. 最大的以 1 为边界的正方形](https://leetcode.cn/problems/largest-1-bordered-square/description/)
 
+### 记忆化搜索 双指针 位运算
+[6365. 将整数减少到零需要的最少操作数](https://leetcode.cn/problems/minimum-operations-to-reduce-an-integer-to-0/)
+
+### 构造 + 思维题
+[6363. 找出对应 LCP 矩阵的字符串](https://leetcode.cn/problems/find-the-string-with-lcp/description/)
