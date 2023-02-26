@@ -82,7 +82,8 @@
 > 给到一个数组，数组内容的顺序不重要时考虑
 >
 * [2563. 统计公平数对的数目](https://leetcode.cn/problems/count-the-number-of-fair-pairs/)
-
+> 集合思维 + 逆向思维
+* [6367. 求出最多标记下标](https://leetcode.cn/problems/find-the-maximum-number-of-marked-indices/description/)
 
 ### 位运算 哈希表
 [2564. 子字符串异或查询](https://leetcode.cn/problems/substring-xor-queries/)
@@ -100,3 +101,7 @@
 
 ### 构造 + 思维题
 [6363. 找出对应 LCP 矩阵的字符串](https://leetcode.cn/problems/find-the-string-with-lcp/description/)
+
+### 最短路 + 走地图 + dijstra
+> 翻译成带权图 + 带权最短路的敏感性
+* [6366. 在网格图中访问一个格子的最少时间](https://leetcode.cn/problems/minimum-time-to-visit-a-cell-in-a-grid/)
