@@ -102,6 +102,14 @@
 ### 构造 + 思维题
 [6363. 找出对应 LCP 矩阵的字符串](https://leetcode.cn/problems/find-the-string-with-lcp/description/)
 
+### 博弈 + 记忆化搜索 + 动态规划
+> 这些问题通常都跟选择有关，第一想法就是递归 + 记忆化搜索。
+> 
+> 记忆化搜索好写的多。如果不是一眼做过的动态规划模型，直接上记忆化搜索方便的多
+> [个人题解](https://leetcode.cn/problems/stone-game-ii/solutions/2128159/ji-yi-hua-sou-suo-by-shubulan-0wxb/)
+
+[1140. 石子游戏 II](https://leetcode.cn/problems/stone-game-ii/description/)
+
 ### 最短路 + 走地图 + dijstra
 > 翻译成带权图 + 带权最短路的敏感性
 * [6366. 在网格图中访问一个格子的最少时间](https://leetcode.cn/problems/minimum-time-to-visit-a-cell-in-a-grid/)
