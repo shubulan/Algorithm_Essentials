@@ -8,7 +8,7 @@
 1. [P1100 高低位交换](math/P1100.cpp)
 2. [P1469 找筷子](./math/P1469.cpp)
 
-或运算
+## 或运算
 1. [6360. 最小无法得到的或值](https://leetcode.cn/problems/minimum-impossible-or/description/)
    > 加深对二进制数与或运算的理解
 ## 计数问题
@@ -19,6 +19,9 @@
 ## 筛素数
 1. [P3383 【模板】线性筛素数](math/P3383.cpp)
 
+## 筛法
+1. [P1621](./set/P1621.cpp) 结合并查集
+2. 
 ## 快速幂
 
 
