@@ -18,61 +18,92 @@
 #include <cstdint>
 #include <climits>
 using namespace std;
-#define MAX_N 10000
+const int N = 10000;
+int arr[N + 5];
 
-struct {
-    int max_num;
-    int l, r;
-} tree[MAX_N << 2];
-int arr[MAX_N + 5];
+class SegmentTree {
+    /**
+     * 维护最大值的线段树
+     */
+    public:
+        void init() {
+            _build_tree(1, 0, _n, arr);
+        }
 
-void update(int ind) {
-    tree[ind].max_num = max(tree[ind << 1].max_num, tree[ind << 1 | 1].max_num);
-    return ;
-}
+    SegmentTree(int n): _n(n), tree((n + 2) << 2) {}
+    void modify(int idx, int val) {
+        _modify(1, 0, _n, idx, val);
+    }
+    int query(int L, int R) {
+        return _query(1, 0, _n, L, R);
+    }
+    private:
+        void _build_tree(int root, int L, int R,
+            const vector < int > & arr = vector < int > ()) {
+            if (L == R) {
+                if (arr.size()) {
+                    tree[root] = arr[L];
+                }
+                return;
+            }
+            int mid = (L + R) >> 1;
+            _build_tree(root * 2, L, mid, arr);
+            _build_tree(root * 2 + 1, mid + 1, R, arr);
+            _update(root);
+            return;
+        }
+    void _build_tree(int root, int L, int R, int * arr = nullptr) {
+        if (L == R) {
+            if (arr) {
+                tree[root] = arr[L];
+            }
+            return;
+        }
+        int mid = (L + R) >> 1;
+        _build_tree(root * 2, L, mid, arr);
+        _build_tree(root * 2 + 1, mid + 1, R, arr);
+        _update(root);
+        return;
+    }
 
-void build_tree(int ind, int l, int r) {
-    tree[ind].l = l, tree[ind].r = r;
-    if (l == r) {
-        tree[ind].max_num = arr[l];
-        return ;
+    void _modify(int root, int rl, int rr, int idx, int val) {
+        if (rl == rr) {
+            tree[root] = val;
+            return;
+        }
+        int mid = (rl + rr) >> 1;
+        if (idx <= mid) {
+            _modify(root << 1, rl, mid, idx, val);
+        } else {
+            _modify(root << 1 | 1, mid + 1, rr, idx, val);
+        }
+        _update(root);
+        return;
     }
-    int mid = (l + r) >> 1;
-    build_tree(ind * 2, l, mid);
-    build_tree(ind * 2 + 1, mid + 1, r);
-    update(ind);
-    return ;
-}
 
-void modify(int ind, int k, int val) {
-    if (tree[ind].l == tree[ind].r) {
-        tree[ind].max_num = val;
-        return ;
-    }
-    int mid = (tree[ind].l + tree[ind].r) >> 1;
-    if (k <= mid) {
-        modify(ind << 1, k, val);
-    } else {
-        modify(ind << 1 | 1, k, val);
-    }
-    update(ind);
-    return ;
-}
+    int _query(int root, int rl, int rr, int L, int R) {
 
-int query(int ind, int x, int y) {
-    if (tree[ind].l >= x && tree[ind].r <= y) {
-        return tree[ind].max_num;
+        if (rl >= L && rr <= R) {
+            return tree[root];
+        }
+        int ans = INT_MIN;
+        int mid = (rl + rr) >> 1;
+        if (mid >= L) {
+            ans = max(ans, _query(root << 1, rl, mid, L, R));
+        }
+        if (mid < R) {
+            ans = max(ans, _query(root << 1 | 1, mid + 1, rr, L, R));
+        }
+        return ans;
     }
-    int ans = INT_MIN;
-    int mid = (tree[ind].l + tree[ind].r) >> 1;
-    if (mid >= x) {
-        ans = max(ans, query(ind << 1, x, y));
-    }
-    if (mid < y) {
-        ans = max(ans, query(ind << 1 | 1, x, y));
-    }
-    return ans;
-}
+    void _update(int root) {
+            tree[root] = max(tree[root << 1], tree[root << 1 | 1]);
+            return;
+        }
+        // default [0, n] root is 1;
+    int _n;
+    vector < int > tree;
+};
 
 int main() {
     int n, m, a, b, c;
@@ -81,17 +112,18 @@ int main() {
         scanf("%d", arr + i);
     }
 	// 为什么根节点是1？因为使用完全二叉树，好计算孩子坐标
-    build_tree(1, 1, n);
+    SegmentTree sg(n);
+    sg.init();
     for (int i = 0; i < m; i++) {
         scanf("%d%d%d", &a, &b, &c);
         switch (a) {
-            case 1: modify(1, b, c); break;
+            case 1: sg.modify(b, c); break;
             case 2: {
                 if (b > c) {
                     cout << "-2147483648" << endl;
                     break;
                 }
-                printf("%d\n", query(1, b, c)); 
+                printf("%d\n", sg.query(b, c)); 
             } break;
         }
     }
