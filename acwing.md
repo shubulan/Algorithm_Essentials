@@ -9,10 +9,10 @@
 * [数的范围](acwing/acwing.789.cpp)
 * [数的三次方根](acwing/acwing.790.cpp)
 ## 高精度
-* [高精度加法]
-* [高精度减法]
-* [高精度乘法]
-* [高精度除法]
+* [高精度加法](acwing/acwing.791.cpp)
+* [高精度减法](acwing/acwing.792.cpp)
+* [高精度乘法](acwing/acwing.793.cpp)
+* [高精度除法](acwing/acwing.794.cpp)
 ## 前缀和与差分
 * [前缀和](acwing/acwing.795.cpp)
 * [子矩阵的和](acwing/acwing.796.cpp)
