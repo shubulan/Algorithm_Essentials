@@ -19,16 +19,16 @@
 * [差分](acwing/acwing.797.cpp)
 * [差分矩阵](acwing/acwing.798.cpp)
 ## 双指针
-* [最长连续不重复子序列]
-* [数组元素的目标和]
-* [判断子序列]
+* [最长连续不重复子序列](acwing/acwing.799.cpp)
+* [数组元素的目标和](acwing/acwing.800.cpp)
+* [判断子序列](acwing/acwing.2816.cpp)
 ## 位运算
-* [二进制中1的个数]
+* [二进制中1的个数](acwing/acwing.801.cpp)
 ## 离散化
-* [区间和]
+* [区间和](acwing/acwing.802.cpp)
 
 ## 区间合并
-* [区间合并]
+* [区间合并](acwing/acwing.803.cpp)
 
 # 数据结构
 ## 单链表
