@@ -39,8 +39,8 @@
 * [双链表](acwing/acwing.827.cpp)
 
 ## 栈
-* [模拟栈](acwing/acwing.803.cpp)
-* [表达式求值](acwing/acwing.803.cpp)
+* [模拟栈](acwing/acwing.828.cpp)
+* [表达式求值](acwing/acwing.3302.cpp)
 
 ## 队列
 * [模拟队列](acwing/acwing.803.cpp)
