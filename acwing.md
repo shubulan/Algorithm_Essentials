@@ -43,13 +43,13 @@
 * [表达式求值](acwing/acwing.3302.cpp)
 
 ## 队列
-* [模拟队列](acwing/acwing.803.cpp)
+* [模拟队列](acwing/acwing.829.cpp)
 
 ## 单调栈
-* [单调栈](acwing/acwing.803.cpp)
+* [单调栈](acwing/acwing.830.cpp)
 
 ## 单调队列
-* [滑动窗口](acwing/acwing.803.cpp)
+* [滑动窗口](acwing/acwing.154.cpp)
 ## KMP
 * [KMP字符串](acwing/acwing.803.cpp)
 
