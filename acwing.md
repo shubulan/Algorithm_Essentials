@@ -51,11 +51,11 @@
 ## 单调队列
 * [滑动窗口](acwing/acwing.154.cpp)
 ## KMP
-* [KMP字符串](acwing/acwing.803.cpp)
+* [KMP字符串](acwing/acwing.831.cpp)
 
 ## Trie
-* [Trie字符串统计](acwing/acwing.803.cpp)
-* [最大异或对](acwing/acwing.803.cpp)
+* [Trie字符串统计](acwing/acwing.835.cpp)
+* [最大异或对](acwing/acwing.143.cpp)
 
 ## 并查集
 * [合并集合](acwing/acwing.803.cpp)

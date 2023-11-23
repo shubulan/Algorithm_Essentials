@@ -16,4 +16,6 @@ typedef pair<int, int> PII;
 
 const int N = 100005;
 
-int main() { return 0; }
+int main() {
+    return 0;
+}
