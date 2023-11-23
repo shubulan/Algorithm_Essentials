@@ -1,24 +1,22 @@
+#include <algorithm>
+#include <climits>
+#include <cmath>
+#include <cstring>
 #include <iostream>
 #include <map>
-#include <set>
-#include <unordered_set>
-#include <unordered_map>
 #include <queue>
-#include <cstring>
-#include <utility>
-#include <algorithm>
+#include <set>
 #include <stack>
-#include <vector>
-#include <cmath>
-#include <climits>
 #include <string>
+#include <unordered_map>
+#include <unordered_set>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
 typedef pair<int, int> PII;
-LL gcd(LL a, LL b) {
-  return b ? gcd(b, a % b) : a;
-}
+LL gcd(LL a, LL b) { return b ? gcd(b, a % b) : a; }
 
 LL a, b, c, res;
 int main() {

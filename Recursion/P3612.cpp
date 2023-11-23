@@ -1,13 +1,13 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -30,15 +30,15 @@ int main() {
   cin >> s >> t;
   int n = s.size();
   while (t > n) {
-      //cout << t << endl;
-      LL x = n;
-      while (x < t) {
-          x *= 2;
-      }
-      LL md = x / 2;
-      t -= md;
-      t = (t - 1);
-      if (t <= 0) t = md;
+    // cout << t << endl;
+    LL x = n;
+    while (x < t) {
+      x *= 2;
+    }
+    LL md = x / 2;
+    t -= md;
+    t = (t - 1);
+    if (t <= 0) t = md;
   }
   cout << s[t - 1] << endl;
 

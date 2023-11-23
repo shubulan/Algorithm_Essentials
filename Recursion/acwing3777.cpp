@@ -1,17 +1,17 @@
+#include <algorithm>
+#include <climits>
+#include <cmath>
+#include <cstring>
 #include <iostream>
 #include <map>
-#include <set>
-#include <unordered_set>
-#include <unordered_map>
 #include <queue>
-#include <cstring>
-#include <utility>
-#include <algorithm>
+#include <set>
 #include <stack>
-#include <vector>
-#include <cmath>
-#include <climits>
 #include <string>
+#include <unordered_map>
+#include <unordered_set>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -47,8 +47,10 @@ void solve() {
     if (arr[i] == 'W') continue;
     arr[i] = 'B';
     ops[i] = 1;
-    if (arr[i + 1] == 'B') arr[i + 1] = 'W';
-    else arr[i + 1] = 'B';
+    if (arr[i + 1] == 'B')
+      arr[i + 1] = 'W';
+    else
+      arr[i + 1] = 'B';
   }
   if (arr[n - 1] == 'W') {
     print();
@@ -58,8 +60,10 @@ void solve() {
   for (int i = 0; i < n - 1; i++) {
     if (arr2[i] == 'B') continue;
     arr[i] = 'W';
-    if (arr2[i + 1] == 'B') arr2[i + 1] = 'W';
-    else arr2[i + 1] = 'B';
+    if (arr2[i + 1] == 'B')
+      arr2[i + 1] = 'W';
+    else
+      arr2[i + 1] = 'B';
   }
   if (arr2[n - 1] == 'B') {
     print();
@@ -73,6 +77,6 @@ int main() {
   while (t--) {
     solve();
   }
-  
+
   return 0;
 }

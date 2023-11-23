@@ -1,18 +1,18 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
 typedef pair<int, int> PII;
-vector<int> add(const vector<int>& A, const vector<int> &B) {
+vector<int> add(const vector<int>& A, const vector<int>& B) {
   vector<int> C;
   int t = 0;
   for (int i = 0; i < A.size() || i < B.size(); i++) {

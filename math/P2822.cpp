@@ -1,17 +1,17 @@
+#include <algorithm>
+#include <climits>
+#include <cmath>
+#include <cstring>
 #include <iostream>
 #include <map>
-#include <set>
-#include <unordered_set>
-#include <unordered_map>
 #include <queue>
-#include <cstring>
-#include <utility>
-#include <algorithm>
+#include <set>
 #include <stack>
-#include <vector>
-#include <cmath>
-#include <climits>
 #include <string>
+#include <unordered_map>
+#include <unordered_set>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -26,8 +26,7 @@ void init(int n, int m) {
       if (j) {
         C[i][j] = C[i - 1][j] + C[i - 1][j - 1];
         C[i][j] %= k;
-      }
-      else 
+      } else
         C[i][j] = 1;
       // cout << C[i][j] << " ";
     }
@@ -43,7 +42,6 @@ void init(int n, int m) {
     }
   }
 }
-
 
 int main() {
   cin >> t >> k;

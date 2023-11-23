@@ -1,13 +1,13 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -19,9 +19,9 @@ void dfs(int x, int b) {
       printf("%3d", arr[i]);
     }
     printf("\n");
-    return ;
+    return;
   }
-  if (b == n + 1) return ;
+  if (b == n + 1) return;
 
   for (int i = b; i <= n; i++) {
     arr.push_back(i);
@@ -43,7 +43,6 @@ int main() {
     printf("\n");
 
   } while (next_permutation(arr.begin(), arr.end()));
-
 
   return 0;
 }

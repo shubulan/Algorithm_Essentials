@@ -1,17 +1,17 @@
+#include <algorithm>
+#include <climits>
+#include <cmath>
+#include <cstring>
 #include <iostream>
 #include <map>
-#include <set>
-#include <unordered_set>
-#include <unordered_map>
 #include <queue>
-#include <cstring>
-#include <utility>
-#include <algorithm>
+#include <set>
 #include <stack>
-#include <vector>
-#include <cmath>
-#include <climits>
 #include <string>
+#include <unordered_map>
+#include <unordered_set>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -21,7 +21,6 @@ int par[N], t, n;
 int br[N][3], ct1;
 unordered_map<int, int> hidx;
 int id;
-
 
 int find(int x) { return x == par[x] ? x : par[x] = find(par[x]); }
 void unite(int x, int y) {
@@ -59,7 +58,6 @@ int main() {
   while (t--) {
     solve();
   }
-
 
   return 0;
 }

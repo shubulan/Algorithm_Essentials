@@ -1,13 +1,13 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -20,22 +20,19 @@ int n, k, ans;
 void init(int n) {
   for (int i = 0; i < n; i++) par[i] = i, rak[i] = 0;
 }
-int find(int a) {
-  return a == par[a] ?  a : par[a] = find(par[a]);
-}
+int find(int a) { return a == par[a] ? a : par[a] = find(par[a]); }
 void unite(int x, int y) {
   x = find(x);
   y = find(y);
   if (x == y) return;
-  if (rak[x] < rak[y]) par[x] = y;
+  if (rak[x] < rak[y])
+    par[x] = y;
   else {
     par[y] = x;
     if (rak[x] == rak[y]) rak[x]++;
   }
 }
-bool same(int a, int b) {
-  return find(a) == find(b);
-}
+bool same(int a, int b) { return find(a) == find(b); }
 
 int main() {
   scanf("%d%d", &n, &k);

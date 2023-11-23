@@ -1,14 +1,14 @@
+#include <algorithm>
+#include <cassert>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
-#include <cassert>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -20,14 +20,12 @@ const int N = 100005;
 int head, e[N], nx[N], cnt;
 
 void insert(int x, int k) {
-    e[++cnt] = x;
-    nx[cnt] = nx[k];
-    nx[k] = cnt;
+  e[++cnt] = x;
+  nx[cnt] = nx[k];
+  nx[k] = cnt;
 }
 
-void erase(int k) {
-    nx[k] = nx[nx[k]];
-}
+void erase(int k) { nx[k] = nx[nx[k]]; }
 
 int main() {
   int n;
@@ -36,19 +34,18 @@ int main() {
     char c;
     cin >> c;
     if (c == 'H') {
-        int x;
-        cin >> x;
-        insert(x, 0);
+      int x;
+      cin >> x;
+      insert(x, 0);
     } else if (c == 'D') {
-        int k;
-        cin >> k;
-        erase(k);
+      int k;
+      cin >> k;
+      erase(k);
     } else if (c == 'I') {
-        int k, x;
-        cin >> k >> x;
-        insert(x, k);
+      int k, x;
+      cin >> k >> x;
+      insert(x, k);
     }
-
   }
   for (int i = nx[head]; i; i = nx[i]) {
     cout << e[i] << " ";

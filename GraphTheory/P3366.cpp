@@ -1,13 +1,13 @@
-#include <iostream>
-#include <map>
-#include <unordered_map>
-#include <queue>
-#include <utility>
 #include <algorithm>
-#include <stack>
 #include <climits>
 #include <cmath>
+#include <iostream>
+#include <map>
+#include <queue>
+#include <stack>
 #include <string>
+#include <unordered_map>
+#include <utility>
 
 using namespace std;
 typedef long long LL;
@@ -30,7 +30,7 @@ int vis[N];
 int mincost[N];
 const string Prime() {
   fill(mincost, mincost + N, INT_MAX);
-  
+
   int res = 0;
   mincost[1] = 0;
   while (true) {

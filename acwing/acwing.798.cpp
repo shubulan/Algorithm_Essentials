@@ -1,13 +1,13 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -18,9 +18,9 @@ int arr[N][N], b[N][N];
 
 void insert(int x1, int y1, int x2, int y2, int c) {
   b[x1][y1] += c;
-  b[x2 + 1][y1] -= c; 
-  b[x1][y2 + 1] -= c; 
-  b[x2 + 1][y2 + 1] += c; 
+  b[x2 + 1][y1] -= c;
+  b[x1][y2 + 1] -= c;
+  b[x2 + 1][y2 + 1] += c;
 }
 
 int main() {
@@ -48,8 +48,7 @@ int main() {
     }
 
   for (int i = 1; i <= n; i++) {
-    for (int j = 1; j <= m; j++)
-      cout << b[i][j] << " ";
+    for (int j = 1; j <= m; j++) cout << b[i][j] << " ";
     cout << endl;
   }
   cout << endl;

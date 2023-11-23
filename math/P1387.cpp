@@ -1,13 +1,13 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -23,7 +23,7 @@ int main() {
   //   for (int j = 1; j <= m; j++) {
   //     scanf("%d", &a[i][j]);
   //     if (a[i][j] == 1)
-  //       a[i][j] = a[i][j] + min(a[i - 1][j], 
+  //       a[i][j] = a[i][j] + min(a[i - 1][j],
   //                   min(a[i - 1][j - 1], a[i][j - 1]));
   //     if (a[i][j] > res) res = a[i][j];
   //   }
@@ -41,7 +41,6 @@ int main() {
     }
   }
   printf("%d\n", res);
-
 
   return 0;
 }

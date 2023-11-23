@@ -1,14 +1,14 @@
+#include <algorithm>
+#include <cassert>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
-#include <cassert>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -18,13 +18,9 @@ const int N = 100005;
 
 int st[N], top = -1;
 
-void push(int x) {
-    st[++top] = x;
-}
+void push(int x) { st[++top] = x; }
 
-void pop() {
-    top--;
-}
+void pop() { top--; }
 
 int query() { return st[top]; }
 
@@ -37,15 +33,16 @@ int main() {
     string s;
     cin >> s;
     if (s == "push") {
-        int x;
-        cin >> x;
-        push(x);
+      int x;
+      cin >> x;
+      push(x);
     } else if (s == "query") {
-        cout << query() << endl;
-    } else if (s == "pop") pop();
-    else if (s == "empty") cout << (empty() ? "YES" : "NO") << endl;
+      cout << query() << endl;
+    } else if (s == "pop")
+      pop();
+    else if (s == "empty")
+      cout << (empty() ? "YES" : "NO") << endl;
   }
-  
 
   return 0;
 }

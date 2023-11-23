@@ -1,14 +1,14 @@
+#include <algorithm>
+#include <climits>
+#include <cmath>
+#include <cstring>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
-#include <cstring>
-#include <vector>
-#include <cmath>
 #include <string>
-#include <climits>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -51,7 +51,8 @@ void solve2() {
   priority_queue<PII, vector<PII>, greater<PII>> que;
   que.push({0, s});
   while (!que.empty()) {
-    PII nd = que.top(); que.pop();
+    PII nd = que.top();
+    que.pop();
     int mn = nd.first, v = nd.second;
     if (d[v] < mn) continue;
     for (int i = 0; i < G[v].size(); i++) {

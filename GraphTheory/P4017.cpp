@@ -1,13 +1,13 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -26,14 +26,15 @@ int main() {
     degree[a]++;
   }
   queue<int> que;
-  for (int i = 1; i <= n; i++) 
+  for (int i = 1; i <= n; i++)
     if (degree[i] == 0) {
       que.push(i);
       ct[i] = 1;
     }
-  
+
   while (!que.empty()) {
-    int nd = que.front(); que.pop();
+    int nd = que.front();
+    que.pop();
     if (G[nd].size() == 0) {
       res = (res + ct[nd]) % 80112002;
     }

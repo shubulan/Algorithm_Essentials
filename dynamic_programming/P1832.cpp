@@ -1,5 +1,5 @@
-#include <iostream>
 #include <cstring>
+#include <iostream>
 using namespace std;
 #define MAX_N 1000
 typedef long long LL;
@@ -9,29 +9,27 @@ LL dp[MAX_N + 5];
 int n;
 
 void init() {
-    memset(v, 1, sizeof v);
-    for (int i = 2; i <= MAX_N; i++) {
-        if (!v[i]) continue;
-        v[++cnt] = i;
-        for (int j = 2 * i; j <= MAX_N; j += i) {
-            v[j] = 0;
-        }
+  memset(v, 1, sizeof v);
+  for (int i = 2; i <= MAX_N; i++) {
+    if (!v[i]) continue;
+    v[++cnt] = i;
+    for (int j = 2 * i; j <= MAX_N; j += i) {
+      v[j] = 0;
     }
+  }
 }
 
-int main()
-{
-    init();
-    cin >> n;
-    dp[0] = 1;
-    for (int i = 1; i <= cnt; i++) {
-        LL p = v[i];
-        for (int j = p; j <= n; j++) {
-            dp[j] += dp[j - p];
-        }
+int main() {
+  init();
+  cin >> n;
+  dp[0] = 1;
+  for (int i = 1; i <= cnt; i++) {
+    LL p = v[i];
+    for (int j = p; j <= n; j++) {
+      dp[j] += dp[j - p];
     }
-    cout << dp[n] << endl;
+  }
+  cout << dp[n] << endl;
 
-    return 0;
+  return 0;
 }
-

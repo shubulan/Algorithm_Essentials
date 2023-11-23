@@ -1,17 +1,17 @@
+#include <algorithm>
+#include <climits>
+#include <cmath>
+#include <cstring>
 #include <iostream>
 #include <map>
-#include <set>
-#include <unordered_set>
-#include <unordered_map>
 #include <queue>
-#include <cstring>
-#include <utility>
-#include <algorithm>
+#include <set>
 #include <stack>
-#include <vector>
-#include <cmath>
-#include <climits>
 #include <string>
+#include <unordered_map>
+#include <unordered_set>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -19,21 +19,20 @@ typedef pair<int, int> PII;
 const int N = 40005;
 
 int n, m;
-struct edge{
+struct edge {
   int b, w;
 };
 int par[N], rak[N];
 vector<edge> G[N];
 
-int find(int x) {
-  return x == par[x] ? x : par[x] = find(par[x]);
-}
+int find(int x) { return x == par[x] ? x : par[x] = find(par[x]); }
 
 void unite(int a, int b) {
   a = find(a);
   b = find(b);
   if (a == b) return;
-  if (rak[a] < rak[b]) par[a] = b;
+  if (rak[a] < rak[b])
+    par[a] = b;
   else {
     par[b] = a;
     if (rak[a] == rak[b]) rak[a]++;
@@ -47,12 +46,14 @@ bool bfs_bi_graph(int t, int x) {
   queue<int> que;
   que.push(t);
   while (!que.empty()) {
-    int p = que.front(); que.pop();
+    int p = que.front();
+    que.pop();
     int c = -color[p] + 3;
     for (int i = 0; i < G[p].size(); i++) {
       int nd = G[p][i].b, w = G[p][i].w;
       if (w <= x) continue;
-      if (color[nd] == c) continue;
+      if (color[nd] == c)
+        continue;
       else if (!color[nd]) {
         color[nd] = c;
         que.push(nd);
@@ -64,7 +65,7 @@ bool bfs_bi_graph(int t, int x) {
   return true;
 }
 
-bool bi_graph(int x) { // 移除掉所有 > x的边，是否能形成二分图？
+bool bi_graph(int x) {  // 移除掉所有 > x的边，是否能形成二分图？
   memset(color, 0, sizeof color);
   for (int i = 1; i <= n; i++) {
     if (color[i]) continue;
@@ -72,9 +73,7 @@ bool bi_graph(int x) { // 移除掉所有 > x的边，是否能形成二分图�
   }
   return true;
 }
-bool check(int x) {
-  return bi_graph(x);
-}
+bool check(int x) { return bi_graph(x); }
 
 bool same(int x, int y) { return find(x) == find(y); }
 
@@ -115,7 +114,6 @@ int main() {
     }
   }
   printf("%d\n", l);
-
 
   return 0;
 }

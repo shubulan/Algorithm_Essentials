@@ -1,14 +1,14 @@
+#include <algorithm>
+#include <climits>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
-#include <climits>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 using namespace std;
 /**
  * 本题目很有意思。
@@ -18,13 +18,13 @@ using namespace std;
  * 可能有人想到得用ull来存，但是可能想不到的是还不够，得用大整数来存。
  * 此外，该题目整理后，会发现，就是对一个二维矩阵做n + 1次前缀和，
  * 所以答案可以写的很简洁。
-*/
+ */
 
 typedef long long LL;
 typedef unsigned long long ULL;
 typedef pair<int, int> PII;
 const int N = 55;
-vector<int> add(const vector<int>& A, const vector<int> &B) {
+vector<int> add(const vector<int>& A, const vector<int>& B) {
   vector<int> C;
   int t = 0;
   for (int i = 0; i < A.size() || i < B.size(); i++) {
@@ -37,7 +37,7 @@ vector<int> add(const vector<int>& A, const vector<int> &B) {
   if (C.size() == 0) C.push_back(0);
   return C;
 }
-vector<int> sub(const vector<int>& A, const vector<int> &B) {
+vector<int> sub(const vector<int>& A, const vector<int>& B) {
   // 必须有A > B, 不处理负数;
   vector<int> C;
   for (int i = 0; i < A.size() || i < B.size(); i++) {
@@ -62,7 +62,8 @@ int main() {
   for (int i = 0; i <= n; i++) {
     for (int j = 0; j <= a; j++) {
       for (int k = 0; k <= b; k++) {
-        if (j == 0 && k == 0) f[j][k] = {1};
+        if (j == 0 && k == 0)
+          f[j][k] = {1};
         else {
           if (j - 1 >= 0) f[j][k] = add(f[j - 1][k], f[j][k]);
           if (k - 1 >= 0) f[j][k] = add(f[j][k - 1], f[j][k]);

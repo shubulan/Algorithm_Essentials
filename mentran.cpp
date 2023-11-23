@@ -1,14 +1,14 @@
+#include <algorithm>
+#include <cmath>
+#include <cstring>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
-#include <cstring>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 
@@ -23,48 +23,47 @@ vector<int> arr[M];
 int n, m;
 
 bool check(int k, int n) {
-    int cnt = 0;
-    while (n--) {
-        if (k & 1) {
-            if (cnt % 2) return false;
-            cnt = 0;
-        }
-        else cnt++;
-        k >>= 1;
-    }
+  int cnt = 0;
+  while (n--) {
+    if (k & 1) {
+      if (cnt % 2) return false;
+      cnt = 0;
+    } else
+      cnt++;
+    k >>= 1;
+  }
 
-    return cnt % 2 == 0;
+  return cnt % 2 == 0;
 }
 
 int main() {
+  while (cin >> n >> m, (n && m)) {
+    memset(f, 0, sizeof f);
+    memset(st, 0, sizeof st);
 
-    while (cin >> n >> m, (n && m)) {
-        memset(f, 0, sizeof f);
-        memset(st, 0, sizeof st);
-
-        f[0][0] = 1;
-        for (int i = 0; i < 1 << n; i++) {
-            st[i] = check(i, n);
-        }
-
-        for (int j = 0; j < 1 << n; j++) {
-            arr[j].clear();
-            for (int k = 0; k < 1 << n; k++) {
-                if ((j & k) == 0 && st[j | k]) {
-                    arr[j].push_back(k);
-                }
-            }
-        }
-
-        for (int i = 1; i <= m; i++) {
-            for (int j = 0; j < 1 << n; j++) {
-                for (auto k: arr[j]) {
-                    f[i][j] += f[i - 1][k];
-                }
-            }
-        }
-        cout << f[m][0] << endl;
+    f[0][0] = 1;
+    for (int i = 0; i < 1 << n; i++) {
+      st[i] = check(i, n);
     }
 
-    return 0;
+    for (int j = 0; j < 1 << n; j++) {
+      arr[j].clear();
+      for (int k = 0; k < 1 << n; k++) {
+        if ((j & k) == 0 && st[j | k]) {
+          arr[j].push_back(k);
+        }
+      }
+    }
+
+    for (int i = 1; i <= m; i++) {
+      for (int j = 0; j < 1 << n; j++) {
+        for (auto k : arr[j]) {
+          f[i][j] += f[i - 1][k];
+        }
+      }
+    }
+    cout << f[m][0] << endl;
+  }
+
+  return 0;
 }

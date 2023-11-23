@@ -1,19 +1,18 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 const int MAX_N = 100000;
 using namespace std;
 typedef long long LL;
 typedef pair<int, int> PII;
-
 
 int main() {
   unordered_map<int, int> mmap;

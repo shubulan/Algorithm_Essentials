@@ -1,25 +1,20 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
 typedef pair<int, int> PII;
 int n;
 char arr[250];
-const char* ct[4] = {
-  "ooo*o**--",
-  "o--*o**oo",
-  "o*o*o*--o",
-  "--o*o*o*o"
-};
+const char* ct[4] = {"ooo*o**--", "o--*o**oo", "o*o*o*--o", "--o*o*o*o"};
 void print(int n) {
   for (int i = 0; i < 2 * n + 2; i++) cout << arr[i];
   cout << endl;
@@ -46,8 +41,6 @@ int main() {
     for (int j = 0; j < 9; j++) arr[j] = ct[i][j];
     print(n);
   }
-
-
 
   return 0;
 }

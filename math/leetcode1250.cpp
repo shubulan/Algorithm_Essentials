@@ -1,12 +1,12 @@
 class Solution {
-public:
-    bool isGoodArray(vector<int>& nums) {
-        for (int i = 0, a = 0; i < nums.size(); i++) {
-            a = gcd(a, nums[i]);
-            if (a == 1) return true;
-        }
-        return false;
+ public:
+  bool isGoodArray(vector<int>& nums) {
+    for (int i = 0, a = 0; i < nums.size(); i++) {
+      a = gcd(a, nums[i]);
+      if (a == 1) return true;
     }
+    return false;
+  }
 };
 
 /**
@@ -23,5 +23,5 @@ public:
  *  存在gcd(subset(a)) = 1  等价于 gcd(a1,a2...an) = 1
  *  因为数组中一部分的最大公约数为1,那么显然整体的最大公约数是1.
  *  如果整体的最大公约数是1,那么至少整体的最大公约数是1。证必。
- * 
+ *
  */

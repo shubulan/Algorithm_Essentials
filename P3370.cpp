@@ -1,13 +1,13 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_set>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_set>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -18,7 +18,7 @@ unordered_set<uint> sset;
 uint get(char* str) {
   const int P = 1e7 + 9;
   uint res = 1;
-  for (char *p = str; *p; p++) {
+  for (char* p = str; *p; p++) {
     res = res * P + *p;
   }
   return res;
@@ -32,7 +32,6 @@ int main() {
     sset.insert(get(s));
   }
   printf("%u\n", sset.size());
-
 
   return 0;
 }

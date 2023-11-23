@@ -1,13 +1,13 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -16,7 +16,7 @@ const int MAX_N = 6005;
 struct {
   int nd, ne;
 } e[MAX_N];
-int head[MAX_N]; //每个节点的临界边起点
+int head[MAX_N];  // 每个节点的临界边起点
 int cnt = 0;
 void insert(int from, int to) {
   cnt++;
@@ -32,7 +32,7 @@ int n;
 void dfs(int x) {
   // printf("calc %d\n", x);
   int b = head[x];
-  
+
   dp[x][1] = v[x];
   for (int i = b; i != 0; i = e[i].ne) {
     int nd = e[i].nd;

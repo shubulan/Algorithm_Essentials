@@ -30,40 +30,41 @@ lcp[k][j] 如果等于0，其还是不能确定，但一定不是'b'
 */
 
 class Solution {
-public:
-    string findTheString(vector<vector<int>>& lcp) {
-        int n = lcp.size();
-        string s(n, '0');
-        char c = 'a';
-        while (true) {
-            int i = 0;
-            for (; i < n; i++) if (s[i] == '0') break;
-            if (i == n) break;
-            if (c == 'z' + 1) return "";
-            for (int j = i; j < n; j++) {
-                if (!lcp[i][j]) continue;
-                if (s[j] != '0') return "";
-                s[j] = c;
-            }
-            c++;
-        }
-        if (check(lcp, s)) return s;
-        return "";
+ public:
+  string findTheString(vector<vector<int>>& lcp) {
+    int n = lcp.size();
+    string s(n, '0');
+    char c = 'a';
+    while (true) {
+      int i = 0;
+      for (; i < n; i++)
+        if (s[i] == '0') break;
+      if (i == n) break;
+      if (c == 'z' + 1) return "";
+      for (int j = i; j < n; j++) {
+        if (!lcp[i][j]) continue;
+        if (s[j] != '0') return "";
+        s[j] = c;
+      }
+      c++;
     }
-    bool check(vector<vector<int>>& lcp, string &s) {
-        int n = s.size();
-        vector<vector<int>> llcp(n, vector<int>(n));
-        for (int i = n - 1; i >= 0; i--) {
-            for (int j = n - 1; j >= 0; j--) {
-                if (s[i] == s[j]) {
-                    int a = 0;
-                    if (i + 1 < n && j + 1 < n) a = llcp[i + 1][j + 1];
-                    llcp[i][j] = a + 1;
-                }
-                if (llcp[i][j] != lcp[i][j]) return false;
-            }
+    if (check(lcp, s)) return s;
+    return "";
+  }
+  bool check(vector<vector<int>>& lcp, string& s) {
+    int n = s.size();
+    vector<vector<int>> llcp(n, vector<int>(n));
+    for (int i = n - 1; i >= 0; i--) {
+      for (int j = n - 1; j >= 0; j--) {
+        if (s[i] == s[j]) {
+          int a = 0;
+          if (i + 1 < n && j + 1 < n) a = llcp[i + 1][j + 1];
+          llcp[i][j] = a + 1;
         }
+        if (llcp[i][j] != lcp[i][j]) return false;
+      }
+    }
 
-        return true;
-    }
+    return true;
+  }
 };

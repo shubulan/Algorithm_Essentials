@@ -1,32 +1,32 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
 typedef pair<int, int> PII;
 const int N = 100005;
 int n, m;
-int arr[N][2]; 
+int arr[N][2];
 bool check(int mid) {
-    LL ct = 0;
-    for (int i = 0; i < n; i++) {
-        // 求大于mid的升级次数
-        if (arr[i][0] <= mid) continue;
-        int d = arr[i][0] - mid;
-        int t = (arr[i][0] - mid) / arr[i][1];
-        if (d % arr[i][1] != 0) t++;
+  LL ct = 0;
+  for (int i = 0; i < n; i++) {
+    // 求大于mid的升级次数
+    if (arr[i][0] <= mid) continue;
+    int d = arr[i][0] - mid;
+    int t = (arr[i][0] - mid) / arr[i][1];
+    if (d % arr[i][1] != 0) t++;
 
-        ct += t;
-    }
-    return ct >= m;
+    ct += t;
+  }
+  return ct >= m;
 }
 
 int main() {
@@ -36,12 +36,12 @@ int main() {
     scanf("%d%d", &arr[i][0], &arr[i][1]);
   }
   while (l < r) {
-      int mid = (l + r + 1) / 2;
-      if (check(mid)) {
-          l = mid;
-      } else {
-          r = mid - 1;
-      }
+    int mid = (l + r + 1) / 2;
+    if (check(mid)) {
+      l = mid;
+    } else {
+      r = mid - 1;
+    }
   }
 
   LL res = 0, sum = 0;

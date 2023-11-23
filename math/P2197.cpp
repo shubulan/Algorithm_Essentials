@@ -1,20 +1,20 @@
+#include <algorithm>
+#include <climits>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
-#include <climits>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 using namespace std;
 typedef long long LL;
 typedef pair<int, int> PII;
 int t, n, a, res;
 
-/** 
+/**
  * 先理解公平组合游戏：两个人交互行动，两个人的操作规则完全一致，并且总会结束。
  * 再理解必败态：当前需要行动，无论怎么操作，都会输的状态。
  *     (注意再公平组合游戏中，两人的操作完全一致，所以必败态只跟当前操作的人有关)
@@ -26,7 +26,7 @@ int t, n, a, res;
  * 这样，初始f(a) != 0, 我能保证永远给对手留下f(a) = 0的状态。
  * 由于数组a的总和在不断减小，最终一定会给到对手必败态，我一定会赢。
  * 反之，我一定会输
-*/
+ */
 int main() {
   scanf("%d", &t);
   while (t--) {
@@ -38,7 +38,6 @@ int main() {
     }
     printf("%s\n", res == 0 ? "No" : "Yes");
   }
-
 
   return 0;
 }

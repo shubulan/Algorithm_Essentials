@@ -1,14 +1,14 @@
+#include <algorithm>
+#include <cassert>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
-#include <cassert>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -29,8 +29,8 @@ int main() {
   for (int i = 0, j = 0; i < n; i++, i = j) {
     int r = arr[i].second;
     while (j < n && arr[j].first <= r) {
-        r = max(r, arr[j].second);
-        j++;
+      r = max(r, arr[j].second);
+      j++;
     }
     cnt++;
   }

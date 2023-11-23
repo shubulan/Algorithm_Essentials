@@ -1,13 +1,13 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 const int mod = 1e9 + 7;
 using namespace std;
@@ -25,7 +25,8 @@ int main() {
   for (int i = 0; i < n; i++) {
     res = ((LL)res * (a[i] - i)) % mod;
   }
-  cout << res << endl;;
+  cout << res << endl;
+  ;
 
   return 0;
 }

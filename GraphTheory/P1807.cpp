@@ -1,19 +1,19 @@
+#include <algorithm>
+#include <climits>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
+#include <unordered_map>
+#include <utility>
 #include <vector>
-#include <cmath>
-#include <climits>
 
 using namespace std;
 typedef long long LL;
 typedef pair<int, int> PII;
 const int N = 1505, M = 50005;
-struct edge{
+struct edge {
   int nf, nd, w;
 } edges[M];
 
@@ -65,8 +65,6 @@ int main() {
   } else {
     printf("%d\n", -lon[n]);
   }
-  
-
 
   return 0;
 }

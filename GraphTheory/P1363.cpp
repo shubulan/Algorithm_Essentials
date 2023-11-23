@@ -1,15 +1,15 @@
+#include <algorithm>
+#include <climits>
+#include <cmath>
+#include <cstring>
 #include <iostream>
 #include <map>
-#include <unordered_set>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
-#include <cstring>
-#include <climits>
+#include <unordered_set>
+#include <utility>
+#include <vector>
 using namespace std;
 typedef long long LL;
 typedef pair<int, int> PII;
@@ -39,7 +39,8 @@ bool solve() {
     }
   }
   while (!que.empty()) {
-    node node = que.front(); que.pop();
+    node node = que.front();
+    que.pop();
     for (int i = 0; i < 4; i++) {
       int nx = node.x + dir[i];
       int ny = node.y + dir[i + 1];
@@ -49,9 +50,10 @@ bool solve() {
       if (oy < 0) oy += m;
       if (arr[ox][oy] == '#') continue;
       if (used[ox][oy][0]) {
-        if (nx == used[ox][oy][1] &&
-          ny == used[ox][oy][2]) continue;
-        else return true;
+        if (nx == used[ox][oy][1] && ny == used[ox][oy][2])
+          continue;
+        else
+          return true;
       }
       used[ox][oy][0] = 1, used[ox][oy][1] = nx, used[ox][oy][2] = ny;
       que.push({nx, ny});
@@ -62,8 +64,10 @@ bool solve() {
 
 int main() {
   while (cin >> n >> m) {
-    if (solve()) printf("Yes\n");
-    else printf("No\n");
+    if (solve())
+      printf("Yes\n");
+    else
+      printf("No\n");
   }
   return 0;
 }

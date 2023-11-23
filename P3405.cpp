@@ -1,13 +1,13 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -16,7 +16,7 @@ typedef pair<int, int> PII;
 
 unordered_map<uint, LL> mmap;
 uint get(string s, string b) {
-  const uint mod = 1e9+7;
+  const uint mod = 1e9 + 7;
   uint res = 1;
   res = res * mod + s[0];
   res = res * mod + s[1];
@@ -33,7 +33,7 @@ int main() {
     scanf("%s%s", a, b);
     if (a[0] == b[0] && a[1] == b[1]) continue;
     res += mmap[get(b, a)];
-    mmap[get(a, b)] ++;
+    mmap[get(a, b)]++;
   }
   printf("%lld\n", res);
   return 0;

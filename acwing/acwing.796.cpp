@@ -1,14 +1,14 @@
 
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 const int N = 1005;
 int arr[N][N];
@@ -29,7 +29,9 @@ int main() {
   while (q--) {
     int x1, y1, x2, y2;
     cin >> x1 >> y1 >> x2 >> y2;
-    cout << arr[x2][y2] - arr[x1 - 1][y2] - arr[x2][y1 - 1] + arr[x1 - 1][y1 - 1] << endl;
+    cout << arr[x2][y2] - arr[x1 - 1][y2] - arr[x2][y1 - 1] +
+                arr[x1 - 1][y1 - 1]
+         << endl;
   }
 
   return 0;

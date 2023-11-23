@@ -1,14 +1,13 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
-
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -35,7 +34,7 @@ int main() {
   init(uint(sqrt(r) + 5));
   for (uint i = 1; i <= cnt && primes[i] * primes[i] <= r; i++) {
     for (uint j = l / primes[i] * primes[i]; j <= r; j += primes[i]) {
-      if (j < l ||  primes[i] == j) continue;
+      if (j < l || primes[i] == j) continue;
       ans[j - l] = 1;
     }
   }

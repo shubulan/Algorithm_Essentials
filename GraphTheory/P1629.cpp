@@ -1,15 +1,15 @@
+#include <algorithm>
+#include <climits>
+#include <cmath>
+#include <cstring>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
-#include <climits>
-#include <cstring>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 using namespace std;
 typedef long long LL;
 typedef pair<int, int> PII;
@@ -38,7 +38,8 @@ void dijistra(vector<edge> G[N]) {
   priority_queue<PII, vector<PII>, greater<PII>> que;
   que.push({0, 1});
   while (!que.empty()) {
-    PII nd = que.top(); que.pop();
+    PII nd = que.top();
+    que.pop();
     int x = nd.second, y = nd.first;
     if (dis[x] < y) continue;
     dis[x] = y;
@@ -65,8 +66,6 @@ int main() {
   dijistra(G2);
   for (int i = 2; i <= n; i++) res += dis[i];
   printf("%lld\n", res);
-
-
 
   return 0;
 }

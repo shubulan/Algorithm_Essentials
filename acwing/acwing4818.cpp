@@ -1,13 +1,13 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 #define MAX_N
 using namespace std;
@@ -19,19 +19,19 @@ int main() {
   cin >> n;
   vector<LL> arr;
   for (int i = 0, t; i < n; i++) {
-      cin >> t;
-      arr.push_back(t);
+    cin >> t;
+    arr.push_back(t);
   }
   sort(arr.begin(), arr.end());
   LL mx = -1;
   for (int i = 0; i < n; i++) {
-      mx = max(mx, arr[i] * (n - i));
+    mx = max(mx, arr[i] * (n - i));
   }
   for (int i = 0; i < n; i++) {
-      if (mx == arr[i] * (n - i)) {
-          cout << mx << " " << arr[i] << endl;
-          break;
-      }
+    if (mx == arr[i] * (n - i)) {
+      cout << mx << " " << arr[i] << endl;
+      break;
+    }
   }
 
   return 0;

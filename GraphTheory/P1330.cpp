@@ -1,13 +1,13 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -23,11 +23,10 @@ bool dfs(int x, int c) {
   for (int i = 0; i < G[x].size(); i++) {
     int nd = G[x][i];
     if (color[nd] == c) return false;
-    if (!color[nd] && !dfs(nd, vc)) return false; 
+    if (!color[nd] && !dfs(nd, vc)) return false;
   }
   return true;
 }
-
 
 int main() {
   scanf("%d%d", &n, &m);
@@ -47,8 +46,10 @@ int main() {
     }
     res += min(ct[1], ct[2]);
   }
-  if (flag) printf("Impossible\n");
-  else printf("%d\n", res);
+  if (flag)
+    printf("Impossible\n");
+  else
+    printf("%d\n", res);
 
   return 0;
 }

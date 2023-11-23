@@ -1,13 +1,13 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 #define MAX_N 5000
 using namespace std;
@@ -17,10 +17,10 @@ typedef pair<int, int> PII;
 LL arr[MAX_N + 5];
 
 LL dfs(int n) {
-    if (n == 0) return 1;
-    if (n < 0) return 0;
-    if (arr[n] != 0) return arr[n];
-    return arr[n] = dfs(n - 1) + dfs(n - 2);
+  if (n == 0) return 1;
+  if (n < 0) return 0;
+  if (arr[n] != 0) return arr[n];
+  return arr[n] = dfs(n - 1) + dfs(n - 2);
 }
 vector<int> add(const vector<int>& A, const vector<int>& B) {
   vector<int> C;

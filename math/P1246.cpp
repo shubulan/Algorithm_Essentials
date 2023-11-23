@@ -1,17 +1,17 @@
+#include <algorithm>
+#include <climits>
+#include <cmath>
+#include <cstring>
 #include <iostream>
 #include <map>
-#include <set>
-#include <unordered_set>
-#include <unordered_map>
 #include <queue>
-#include <cstring>
-#include <utility>
-#include <algorithm>
+#include <set>
 #include <stack>
-#include <vector>
-#include <cmath>
-#include <climits>
 #include <string>
+#include <unordered_map>
+#include <unordered_set>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -28,7 +28,7 @@ void init() {
       f[i - 1][j + 1] = ans;
     }
   }
-  
+
   // for (int i = 0; i < 26; i++) {
   //   for (int j = 0; j <= 6; j++) {
   //     cout << f[i][j] << " ";
@@ -39,7 +39,7 @@ void init() {
 int main() {
   cin >> s;
   int n = s.size();
-  
+
   // 模拟法，会tle
   // string a = "a";
   // res = 1;

@@ -1,14 +1,14 @@
+#include <algorithm>
+#include <climits>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
-#include <climits>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 using namespace std;
 typedef long long LL;
 typedef pair<int, int> PII;
@@ -24,7 +24,8 @@ void bfs(int s) {
   que.push(s);
   vis[s] = 1;
   while (!que.empty()) {
-    int nd = que.front(); que.pop();
+    int nd = que.front();
+    que.pop();
     used[nd]++;
     for (int i = 0; i < G[nd].size(); i++) {
       int ndd = G[nd][i];

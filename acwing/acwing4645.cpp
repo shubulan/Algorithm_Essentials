@@ -1,13 +1,13 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 using namespace std;
 
 typedef long long LL;
@@ -31,8 +31,10 @@ int main() {
   while (m--) {
     int l, r;
     scanf("%d%d", &l, &r);
-    if (g[r] >= l) puts("yes");
-    else puts("no");
+    if (g[r] >= l)
+      puts("yes");
+    else
+      puts("no");
   }
 
   return 0;

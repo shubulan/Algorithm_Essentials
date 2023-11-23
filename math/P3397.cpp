@@ -1,13 +1,13 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -18,20 +18,20 @@ int n, m;
 void insert(int x1, int y1, int x2, int y2, int c) {
   /**
    * 看清题意，是否需要取模，int能否放下数组。
-  */
-    a[x1][y1] += c;
-    a[x1][y2 + 1] -= c;
-    a[x2 + 1][y1] -= c;
-    a[x2 + 1][y2 + 1] += c;
+   */
+  a[x1][y1] += c;
+  a[x1][y2 + 1] -= c;
+  a[x2 + 1][y1] -= c;
+  a[x2 + 1][y2 + 1] += c;
 }
 void sum() {
   /*
   需要自己改范围
   */
-    for (int i = 1; i <= n; i++) {
-      for (int j = 1; j <= n; j++) {
-        a[i][j] += a[i - 1][j] + a[i][j - 1] - a[i - 1][j - 1];
-      }
+  for (int i = 1; i <= n; i++) {
+    for (int j = 1; j <= n; j++) {
+      a[i][j] += a[i - 1][j] + a[i][j - 1] - a[i - 1][j - 1];
+    }
   }
 }
 
@@ -49,7 +49,6 @@ int main() {
     }
     printf("\n");
   }
-
 
   return 0;
 }

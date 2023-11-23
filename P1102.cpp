@@ -1,13 +1,13 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 /**
  * 理解什么是线性复杂度优化：
  *  就是一个非O(n)的算法，优化成O(n)算法
@@ -18,7 +18,7 @@
  *  很多问题可以重排序来、二分、双指针解决。例如：子序列问题、挑出两个数问题。
  * 2. 如若是顺序相关的，则通常用滑动窗口来解决。例如：子数组问题
  * 本题可以排序 + 双指针解决。
-*/
+ */
 using namespace std;
 typedef long long LL;
 typedef pair<int, int> PII;

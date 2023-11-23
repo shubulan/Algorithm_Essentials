@@ -1,13 +1,13 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -28,7 +28,7 @@ int main() {
     cin >> arr[i];
   }
 
-  for (int i = n; i >= 1; i--) { // 这里可以用差分，也可以用插入
+  for (int i = n; i >= 1; i--) {  // 这里可以用差分，也可以用插入
     // arr[i] -= arr[i - 1];
     insert(i, i, arr[i]);
   }
@@ -37,8 +37,8 @@ int main() {
     int l, r, c;
     cin >> l >> r >> c;
     insert(l, r, c);
-    //arr[l] += c;
-    //arr[r + 1] -= c;
+    // arr[l] += c;
+    // arr[r + 1] -= c;
   }
   // for (int i = 1; i <= n; i++) arr[i] += arr[i - 1];
   for (int i = 1; i <= n; i++) b[i] += b[i - 1];

@@ -1,17 +1,17 @@
+#include <algorithm>
+#include <climits>
+#include <cmath>
+#include <cstring>
 #include <iostream>
 #include <map>
-#include <set>
-#include <unordered_set>
-#include <unordered_map>
 #include <queue>
-#include <cstring>
-#include <utility>
-#include <algorithm>
+#include <set>
 #include <stack>
-#include <vector>
-#include <cmath>
-#include <climits>
 #include <string>
+#include <unordered_map>
+#include <unordered_set>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -19,16 +19,16 @@ typedef pair<int, int> PII;
 LL a = 0, b = 1, ca, cb, num, f;
 string s;
 
-LL gcd(LL a, LL b) {
-  return b ? gcd(b, a % b) : a;
-}
+LL gcd(LL a, LL b) { return b ? gcd(b, a % b) : a; }
 void cacl() {
   // printf("%lld %lld %lld %lld\n", a, b, ca, cb);
   a *= cb;
   ca *= b;
   b *= cb;
-  if (f) a -= ca;
-  else a += ca;
+  if (f)
+    a -= ca;
+  else
+    a += ca;
   int t = gcd(abs(a), b);
   a /= t;
   b /= t;
@@ -45,8 +45,10 @@ int main() {
       cb = num;
       num = 0;
       cacl();
-      if (c == '+') f = 0; // 计算加法
-      else f = 1;
+      if (c == '+')
+        f = 0;  // 计算加法
+      else
+        f = 1;
     } else {
       num = num * 10 + c - '0';
     }
@@ -58,6 +60,6 @@ int main() {
   } else {
     cout << a << "/" << b << endl;
   }
-  
+
   return 0;
 }

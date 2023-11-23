@@ -1,131 +1,127 @@
 /*************************************************************************
-	> File Name: 1.HZOJ222.cpp
-	> Author: huguang
-	> Mail: hug@haizeix.com
-	> Created Time: 
+        > File Name: 1.HZOJ222.cpp
+        > Author: huguang
+        > Mail: hug@haizeix.com
+        > Created Time:
  ************************************************************************/
 
-#include <iostream>
+#include <algorithm>
+#include <climits>
+#include <cstdint>
 #include <cstdio>
 #include <cstdlib>
-#include <queue>
-#include <stack>
-#include <algorithm>
-#include <string>
+#include <iostream>
 #include <map>
+#include <queue>
 #include <set>
+#include <stack>
+#include <string>
 #include <vector>
-#include <cstdint>
-#include <climits>
 using namespace std;
 const int N = 10000;
 int arr[N + 5];
 
 class SegmentTree {
-    /**
-     * 维护最大值的线段树
-     */
-    public:
-        void init() {
-            _build_tree(1, 0, _n, arr);
-        }
+  /**
+   * 维护最大值的线段树
+   */
+ public:
+  void init() { _build_tree(1, 0, _n, arr); }
 
-    SegmentTree(int n): _n(n), tree((n + 2) << 2) {}
-    void modify(int idx, int val) {
-        _modify(1, 0, _n, idx, val);
-    }
-    int query(int L, int R) {
-        return _query(1, 0, _n, L, R);
-    }
-    private:
-        void _build_tree(int root, int L, int R,
-            const vector < int > & arr = vector < int > ()) {
-            if (L == R) {
-                if (arr.size()) {
-                    tree[root] = arr[L];
-                }
-                return;
-            }
-            int mid = (L + R) >> 1;
-            _build_tree(root * 2, L, mid, arr);
-            _build_tree(root * 2 + 1, mid + 1, R, arr);
-            _update(root);
-            return;
-        }
-    void _build_tree(int root, int L, int R, int * arr = nullptr) {
-        if (L == R) {
-            if (arr) {
-                tree[root] = arr[L];
-            }
-            return;
-        }
-        int mid = (L + R) >> 1;
-        _build_tree(root * 2, L, mid, arr);
-        _build_tree(root * 2 + 1, mid + 1, R, arr);
-        _update(root);
-        return;
-    }
+  SegmentTree(int n) : _n(n), tree((n + 2) << 2) {}
+  void modify(int idx, int val) { _modify(1, 0, _n, idx, val); }
+  int query(int L, int R) { return _query(1, 0, _n, L, R); }
 
-    void _modify(int root, int rl, int rr, int idx, int val) {
-        if (rl == rr) {
-            tree[root] = val;
-            return;
-        }
-        int mid = (rl + rr) >> 1;
-        if (idx <= mid) {
-            _modify(root << 1, rl, mid, idx, val);
-        } else {
-            _modify(root << 1 | 1, mid + 1, rr, idx, val);
-        }
-        _update(root);
-        return;
+ private:
+  void _build_tree(int root, int L, int R,
+                   const vector<int>& arr = vector<int>()) {
+    if (L == R) {
+      if (arr.size()) {
+        tree[root] = arr[L];
+      }
+      return;
     }
-
-    int _query(int root, int rl, int rr, int L, int R) {
-
-        if (rl >= L && rr <= R) {
-            return tree[root];
-        }
-        int ans = INT_MIN;
-        int mid = (rl + rr) >> 1;
-        if (mid >= L) {
-            ans = max(ans, _query(root << 1, rl, mid, L, R));
-        }
-        if (mid < R) {
-            ans = max(ans, _query(root << 1 | 1, mid + 1, rr, L, R));
-        }
-        return ans;
+    int mid = (L + R) >> 1;
+    _build_tree(root * 2, L, mid, arr);
+    _build_tree(root * 2 + 1, mid + 1, R, arr);
+    _update(root);
+    return;
+  }
+  void _build_tree(int root, int L, int R, int* arr = nullptr) {
+    if (L == R) {
+      if (arr) {
+        tree[root] = arr[L];
+      }
+      return;
     }
-    void _update(int root) {
-            tree[root] = max(tree[root << 1], tree[root << 1 | 1]);
-            return;
-        }
-        // default [0, n] root is 1;
-    int _n;
-    vector < int > tree;
+    int mid = (L + R) >> 1;
+    _build_tree(root * 2, L, mid, arr);
+    _build_tree(root * 2 + 1, mid + 1, R, arr);
+    _update(root);
+    return;
+  }
+
+  void _modify(int root, int rl, int rr, int idx, int val) {
+    if (rl == rr) {
+      tree[root] = val;
+      return;
+    }
+    int mid = (rl + rr) >> 1;
+    if (idx <= mid) {
+      _modify(root << 1, rl, mid, idx, val);
+    } else {
+      _modify(root << 1 | 1, mid + 1, rr, idx, val);
+    }
+    _update(root);
+    return;
+  }
+
+  int _query(int root, int rl, int rr, int L, int R) {
+    if (rl >= L && rr <= R) {
+      return tree[root];
+    }
+    int ans = INT_MIN;
+    int mid = (rl + rr) >> 1;
+    if (mid >= L) {
+      ans = max(ans, _query(root << 1, rl, mid, L, R));
+    }
+    if (mid < R) {
+      ans = max(ans, _query(root << 1 | 1, mid + 1, rr, L, R));
+    }
+    return ans;
+  }
+  void _update(int root) {
+    tree[root] = max(tree[root << 1], tree[root << 1 | 1]);
+    return;
+  }
+  // default [0, n] root is 1;
+  int _n;
+  vector<int> tree;
 };
 
 int main() {
-    int n, m, a, b, c;
-    scanf("%d%d", &n, &m);
-    for (int i = 1; i <= n; i++) {
-        scanf("%d", arr + i);
-    }
-	// 为什么根节点是1？因为使用完全二叉树，好计算孩子坐标
-    SegmentTree sg(n);
-    sg.init();
-    for (int i = 0; i < m; i++) {
-        scanf("%d%d%d", &a, &b, &c);
-        switch (a) {
-            case 1: sg.modify(b, c); break;
-            case 2: {
-                if (b > c) {
-                    cout << "-2147483648" << endl;
-                    break;
-                }
-                printf("%d\n", sg.query(b, c)); 
-            } break;
+  int n, m, a, b, c;
+  scanf("%d%d", &n, &m);
+  for (int i = 1; i <= n; i++) {
+    scanf("%d", arr + i);
+  }
+  // 为什么根节点是1？因为使用完全二叉树，好计算孩子坐标
+  SegmentTree sg(n);
+  sg.init();
+  for (int i = 0; i < m; i++) {
+    scanf("%d%d%d", &a, &b, &c);
+    switch (a) {
+      case 1:
+        sg.modify(b, c);
+        break;
+      case 2: {
+        if (b > c) {
+          cout << "-2147483648" << endl;
+          break;
         }
+        printf("%d\n", sg.query(b, c));
+      } break;
     }
-    return 0;
+  }
+  return 0;
 }

@@ -1,14 +1,14 @@
+#include <algorithm>
+#include <cassert>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
-#include <cassert>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -20,15 +20,26 @@ int num;
 stack<int> st;
 stack<char> op;
 void eval() {
-    char c = op.top(); op.pop();
-    int y = st.top(); st.pop();
-    int x = st.top(); st.pop();
-    switch (c) {
-        case '+': st.push(x + y); break;
-        case '-': st.push(x - y); break;
-        case '*': st.push(x * y); break;
-        case '/': st.push(x / y); break;
-    }
+  char c = op.top();
+  op.pop();
+  int y = st.top();
+  st.pop();
+  int x = st.top();
+  st.pop();
+  switch (c) {
+    case '+':
+      st.push(x + y);
+      break;
+    case '-':
+      st.push(x - y);
+      break;
+    case '*':
+      st.push(x * y);
+      break;
+    case '/':
+      st.push(x / y);
+      break;
+  }
 }
 
 int main() {
@@ -43,34 +54,34 @@ int main() {
 
   for (int i = 0; i < s.size(); i++) {
     switch (s[i]) {
-        case '+':
-        case '-':
-        case '*':
-        case '/':
-            while (op.size() && pr[s[i]] <= pr[op.top()]) {
-                eval();
-            }
-            op.push(s[i]);
-            break;
-        case '(': {
-            op.push(s[i]);
-            break;
+      case '+':
+      case '-':
+      case '*':
+      case '/':
+        while (op.size() && pr[s[i]] <= pr[op.top()]) {
+          eval();
         }
-        case ')': {
-            while (op.top() != '(') {
-                eval();
-            }
-            op.pop();
-            break;
+        op.push(s[i]);
+        break;
+      case '(': {
+        op.push(s[i]);
+        break;
+      }
+      case ')': {
+        while (op.top() != '(') {
+          eval();
         }
-        default: { // number
-            int num = 0, j = i;
-            while (j < s.size() && (s[j] >= '0' && s[j] <= '9')) {
-                num = num * 10 + s[j++] - '0';
-            }
-            i = j - 1;
-            st.push(num);
+        op.pop();
+        break;
+      }
+      default: {  // number
+        int num = 0, j = i;
+        while (j < s.size() && (s[j] >= '0' && s[j] <= '9')) {
+          num = num * 10 + s[j++] - '0';
         }
+        i = j - 1;
+        st.push(num);
+      }
     }
   }
   while (!op.empty()) {

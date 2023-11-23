@@ -1,13 +1,13 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -19,9 +19,7 @@ int main() {
   scanf("%d", &n);
   for (int i = 1; i <= n; i++) scanf("%d", &a[i]);
   for (int i = 1; i <= n; i++) b[i] = i;
-  stable_sort(b + 1, b + n + 1, [](int l, int r) {
-    return a[l] < a[r];
-  });
+  stable_sort(b + 1, b + n + 1, [](int l, int r) { return a[l] < a[r]; });
   LL res = 0, s = 0;
   for (int i = 1; i <= n; i++) {
     printf("%d ", b[i]);

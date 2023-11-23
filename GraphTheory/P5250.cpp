@@ -1,15 +1,15 @@
+#include <algorithm>
+#include <cmath>
+#include <cstring>
 #include <iostream>
 #include <map>
-#include <set>
-#include <unordered_map>
 #include <queue>
-#include <cstring>
-#include <utility>
-#include <algorithm>
+#include <set>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 const int MAX_N = 1;
 using namespace std;
@@ -23,13 +23,16 @@ int main() {
   for (int i = 0; i < n; i++) {
     scanf("%d%d", &a, &b);
     if (a == 1) {
-      if (sset.count(b)) printf("Already Exist\n");
-      else sset.insert(b);
+      if (sset.count(b))
+        printf("Already Exist\n");
+      else
+        sset.insert(b);
     } else {
-      if (sset.size() == 0) printf("Empty\n");
+      if (sset.size() == 0)
+        printf("Empty\n");
       else {
         auto it = sset.lower_bound(b);
-        if (it == sset.end()){
+        if (it == sset.end()) {
           --it;
           printf("%d\n", *it);
           sset.erase(it);
@@ -41,7 +44,8 @@ int main() {
           printf("%d\n", *it);
           sset.erase(it);
         } else {
-          if (*it == b) printf("%d\n", *it);
+          if (*it == b)
+            printf("%d\n", *it);
           else {
             auto it2 = it;
             it2--;

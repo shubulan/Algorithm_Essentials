@@ -1,14 +1,14 @@
+#include <algorithm>
+#include <climits>
+#include <cmath>
+#include <cstring>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
-#include <cstring>
-#include <vector>
-#include <cmath>
 #include <string>
-#include <climits>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -20,35 +20,35 @@ vector<int> G[N];
 
 int vis[N];
 void dfs(int b) {
-    printf("%d ", b);
-    vis[b] = 1;
-    for (int i = 0; i < G[b].size(); i++) {
-        if (vis[G[b][i]]) continue;
-        dfs(G[b][i]);
-    }
-    return;
+  printf("%d ", b);
+  vis[b] = 1;
+  for (int i = 0; i < G[b].size(); i++) {
+    if (vis[G[b][i]]) continue;
+    dfs(G[b][i]);
+  }
+  return;
 }
 
 void bfs(int b) {
-    queue<int> que;
-    que.push(b);
-    vis[b] = 1;
-    while (!que.empty()) {
-        int sz = que.size();
-        for (int i = 0; i < sz; i++) {
-            int t = que.front(); que.pop();
-            printf("%d ", t);
-            for (int i = 0; i < G[t].size(); i++) {
-                if (vis[G[t][i]]) continue;
-                que.push(G[t][i]);
-                vis[G[t][i]] = 1;
-            }
-        }
+  queue<int> que;
+  que.push(b);
+  vis[b] = 1;
+  while (!que.empty()) {
+    int sz = que.size();
+    for (int i = 0; i < sz; i++) {
+      int t = que.front();
+      que.pop();
+      printf("%d ", t);
+      for (int i = 0; i < G[t].size(); i++) {
+        if (vis[G[t][i]]) continue;
+        que.push(G[t][i]);
+        vis[G[t][i]] = 1;
+      }
     }
+  }
 }
 
-void print() {
-}
+void print() {}
 
 int main() {
   scanf("%d%d", &n, &m);
@@ -60,18 +60,18 @@ int main() {
   for (int i = 1; i <= n; i++) sort(G[i].begin(), G[i].end());
   memset(vis, 0, sizeof(vis));
   dfs(1);
-  //for (int i = 1; i <= n; i++) {
-  //    if (vis[i]) continue;
-  //    dfs(i);
-  //}
+  // for (int i = 1; i <= n; i++) {
+  //     if (vis[i]) continue;
+  //     dfs(i);
+  // }
   printf("\n");
 
   memset(vis, 0, sizeof(vis));
   bfs(1);
-  //for (int i = 1; i <= n; i++) {
-  //    if (vis[i]) continue;
-  //    bfs(i);
-  //}
+  // for (int i = 1; i <= n; i++) {
+  //     if (vis[i]) continue;
+  //     bfs(i);
+  // }
   printf("\n");
 
   return 0;

@@ -1,13 +1,13 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -31,7 +31,7 @@ void Union(int a, int b) {
 int main() {
   int n, m, p;
   scanf("%d%d%d", &n, &m, &p);
-  for (int i = 0; i <= n; i++ ) par[i] = i;
+  for (int i = 0; i <= n; i++) par[i] = i;
   for (int i = 0; i < m; i++) {
     int a, b;
     scanf("%d%d", &a, &b);
@@ -42,7 +42,6 @@ int main() {
     scanf("%d%d", &a, &b);
     printf("%s\n", find(a) == find(b) ? "Yes" : "No");
   }
-
 
   return 0;
 }

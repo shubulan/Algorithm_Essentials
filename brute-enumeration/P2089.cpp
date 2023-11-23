@@ -1,13 +1,13 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -27,7 +27,7 @@ void judge() {
 void dfs(int i) {
   if (i == 11) {
     judge();
-    return ;
+    return;
   }
   for (int k = 1; k <= 3; k++) {
     tmp.push_back(k);

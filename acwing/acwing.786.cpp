@@ -1,14 +1,14 @@
+#include <algorithm>
+#include <cassert>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
-#include <cassert>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -18,19 +18,23 @@ const int N = 100005;
 int a[N], n, k;
 
 int kth_num(int *arr, int l, int k, int r) {
-    if (k < l || k > r) assert(false);
-    if (l == r) {
-        return arr[l];
-    }
-    int x = arr[l + r >> 1], i = l - 1, j = r + 1;
-    while (i < j) {
-        do i++; while (arr[i] < x);
-        do j--; while (arr[j] > x);
-        if (i < j) swap(arr[i], arr[j]);
-    }
+  if (k < l || k > r) assert(false);
+  if (l == r) {
+    return arr[l];
+  }
+  int x = arr[l + r >> 1], i = l - 1, j = r + 1;
+  while (i < j) {
+    do i++;
+    while (arr[i] < x);
+    do j--;
+    while (arr[j] > x);
+    if (i < j) swap(arr[i], arr[j]);
+  }
 
-    if (k <= j) return kth_num(arr, l, k, j);
-    else return kth_num(arr, j + 1, k, r);
+  if (k <= j)
+    return kth_num(arr, l, k, j);
+  else
+    return kth_num(arr, j + 1, k, r);
 }
 
 int main() {

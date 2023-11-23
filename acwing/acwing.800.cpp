@@ -1,14 +1,14 @@
+#include <algorithm>
+#include <cassert>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
-#include <cassert>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -24,8 +24,8 @@ int main() {
   for (int i = 0, j = m - 1; i < n; i++) {
     while (j >= 0 && a[i] + b[j] > x) j--;
     if (a[i] + b[j] == x) {
-        cout << i << " " << j << endl;
-        break;
+      cout << i << " " << j << endl;
+      break;
     }
   }
 

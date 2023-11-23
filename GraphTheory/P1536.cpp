@@ -1,14 +1,14 @@
+#include <algorithm>
+#include <cmath>
+#include <cstring>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <cstring>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 const int MAX_N = 1;
 using namespace std;
@@ -19,9 +19,7 @@ const int N = 1005;
 int par[N], rak[N];
 
 int n, m;
-int find(int x) {
-  return par[x] == x ? x : par[x] = find(par[x]);
-}
+int find(int x) { return par[x] == x ? x : par[x] = find(par[x]); }
 
 void unite(int x, int y) {
   x = find(x);
@@ -49,7 +47,6 @@ void solve() {
   printf("%d\n", res);
 }
 int main() {
-
   while (true) {
     scanf("%d", &n);
     if (n == 0) break;

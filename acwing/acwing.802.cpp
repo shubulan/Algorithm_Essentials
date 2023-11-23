@@ -1,14 +1,14 @@
+#include <algorithm>
+#include <cassert>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
-#include <cassert>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -20,15 +20,17 @@ int b[N * 3], cnt = 1;
 PII a[N], q[N];
 int d[N * 3];
 int get(int x) {
-    int l = 1, r = cnt - 1;
-    while (l <= r) {
-        int mid = (l + r) / 2;
-        if (b[mid] == x) {
-            return mid;
-        } else if (b[mid] > x) r = mid - 1;
-        else l = mid + 1;
-    }
-    return -1;
+  int l = 1, r = cnt - 1;
+  while (l <= r) {
+    int mid = (l + r) / 2;
+    if (b[mid] == x) {
+      return mid;
+    } else if (b[mid] > x)
+      r = mid - 1;
+    else
+      l = mid + 1;
+  }
+  return -1;
 }
 int main() {
   int n, m;

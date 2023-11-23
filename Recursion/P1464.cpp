@@ -1,21 +1,19 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <queue>
-#include <utility>
-#include <algorithm>
 #include <stack>
-#include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
 typedef pair<int, int> PII;
 
-LL get(LL a, LL b, LL c) {
-  return a * 10000 + b * 100 + c;
-}
+LL get(LL a, LL b, LL c) { return a * 10000 + b * 100 + c; }
 unordered_map<LL, LL> vis;
 
 LL dfs(LL a, LL b, LL c) {
@@ -24,9 +22,8 @@ LL dfs(LL a, LL b, LL c) {
   if (vis.count(get(a, b, c))) {
     return vis[get(a, b, c)];
   }
-  return vis[get(a, b, c)] = (dfs(a - 1, b, c) + dfs(a - 1, b - 1, c) + 
-            dfs(a - 1, b, c - 1) - dfs(a - 1, b - 1, c - 1));
-
+  return vis[get(a, b, c)] = (dfs(a - 1, b, c) + dfs(a - 1, b - 1, c) +
+                              dfs(a - 1, b, c - 1) - dfs(a - 1, b - 1, c - 1));
 }
 int main() {
   LL a, b, c;
