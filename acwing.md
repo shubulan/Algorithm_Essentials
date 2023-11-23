@@ -58,9 +58,9 @@
 * [最大异或对](acwing/acwing.143.cpp)
 
 ## 并查集
-* [合并集合](acwing/acwing.803.cpp)
-* [连通块中点的数量](acwing/acwing.803.cpp)
-* [食物链](acwing/acwing.803.cpp)
+* [合并集合](acwing/acwing.836.cpp)
+* [连通块中点的数量](acwing/acwing.837.cpp)
+* [食物链](acwing/acwing.240.cpp)
 
 ## 堆
 * [堆排序](acwing/acwing.803.cpp)
