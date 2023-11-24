@@ -63,12 +63,14 @@
 * [食物链](acwing/acwing.240.cpp)
 
 ## 堆
-* [堆排序](acwing/acwing.803.cpp)
-* [模拟堆](acwing/acwing.803.cpp)
+* [堆排序](acwing/acwing.838.cpp)
+* [模拟堆](acwing/acwing.839.cpp)
 
 ## 哈希表
-* [模拟散列表](acwing/acwing.803.cpp)
-* [字符串哈希](acwing/acwing.803.cpp)
+* [模拟散列表](acwing/acwing.840.cpp)
+    * [拉链法](acwing/acwing.840.cpp)
+    * [开放寻址法](acwing/acwing.840_2.cpp)
+* [字符串哈希](acwing/acwing.841.cpp)
 
 
 # 搜索与图论
