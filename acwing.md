@@ -74,7 +74,39 @@
 
 
 # 搜索与图论
+## dfs
+* [排列数字](acwing/acwing.842.cpp)
+* [n-皇后问题](acwing/acwing.843.cpp)
+## BFS
+* [走迷宫](acwing/acwing.844.cpp)
+* [八数码](acwing/acwing.845.cpp)
+## 树与图的深度优先遍历
+* [树的重心](acwing/acwing.844.cpp)
 
+## 树与图的广度优先遍历
+* [图中点的层次](acwing/acwing.844.cpp)
+
+## 拓扑排序
+* [图中点的层次](acwing/acwing.844.cpp)
+
+## dijkstra
+* [图中点的层次](acwing/acwing.844.cpp)
+
+## bellman-ford
+* [图中点的层次](acwing/acwing.844.cpp)
+
+## spfa
+
+
+## floyd
+
+## Prim
+
+## kruskal
+
+## 染色法判定二分图
+
+## 匈牙利算法
 
 # 数学知识
 
