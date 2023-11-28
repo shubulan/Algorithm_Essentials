@@ -17,14 +17,6 @@ typedef pair<int, int> PII;
 const int N = 100005;
 unordered_map<string, bool> st;
 string s;
-
-vector<string> get(string &s) {
-    int x;
-    for (x = 0; x < s.size(); x++) {
-        
-    }
-}
-
 void bfs() {
   st[s] = true;
   queue<string> que;
@@ -34,21 +26,66 @@ void bfs() {
     int sz = que.size();
     for (int i = 0; i < sz; i++) {
       string g = que.front();
+      que.pop();
       if (g == "12345678x") {
         cout << t << endl;
         return;
       }
-      for (int )
+      int px = 0;
+      for (; px < s.size(); px++) 
+        if (g[px] == 'x') break;
 
+      // try left
+      if (px != 0 && px != 3 && px != 6) {
+        string ng = g;
+        swap(ng[px], ng[px - 1]);
+        if (!st[ng]) {
+          st[ng] = true;
+          que.push(ng);
+        }
+      }
+      // try up
+      if (px >= 3) {
+        string ng = g;
+        swap(ng[px], ng[px - 3]);
+        if (!st[ng]) {
+          st[ng] = true;
+          que.push(ng);
+        }
+      }
+
+      // try right
+      if (px != 2 && px != 5 && px != 8) {
+        string ng = g;
+        swap(ng[px], ng[px + 1]);
+        if (!st[ng]) {
+          st[ng] = true;
+          que.push(ng);
+        }
+      }
+      // try down
+      if (px <= 5) {
+        string ng = g;
+        swap(ng[px], ng[px + 3]);
+        if (!st[ng]) {
+          st[ng] = true;
+          que.push(ng);
+        }
+      }
     }
     t++;
   }
+  cout << -1 << endl;
+  return;
 }
 
 int main() {
-  cin >> s;
+  for (int i = 0; i < 9; i++) {
+    char c;
+    cin >> c;
+    s += c;
+  }
   bfs();
-  
 
   return 0;
 }
