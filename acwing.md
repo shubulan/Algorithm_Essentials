@@ -81,10 +81,10 @@
 * [走迷宫](acwing/acwing.844.cpp)
 * [八数码](acwing/acwing.845.cpp)
 ## 树与图的深度优先遍历
-* [树的重心](acwing/acwing.844.cpp)
+* [树的重心](acwing/acwing.846.cpp)
 
 ## 树与图的广度优先遍历
-* [图中点的层次](acwing/acwing.844.cpp)
+* [图中点的层次](acwing/acwing.847.cpp)
 
 ## 拓扑排序
 * [图中点的层次](acwing/acwing.844.cpp)
