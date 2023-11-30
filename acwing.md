@@ -94,10 +94,11 @@
 * [dijkstra 求最短路II](acwing/acwing.850.cpp)
 
 ## bellman-ford
-* [图中点的层次](acwing/acwing.844.cpp)
+* [有边数限制的最短路](acwing/acwing.853.cpp)
 
 ## spfa
-
+* [spfa 求最短路](acwing/acwing.851.cpp)
+* [spfa 判断负环](acwing/acwing.852.cpp)
 
 ## floyd
 
