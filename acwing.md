@@ -87,10 +87,11 @@
 * [图中点的层次](acwing/acwing.847.cpp)
 
 ## 拓扑排序
-* [图中点的层次](acwing/acwing.844.cpp)
+* [有向图的拓扑序列](acwing/acwing.848.cpp)
 
 ## dijkstra
-* [图中点的层次](acwing/acwing.844.cpp)
+* [dijkstra 求最短路I](acwing/acwing.849.cpp)
+* [dijkstra 求最短路II](acwing/acwing.850.cpp)
 
 ## bellman-ford
 * [图中点的层次](acwing/acwing.844.cpp)
