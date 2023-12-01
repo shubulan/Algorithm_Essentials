@@ -101,14 +101,19 @@
 * [spfa 判断负环](acwing/acwing.852.cpp)
 
 ## floyd
+* [Floyd 求最短路](acwing/acwing.854.cpp)
 
 ## Prim
+* [Floyd求最短路](acwing/acwing.854.cpp)
 
 ## kruskal
+* [Floyd求最短路](acwing/acwing.854.cpp)
 
 ## 染色法判定二分图
+* [Floyd求最短路](acwing/acwing.854.cpp)
 
 ## 匈牙利算法
+* [Floyd求最短路](acwing/acwing.854.cpp)
 
 # 数学知识
 

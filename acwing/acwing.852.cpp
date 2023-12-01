@@ -19,13 +19,19 @@ const int N = 100005;
 
 int h[N], e[N], nx[N], w[N], idx;
 int dist[N];
+int cnt[N];
 bool st[N];
-
-void spfa() {
-  memset(dist, 0x3f, sizeof dist);
-  dist[1] = 0;
+int n, m;
+bool spfa() {
+//   memset(dist, 0x3f, sizeof dist); // 无需初始化
+//   dist[1] = 0;
   queue<int> que;
-  que.push(1);
+  // 将所有点都放入队列中。因为负环不一定从0能到达
+  // 此时 dist 的含义变成了：以节点 i 为重点的最短路径长度，无论起始点。
+  for (int i = 1; i <= n; i++) {
+    que.push(i);
+    st[i] = true;
+  }
   while (que.size()) {
     int x = que.front();
     que.pop();
@@ -38,9 +44,12 @@ void spfa() {
           st[p] = true;
         }
         dist[p] = dist[x] + c;
+        cnt[p] = cnt[x] + 1; // 计算到节点 p 的最短路径的边数
+        if (cnt[p] >= n) return true; // 最短路径边超过 n 条，说明点有 n + 1 个。说明必然存在负权回路。
       }
     }
   }
+  return false;
 }
 
 void add(int a, int b, int c) {
@@ -50,7 +59,7 @@ void add(int a, int b, int c) {
   h[a] = idx++;
 }
 
-int n, m;
+
 int main() {
   cin >> n >> m;
   memset(h, -1, sizeof h);
@@ -59,11 +68,8 @@ int main() {
     cin >> a >> b >> c;
     add(a, b, c);
   }
-  spfa();
-  if (dist[n] == 0x3f3f3f3f) cout << "impossible" << endl;
-  else cout << dist[n] << endl;
 
-  
+  cout << (spfa() ? "Yes" : "No") << endl;
 
   return 0;
 }
