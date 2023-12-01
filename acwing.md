@@ -104,10 +104,10 @@
 * [Floyd 求最短路](acwing/acwing.854.cpp)
 
 ## Prim
-* [Floyd求最短路](acwing/acwing.854.cpp)
+* [Prim 算法求最小生成树](acwing/acwing.858.cpp)
 
 ## kruskal
-* [Floyd求最短路](acwing/acwing.854.cpp)
+* [Kruskal 算法求最小生成树](acwing/acwing.859.cpp)
 
 ## 染色法判定二分图
 * [Floyd求最短路](acwing/acwing.854.cpp)
