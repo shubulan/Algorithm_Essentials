@@ -110,10 +110,10 @@
 * [Kruskal 算法求最小生成树](acwing/acwing.859.cpp)
 
 ## 染色法判定二分图
-* [Floyd求最短路](acwing/acwing.854.cpp)
+* [染色法判定二分图](acwing/acwing.860.cpp)
 
 ## 匈牙利算法
-* [Floyd求最短路](acwing/acwing.854.cpp)
+* [二分图的最大匹配](acwing/acwing.863.cpp)
 
 # 数学知识
 
