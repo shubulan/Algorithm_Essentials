@@ -2,22 +2,27 @@
 ## 快速排序
 * [快速排序](acwing/acwing.785.cpp)
 * [第k个数](acwing/acwing.786.cpp)
+
 ## 归并排序
 * [归并排序](acwing/acwing.789.cpp)
 * [逆序对的数量](acwing/acwing.788.cpp)
+
 ## 二分
 * [数的范围](acwing/acwing.789.cpp)
 * [数的三次方根](acwing/acwing.790.cpp)
+
 ## 高精度
 * [高精度加法](acwing/acwing.791.cpp)
 * [高精度减法](acwing/acwing.792.cpp)
 * [高精度乘法](acwing/acwing.793.cpp)
 * [高精度除法](acwing/acwing.794.cpp)
+
 ## 前缀和与差分
 * [前缀和](acwing/acwing.795.cpp)
 * [子矩阵的和](acwing/acwing.796.cpp)
 * [差分](acwing/acwing.797.cpp)
 * [差分矩阵](acwing/acwing.798.cpp)
+
 ## 双指针
 * [最长连续不重复子序列](acwing/acwing.799.cpp)
 * [数组元素的目标和](acwing/acwing.800.cpp)
@@ -116,6 +121,51 @@
 * [二分图的最大匹配](acwing/acwing.863.cpp)
 
 # 数学知识
+## 质数
+* [试除法判定质数](acwing/acwing.866.cpp)
+* [分解质因数](acwing/acwing.867.cpp)
+* [筛质数](acwing/acwing.868.cpp)
+
+## 约数
+* [试除法求约数](acwing/acwing.869.cpp)
+* [约数个数](acwing/acwing.870.cpp)
+* [约数之和](acwing/acwing.871.cpp)
+* [最大公约数](acwing/acwing.872.cpp)
+
+## 欧拉函数
+* [欧拉函数](acwing/acwing.873.cpp)
+* [筛法欧拉函数](acwing/acwing.874.cpp)
+
+## 快速幂
+* [快速幂](acwing/acwing.875.cpp)
+* [快速幂求逆元](acwing/acwing.876.cpp)
+
+## 扩展欧几里得
+* [扩展欧几里得算法](acwing/acwing.877.cpp)
+* [线性同余方程](acwing/acwing.878.cpp)
+
+## 中国剩余定理
+* [表达整数的奇怪方式](acwing/acwing.878.cpp)
+
+## 高斯消元
+* [高斯消元解线性方程组](acwing/acwing.878.cpp)
+* [高斯消元解异或线性方程组](acwing/acwing.878.cpp)
+
+## 求组合数
+* [求组合数 I](acwing/acwing.878.cpp)
+* [求组合数 II](acwing/acwing.878.cpp)
+* [求组合数 III](acwing/acwing.878.cpp)
+* [求组合数 IV](acwing/acwing.878.cpp)
+* [满足条件的 01 序列](acwing/acwing.878.cpp)
+
+## 容斥原理
+* [能被整除的数](acwing/acwing.878.cpp)
+## 博弈论
+* [Nim 游戏](acwing/acwing.878.cpp)
+* [台阶 - Nim 游戏](acwing/acwing.878.cpp)
+* [集合 - Nim 游戏](acwing/acwing.878.cpp)
+* [拆分 - Nim 游戏](acwing/acwing.878.cpp)
+
 
 # 动态规划
 
