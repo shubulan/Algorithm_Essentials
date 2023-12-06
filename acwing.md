@@ -148,25 +148,74 @@
 * [表达整数的奇怪方式](acwing/acwing.878.cpp)
 
 ## 高斯消元
-* [高斯消元解线性方程组](acwing/acwing.878.cpp)
-* [高斯消元解异或线性方程组](acwing/acwing.878.cpp)
+* [高斯消元解线性方程组](acwing/acwing.883.cpp)
+* [高斯消元解异或线性方程组](acwing/acwing.884.cpp)
 
 ## 求组合数
-* [求组合数 I](acwing/acwing.878.cpp)
-* [求组合数 II](acwing/acwing.878.cpp)
-* [求组合数 III](acwing/acwing.878.cpp)
-* [求组合数 IV](acwing/acwing.878.cpp)
-* [满足条件的 01 序列](acwing/acwing.878.cpp)
+* [求组合数 I](acwing/acwing.885.cpp)
+* [求组合数 II](acwing/acwing.886.cpp)
+* [求组合数 III](acwing/acwing.887.cpp)
+* [求组合数 IV](acwing/acwing.888.cpp)
+* [满足条件的 01 序列](acwing/acwing.889.cpp)
 
 ## 容斥原理
-* [能被整除的数](acwing/acwing.878.cpp)
+* [能被整除的数](acwing/acwing.890.cpp)
 ## 博弈论
-* [Nim 游戏](acwing/acwing.878.cpp)
-* [台阶 - Nim 游戏](acwing/acwing.878.cpp)
-* [集合 - Nim 游戏](acwing/acwing.878.cpp)
-* [拆分 - Nim 游戏](acwing/acwing.878.cpp)
-
+* [Nim 游戏](acwing/acwing.891.cpp)
+* [台阶 - Nim 游戏](acwing/acwing.892.cpp)
+* [集合 - Nim 游戏](acwing/acwing.893.cpp)
+* [拆分 - Nim 游戏](acwing/acwing.894.cpp)
 
 # 动态规划
+## 背包问题
+* [01 背包问题](acwing/acwing.2.cpp)
+* [完全背包问题](acwing/acwing.3.cpp)
+* [多重背包问题](acwing/acwing.4.cpp)
+* [多重背包问题II](acwing/acwing.5.cpp)
+* [分组背包问题](acwing/acwing.9.cpp)
+
+## 线性DP
+* [数字三角形](acwing/acwing.898.cpp)
+* [最长上升子序列](acwing/acwing.895.cpp)
+* [最长上升子序列 II](acwing/acwing.896.cpp)
+* [最长公共子序列](acwing/acwing.897.cpp)
+* [最短编辑距离](acwing/acwing.902.cpp)
+* [编辑距离](acwing/acwing.899.cpp)
+
+## 区间DP
+* [石子合并](acwing/acwing.282.cpp)
+
+## 计数类 DP
+* [整数划分](acwing/acwing.900.cpp)
+
+## 数位统计 DP
+* [计数问题](acwing/acwing.338.cpp)
+
+## 状态压缩 DP
+* [蒙德里安的梦想](acwing/acwing.291.cpp)
+* [最短 Hamiton 路径](acwing/acwing.91.cpp)
+
+## 树形 DP
+* [没有上司的舞会](acwing/acwing.285.cpp)
+
+## 记忆化搜索
+* [滑雪](acwing/acwing.901.cpp)
 
 # 贪心
+## 区间问题
+* [区间选点](acwing/acwing.905.cpp)
+* [最大不相交区间数量](acwing/acwing.908.cpp)
+* [区间分组](acwing/acwing.906.cpp)
+* [区间覆盖](acwing/acwing.907.cpp)
+
+## Huffman 树
+* [合并果子](acwing/acwing.148.cpp)
+
+## 排序不等式
+* [排队打水](acwing/acwing.913.cpp)
+
+## 绝对值不等式
+* [货仓选址](acwing/acwing.104.cpp)
+
+## 推公式
+* [耍杂技的牛](acwing/acwing.125.cpp)
