@@ -7,7 +7,6 @@
     有一道很好的字符串哈希题目[1044. 最长重复子串](https://leetcode.cn/problems/longest-duplicate-substring/description/)，知识点比较少考，以后再说
 - [ ] ch08 中级数据结构
 - [ ] ch09 数学知识
-    容斥原理也有一道不错的题目
 - [ ] ch10 简单计算几何
 - [ ] ch11 简单图论
 - [ ] ch12 中级图论
