@@ -4,7 +4,6 @@
 
 待记录的有
 - [ ] ch07 简单数据结构
-    有一道很好的字符串哈希题目[1044. 最长重复子串](https://leetcode.cn/problems/longest-duplicate-substring/description/)，知识点比较少考，以后再说
 - [ ] ch08 中级数据结构
 - [ ] ch09 数学知识
 - [ ] ch10 简单计算几何
