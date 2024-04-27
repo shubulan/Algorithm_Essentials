@@ -27,6 +27,7 @@
     * sec 06 记忆化搜索
 * [ch06 贪心算法](ch07/README.md)
 * [ch07 数据结构 II](ch08/README.md)
+    * [sec 01 线段树](ch08/seg_tree.md)
 * [ch08 搜索与图论 II](ch09/README.md)
 * [ch09 动态规划 II](ch10/README.md)
 * [ch10 计算几何](ch11/README.md)
