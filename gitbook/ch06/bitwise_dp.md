@@ -1,8 +1,8 @@
-## 状态压缩 DP
+# sec 05 状压dp
 
 状态压缩 DP 有两类，一类是几何表示，一类是集合表示。集合表示的比较多
 
-### 集合表示
+## 集合表示
 * 递推公式
 [3116. 单面值组合的第 K 小金额](https://leetcode.cn/problems/kth-smallest-amount-with-single-denomination-combination/description/)
 计算所有子集的 最小公倍数

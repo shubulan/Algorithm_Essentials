@@ -34,3 +34,7 @@
 .vscode/*
 **/.cph
 **/*.txt
+
+node_modules/*
+gitbook/_book/*
+gitbook/node_modules/*
