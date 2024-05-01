@@ -1,3 +1,4 @@
+```c++
 #include <algorithm>
 #include <cassert>
 #include <cmath>
@@ -89,3 +90,4 @@ int main() {
 
   return 0;
 }
+```

@@ -1,3 +1,4 @@
+```c++
 #include <algorithm>
 #include <cassert>
 #include <cmath>
@@ -52,7 +53,6 @@ int main() {
     for (int j = 1; j <= m; j++)
         cin >> b[i][j];
   bfs();
-
-
   return 0;
 }
+```

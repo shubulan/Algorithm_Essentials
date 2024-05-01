@@ -38,3 +38,6 @@
 node_modules/*
 gitbook/_book/*
 gitbook/node_modules/*
+
+vitepress/node_modules/*
+vitepress/docs/.vitepress/cache/*
