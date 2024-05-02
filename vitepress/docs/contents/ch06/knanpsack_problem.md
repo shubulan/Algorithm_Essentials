@@ -6,7 +6,7 @@
 > * 答案恢复
 > 模型抽象为：物品体积是 $v$，价值是 $w$。背包限制了 $V$ 求背包内可以装的最大价值 $W$。
 
-[toc]
+[[toc]]
 
 ## 求最优解
 ### 0-1 背包问题
@@ -82,7 +82,7 @@ public:
 ```
 
 ### 二维0-1背包问题求方案数
-* [3082. 求出所有子序列的能量和]()
+* [3082. 求出所有子序列的能量和](https://leetcode.cn/problems/find-the-sum-of-the-power-of-all-subsequences/description/)
 * f[i][j] 表示满足：集合大小为 i ，集合内数字之和为 j 的集合个数
 ```
 class Solution {

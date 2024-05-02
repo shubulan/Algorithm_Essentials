@@ -155,7 +155,8 @@ int main() {
 5. 标记下沉发生在递归之前，向上更新发生在具有修改操作的递归之后
 6. 实现起来比较复杂，使用该数据结构之前，请先考虑其他区间修改的办法，比如：差分。如果确定要用，做好认真调试的准备。
 
-* [223. 练习题2：线段树模板(二)](https://oj.haizeix.com/problem/223)[源码](./data_structure/223.oj.cpp)
+* [223. 练习题2：线段树模板(二)](https://oj.haizeix.com/problem/223)
+[源码](./data_structure/223.oj.md)
 * [2569. 更新数组后处理求和查询](https://leetcode.cn/problems/handling-sum-queries-after-update/description/)
 ```
 #define define_mid int mid = (l + r) >> 1;

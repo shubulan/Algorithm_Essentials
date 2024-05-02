@@ -1,5 +1,5 @@
 # sec 01 前缀和与差分
-[toc]
+[[toc]]
 
 > 前缀和与差分是一类非常简单，又常考、有用的算法
 
@@ -90,7 +90,7 @@ public:
 * 比较难想，需要背公式
 * 仍然需要空出第一行和第一列来
 * leetcode 有时候会帮你空出第一行和第一列
-* [2250. 统计包含每个点的矩形数目]() 本题结合了离散化和二维差分
+* [2250. 统计包含每个点的矩形数目](https://leetcode.cn/problems/count-number-of-rectangles-containing-each-point/description/) 本题结合了离散化和二维差分
 
 ```
 class Solution {

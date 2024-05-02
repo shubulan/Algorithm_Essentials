@@ -4,6 +4,7 @@ import markdownItKatex from 'markdown-it-katex'
 export default defineConfig({
   title: "shubulan's algorithm route",
   description: "algorithm template",
+  base: "/Algorithm_Essentials/vitepress/",
   markdown: {
     config: (md) => {
       md.use(markdownItKatex)
