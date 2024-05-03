@@ -65,6 +65,7 @@ public:
     int kmp(const string& s, const string& p) {
         int n = s.size(), m = p.size();
         if (n == m) return s == p ? 0 : -1;
+        if (n < m) return -1;
         if (m == 0) return 0; // p 为空，返回 0
         vector<int> nxt(m);
         int j = -1;
