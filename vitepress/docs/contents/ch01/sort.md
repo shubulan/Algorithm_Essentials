@@ -61,7 +61,8 @@ int kth_num(int *arr, int l, int k, int r) {
   * 一个循环写法：将某个数组为空纳入判断条件，默认++另一个数组
 * 作用：求逆序对
 
-```c++
+::: code-group
+```c++ [三个循环]
 void merge_sort(int* arr, int l, int r) {
   if (l >= r) return;
 
@@ -75,21 +76,36 @@ void merge_sort(int* arr, int l, int r) {
     else temp[idx++] = arr[i++];
   while (i <= mid) temp[idx++] = arr[i++];
   while (j <= r) temp[idx++] = arr[j++];
-  // while (i <= mid || j <= r) { 写法2
-  //   if (i > mid || (j <= r && arr[j] < arr[i])) {
-  //     temp[idx++] = arr[j++];
-  //   } else {
-  //     temp[idx++] = arr[i++];
-  //   }
-  // }
+
   for (int i = l, j = 0; i <= r; i++) 
     arr[i] = temp[j++];
 }
 ```
+```c++ [一个循环]
+void merge_sort(int* arr, int l, int r) {
+  if (l >= r) return;
+
+  int mid = (l + r) >> 1;
+  merge_sort(arr, l, mid);
+  merge_sort(arr, mid + 1, r);
+  int i = l, j = mid + 1, idx = 0;
+
+  while (i <= mid || j <= r) { // 写法2
+    if (i > mid || (j <= r && arr[j] < arr[i]))
+      temp[idx++] = arr[j++];
+    else temp[idx++] = arr[i++];
+  }
+  for (int i = l, j = 0; i <= r; i++) 
+    arr[i] = temp[j++];
+}
+```
+:::
+
 * 例题 [2426. 满足不等式的数对数目](https://leetcode.cn/problems/number-of-pairs-satisfying-inequality/)
   * 求逆序对的变体。
-  * 求逆序对还可以用树状数组 + 二分来求解，时间复杂度 $O(nlog(n)log(n)$
-```
+  * 求逆序对还可以用树状数组 + 二分来求解，时间复杂度 $O(nlog(n)log(n))$
+
+```c++
 class Solution {
 public:
     long long numberOfPairs(vector<int>& nums1, vector<int>& nums2, int diff) {
@@ -123,4 +139,52 @@ public:
         return res;
     }
 };
+```
+
+## 排序与贪心
+> 排序问题通常跟贪心问题结合在一起。因为贪心就是有序的选择。
+> 
+> 贪心很难证明，都是靠感觉猜出来的，即使这道比较简单的题，很容易感觉它是对的，但是仍然很难**想到这个思路**并且**证明它**
+
+例题：[拼数](https://www.luogu.com.cn/problem/P1012)
+
+### 数字与字典序
+* 同长度下，数字比较和字典序比较是一样的
+* 不同长度下，
+  * 长度更长的数字一定大，而字典序不一定
+  * 数字大的字典序不一定大
+  * 字典序更大的数字也不一定大
+### 解决
+思考提示
+* 最终拼成的数字长度是固定的
+* 因此需要整体的*字典序最大*或者*数字最大*
+* 不是字典序降序排列：反例：
+
+`99 9900` 字典序应该是 `9900` 排在前面，而答案应该是 `99` 排在前面
+* 不是数字序列排在前面：反例
+
+`9 8888` 数字序应该是 `8888` 排在前面，而答案应该是 `9` 排在前面
+* **最优解中，任意 i < j 必有 $str[i] + str[j] \ge str[j] + str[i]$**
+
+证明：反证法
+
+如果最优解的拼接序列中，存在 $i < j$ 并且 $str[i] + str[j] < str[j] + str[i]$
+那么可以通过交换 $i j$,来使整体的字典序更大,这与最优解的结论矛盾。因此，最优解一定是这样排序的
+
+```c++
+void solve {
+  string s;
+  int n;
+  cin >> n;
+  vector<string> arr;
+  for (int i = 0; i < n; i++) {
+    cin >> s;
+    arr.push_back(s);
+  }
+  sort(arr.begin(), arr.end(),
+       [](string &a, string &b) { return a + b > b + a; });
+  string res;
+  for (auto &s : arr) res += s;
+  cout << res << endl;
+}
 ```

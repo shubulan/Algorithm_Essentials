@@ -6,6 +6,7 @@ export default defineConfig({
   description: "algorithm template",
   base: "/Algorithm_Essentials/",
   markdown: {
+    lineNumbers: true,
     config: (md) => {
       md.use(markdownItKatex)
     }
