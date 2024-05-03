@@ -233,10 +233,6 @@ public:
 * [复制书稿](https://oj.haizeix.com/problem/395)
   * [code](./code_binary_search/395.oj.md)
 
-* []()
-  * 二分答案
-  * [code](./code_binary_search)
-
 ### 二分查找值
 * [吃瓜群众](https://oj.haizeix.com/problem/386)
   * [code](./code_binary_search/386.oj.md)
