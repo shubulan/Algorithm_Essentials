@@ -1,4 +1,5 @@
 # sec 02 单调队列与单调栈
+[[toc]]
 
 ## 单调栈与单调队列
 > 单调栈与单调队列是非常好的一种双指针优化，通常将 $O(n^2)$ 复杂度降低到 $O(n)$
@@ -76,4 +77,35 @@ public:
 * 视情况将 j 加入队列，将左端点 i 移出队列。
 * 两个动作顺序可反，需要看情况
 * 视情况更新答案
-> 题目遇到再补充
+
+* 例题[预算内的最多机器人数目](https://leetcode.cn/problems/maximum-number-of-robots-within-budget/)
+> 关键词：最多连续，可以用单调队列来写
+
+```
+class Solution {
+public:
+    int maximumRobots(vector<int>& chargeTimes, vector<int>& runningCosts, long long budget) {
+        deque<int> q;
+        int n = chargeTimes.size(), ans = 0;
+        vector<long long> ps(n + 1);
+        for (int i = 0; i < n; i++) {
+            ps[i + 1] = ps[i] + runningCosts[i];
+        }
+        for (int i = 0, j = 0; i < n; i++, j = max(i, j)) {
+            while (j < n) {
+                int k = q.size() ? q.front() : j;
+                int mc = max(chargeTimes[k], chargeTimes[j]);
+                if (mc + (j - i + 1) * (ps[j + 1] - ps[i]) > budget) {
+                    break;
+                }
+                while (q.size() && chargeTimes[q.back()] <= chargeTimes[j]) q.pop_back();
+                q.push_back(j);
+                j++;
+            }
+            ans = max(ans, j - i);
+            if (i == q.front()) q.pop_front();
+        }
+        return ans;
+    }
+};
+```

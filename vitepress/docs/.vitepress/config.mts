@@ -25,7 +25,7 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: '项目介绍', link: '/contents/index' },
-            { text: '算法初步介绍', link: '/contents/introduction' },
+            { text: '算法认知', link: '/contents/introduction' },
           ]
         },
         {

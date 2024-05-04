@@ -2,8 +2,114 @@
 
 > 数据结构的第一部分，简单好写的数据结构
 [[toc]]
+## 栈
+### 理解
+例题：
+* [使括号有效的最少添加](https://leetcode.cn/problems/minimum-add-to-make-parentheses-valid/)
+  * 可以用栈理解，没必要用栈实现
+```c++
+class Solution {
+public:
+    int minAddToMakeValid(string s) {
+        int j = 0, k = 0; 
+        for (auto c : s) {
+            if (c == '(') {
+                j++;
+            } else if (c == ')') {
+                if (j > 0) j--;
+                else k++;
+            }
+        }
+        return j + k;
+    }
+};
+```
+* [括号的分数](https://leetcode.cn/problems/score-of-parentheses/)
+  * 栈运用题,还是比较容易写错的
+```c++
+class Solution {
+public:
+    int scoreOfParentheses(string s) {
+        stack<int> st;
+        for (auto c : s) {
+            if (c == '(') {
+                st.push(0);
+            } else {
+                int tres = 0;
+                while (st.top() != 0) {
+                    tres += st.top(); st.pop();
+                }
+                st.pop();
+                if (tres == 0) st.push(1);
+                else st.push(tres * 2);
+            }
+        }
+        int res = 0;
+        while (st.size()) {
+            res += st.top();
+            st.pop();
+        }
+        return res;
+    }
+};
+```
 
 ## 堆
+### stl:优先队列
+> 大部分场景下使用 stl 提供的优先队列即可。即使是 dijkstra 算法，也可以用重复加入的方式来解决。
+
+* 要点：stl 中默认使用 $<$ 做比较，形成大顶堆
+
+* 例题：[会议室 III](https://leetcode.cn/problems/meeting-rooms-iii/)
+  * 需要两个堆：一个维护最小空闲编号，一个维护最早结束时间
+  * 还需要根据题目来用好这两个堆，题目有一定难度
+```c++
+typedef long long LL;
+typedef pair<LL, int> PLI;
+class Solution {
+public:
+    int mostBooked(int n, vector<vector<int>>& meetings) {
+        sort(meetings.begin(), meetings.end());
+        priority_queue<int, vector<int>, greater<int>> qid;
+        priority_queue<PLI, vector<PLI>, greater<PLI>> qet;
+        for (int i = 0; i < n; i++) qid.push(i);
+        int res = -1;
+        vector<int> cnts(n);
+        for (auto& p : meetings) {
+            while (qet.size() && qet.top().first <= (LL)p[0]) {
+                qid.push(qet.top().second);
+                qet.pop();
+            }
+            int x = -1;
+            if (!qid.empty()) {
+                x = qid.top();
+                qid.pop();
+                qet.push({p[1], x});
+            } else {
+                auto m = qet.top();
+                x = m.second;
+                qet.pop();
+                m.first += p[1] - p[0];
+                qet.push(m);
+            }
+            cnts[x]++;
+            if (res == -1 || cnts[x] > cnts[res] || (x < res && cnts[x] == cnts[res])) res = x;
+        }
+        return res;
+    }
+};
+```
+
+### 堆排序
+* [堆排序](https://www.acwing.com/problem/content/840/)
+  * [code](../acwing/acwing.838.md)
+
+### 动态更新堆
+
+> stl的优先队列只能快速获取最小值或者最大值，但是无法更新。例如：我想将 key 为 10 的节点，更新为 12，如果是大顶堆，那么节点应该上升。这里实现一下。
+* [模拟堆](https://www.acwing.com/problem/content/841/)
+  * [内有模板 code](../acwing/acwing.839.md)
+
 
 
 ## trie 树
@@ -125,7 +231,7 @@ public:
     }
 };
 ```
-其他例题
+#### 其他例题
 * [1044. 最长重复子串](https://leetcode.cn/problems/longest-duplicate-substring/description/)
 * [面试题 01.09. 字符串轮转](https://leetcode.cn/problems/string-rotation-lcci/description/)
   * [code](./leetcode_01.09),包括 字符串哈希、kmp 两个模板
