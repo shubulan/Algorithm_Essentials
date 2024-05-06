@@ -87,6 +87,7 @@ export default defineConfig({
           text: '动态规划',
           collapsed: true,
           items: [
+            { text: '介绍', link: '/contents/ch06/introduction' },
             { text: '状压dp', link: '/contents/ch06/bitwise_dp' },
             { text: '背包问题', link: '/contents/ch06/knanpsack_problem' },
           ]
