@@ -11,12 +11,45 @@ head:
 
 ## 各种算法的时空复杂度
 
-## 变量命名
-* 索引：$i,j,k, p, q, idx$
-* 临时变量：$a, b, c, x, y$
+## 变量命名习惯
+* 索引：$i, j, k, p, q, idx$
+* 大小：$n, m, s, v$
+* 临时变量：$a, b, c, t, s, x, y, w$
+* 字符串：$s, s1, s2, t, p$
+* 地图：$field$
+* 方向数组：$dx, dy, dir$
+* 普通数组：$a, A, B, C, V, S, T$
+* 前缀和后缀和：$psum, ssum$
+* 区间：$itv， s, t$ (start, terminate)
+* 集合：$s, S$
+* 动态规划数组: $dp, f, g$
+* 迭代器：$it, itx$
+* 二分搜索：$l, r, mid, left, right$
+* 记忆化搜索表：$memo$
+* 哈希表: $h, h1, h2, hx, xh, mmap$
+* 递归函数：$rec, dfs$
+* 栈：$st, s$
 * 队列：$q, que, q1, q2$ 索引：$h, t$
-* 图论: $G, e, edge, nx$ 节点：$a, b, x, y$
-* 线段树: $dat$
+* 数学
+  * 质数：$prime$
+  * 模：$mod, P$
+  * 约数：$divisor$
+  * 整数分解：$prime_factor$
+  * 筛：$sieve$
+  * 幂：$pow, qmi$
+
+* 并查集：$par, rank, unite$
+* 图论:
+  * 图：$G, nx$
+  * 边：$e, E, es$
+  * 节点：$u, v, t, i, j, x, y, a, b$
+  * 访问数组：$vs, used$
+  * 最短路：$cost, dist, d, prev(路径还原)$
+  * 最小生成树：$mincost$
+  * 二分图：$color, c$
+* 线段树：$dat, seg_tree$
+* 树状数组：$bit$
+* 分块：$bucket$
 
 ## leetcode 上分技巧
 * [难度练习](https://huxulm.github.io/lc-rating/zen)
