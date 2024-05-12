@@ -64,7 +64,24 @@ while (l < r) {
     * 迭代器是 c++ 经典的尾后模式，即前开后闭区间
     * lower_bound 找到可以插入 key 而不影响整体顺序的的第一个位置
     * upper_bound 找到可以插入 key 而不影响整体顺序的最后一个位置
-
+* 例题：[2563. 统计公平数对的数目](https://leetcode.cn/problems/count-the-number-of-fair-pairs/)
+```c++
+class Solution {
+public:
+    long long countFairPairs(vector<int>& nums, int lower, int upper) {
+        sort(nums.begin(), nums.end());
+        int n = nums.size();
+        long long res = 0;
+        for (int i = 0; i < n; i++) {
+            int x = nums[i];
+            auto it1 = lower_bound(nums.begin() + i + 1, nums.end(), lower - x);
+            auto it2 = upper_bound(nums.begin() + i + 1, nums.end(), upper - x);
+            res += it2 - it1;
+        }
+        return res;
+    }
+};
+```
 * 例题：[1671. 得到山形数组的最少删除次数](https://leetcode.cn/problems/minimum-number-of-removals-to-make-mountain-array/) 
   * 使用二分优化的最长上升子序列问题
 ```c++
