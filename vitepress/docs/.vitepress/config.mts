@@ -88,9 +88,11 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: '介绍', link: '/contents/ch06/introduction' },
-            { text: '线性dp', link: '/contents/ch06/linear_dp.md' },
-            { text: '状压dp', link: '/contents/ch06/bitwise_dp' },
             { text: '背包问题', link: '/contents/ch06/knanpsack_problem' },
+            { text: '线性dp', link: '/contents/ch06/linear_dp.md' },
+            { text: '区间dp', link: '/contents/ch06/interval_dp.md' },
+            { text: '状压dp', link: '/contents/ch06/bitwise_dp' },
+            
           ]
         },
         {

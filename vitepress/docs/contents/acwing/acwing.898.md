@@ -1,3 +1,22 @@
+
+要点：
+* 三角形存在$[1, n]$ 的位置，上面是右边，左上边是左边
+
+```
+        7
+      3   8
+    8   1   0
+  2   7   4   4
+4   5   2   6   5
+存储方式
+7
+3   8
+8   1   0
+2   7   4   4
+4   5   2   6   5
+```
+
+```c++
 #include <iostream>
 #include <cstring>
 #include <algorithm>
@@ -28,3 +47,4 @@ int main()
     cout << mx << endl;
     return 0;
 }
+```

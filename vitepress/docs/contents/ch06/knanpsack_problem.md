@@ -84,6 +84,9 @@ $O(nVlog(s)))$
 
 
 ## 分组背包
+* [分组背包问题](https://www.acwing.com/problem/content/9/)
+    * [code](../acwing/acwing.9.md)
+
 
 ## 混合背包
 

@@ -9,12 +9,21 @@ head:
 
 
 ## 数字三角形模型
+* [数字三角形](https://www.acwing.com/problem/content/900/)
+    * [code](../acwing/acwing.898.md)
 
 ## 最长上升子序列
+* [最长上升子序列](https://www.acwing.com/problem/content/897/)
+* [最长上升子序列 II](https://www.acwing.com/activity/content/problem/content/1004/)
+    * [code](../acwing/acwing.895_896.md)
 
 ## 最长公共子序列
+* [最长公共子序列](https://www.acwing.com/problem/content/899/)
+    * [code](../acwing/acwing.902.md)
 
 ## 最短编辑距离
+* [最短编辑距离](https://www.acwing.com/problem/content/904/)
+    * [code](../acwing/acwing.899.md)
 
 ## 划分型dp
 > 划分型 dp 最难的点在于如何想清楚分割点与状态点
