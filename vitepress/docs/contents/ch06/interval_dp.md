@@ -1,4 +1,4 @@
-## 区间dp
+# 区间dp
 
 > 区间dp更在于代码实现
 
@@ -55,33 +55,3 @@ int main() {
 }
 
 ```
-
-
-## 计数类 DP
-* [整数划分](acwing/acwing.900.cpp)
-* [划分数]
-* [leetcode 940. 不同的子序列 II](https://leetcode.cn/problems/distinct-subsequences-ii/)[
-
-## 数位统计 DP
-* [计数问题](acwing/acwing.338.cpp)
-
-## 状态压缩 DP
-* [蒙德里安的梦想](acwing/acwing.291.cpp)
-* [最短 Hamiton 路径](acwing/acwing.91.cpp)
-
-## 树形 DP
-* [没有上司的舞会](acwing/acwing.285.cpp)
-
-[362. 选课](https://oj.haizeix.com/problem/362)
-[363. Strategic_game](https://oj.haizeix.com/problem/363)
-
-
-## 记忆化搜索
-* [滑雪](acwing/acwing.901.cpp)
-
-## 状态机 DP
-* [leetcode: 801. 使序列递增的最小交换次数](https://leetcode.cn/problems/minimum-swaps-to-make-sequences-increasing/)
-
-## 环形DP
-[364. Naptime](https://oj.haizeix.com/problem/364)
-[365. 环路运输](https://oj.haizeix.com/problem/365)

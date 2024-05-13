@@ -90,9 +90,14 @@ export default defineConfig({
             { text: '介绍', link: '/contents/ch06/introduction' },
             { text: '背包问题', link: '/contents/ch06/knanpsack_problem' },
             { text: '线性dp', link: '/contents/ch06/linear_dp.md' },
+            { text: '记忆化搜索', link: '/contents/ch06/tree_dp' },
             { text: '区间dp', link: '/contents/ch06/interval_dp.md' },
             { text: '状压dp', link: '/contents/ch06/bitwise_dp' },
-            
+            { text: '计数dp', link: '/contents/ch06/count_dp' },
+            { text: '数位dp', link: '/contents/ch06/digital_dp' },
+            { text: '树形dp', link: '/contents/ch06/tree_dp' },
+            { text: '状态机 dp', link: '/contents/ch06/state_machine_dp' },
+            { text: '进阶：环形dp', link: '/contents/ch06/loop_dp' },
           ]
         },
         {
