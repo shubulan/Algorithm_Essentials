@@ -69,7 +69,7 @@ public:
 };
 ```
 * 图论
-[最短 Hamiton 路径](acwing/acwing.91.cpp)
+[最短 Hamiton 路径](../acwing/acwing.91)
 
 ## 几何表示
-* [蒙德里安的梦想](acwing/acwing.291.cpp)
+* [蒙德里安的梦想](../acwing/acwing.291)

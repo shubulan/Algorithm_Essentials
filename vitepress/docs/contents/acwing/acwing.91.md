@@ -1,3 +1,5 @@
+
+```c++
 #include <iostream>
 #include <cstring>
 #include <cstdlib>
@@ -34,3 +36,4 @@ int main() {
 
     return 0;
 }
+```

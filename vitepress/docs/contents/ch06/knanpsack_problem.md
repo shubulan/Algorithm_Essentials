@@ -50,6 +50,9 @@ int rec(int i, int j) { // 从 i 开始选，背包承重还剩 j
 > 价值和体积一样
 * [装箱问题](https://www.luogu.com.cn/problem/P1049)
     * [code](../luogu/dynamic_programming/P1049)
+> 二维 0-1 背包
+* [NASA的食物计划](https://www.luogu.com.cn/problem/P1507)
+    * [code](../luogu/dynamic_programming/P1507)
 
 ## 完全背包问题
 > 有 $n$ 种物品，每种物品都有无限多个。质量分别是 $w_i$，价值分为 $v_i$。背包承重为 $W$，求背包可以装的最大价值 $val$
@@ -94,7 +97,8 @@ $O(nVlog(s)))$
 ## 分组背包
 * [分组背包问题](https://www.acwing.com/problem/content/9/)
     * [code](../acwing/acwing.9.md)
-
+* [通天之分组背包](https://www.luogu.com.cn/problem/P1757)
+    * [code](../luogu/dynamic_programming/P1757)
 
 ## 混合背包
 
@@ -157,6 +161,9 @@ public:
     }
 };
 ```
+### 完全背包问题求方案数
+* [ A+B Problem（再升级）](https://www.luogu.com.cn/problem/P1832)
+    * [code](../luogu/dynamic_programming/P1832.md)
 
 ## 求具体方案：答案恢复
 ### 0-1 背包答案恢复

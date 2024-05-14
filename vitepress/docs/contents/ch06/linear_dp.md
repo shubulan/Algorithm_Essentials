@@ -14,6 +14,9 @@ head:
 ## 数字三角形模型
 * [数字三角形](https://www.acwing.com/problem/content/900/)
     * [code](../acwing/acwing.898.md)
+* [过河卒](https://www.luogu.com.cn/problem/P1002)
+    * 数字三角形求方案数 
+    * [code](../luogu/dynamic_programming/P1002)
 
 ## 最长上升子序列
 * [最长上升子序列](https://www.acwing.com/problem/content/897/)
@@ -66,3 +69,6 @@ public:
 };
 
 ```
+
+* [最长前缀 Longest Prefix](https://www.luogu.com.cn/problem/P1470)
+    * [code](../luogu/dynamic_programming/P1470.md)

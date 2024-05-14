@@ -1,6 +1,3 @@
-# 排序
-[题目单洛谷](https://www.luogu.com.cn/training/107#problems)
-
 
 ## 
 [OJ 380 大统领投票](https://oj.haizeix.com/problem/380) 排序、模拟

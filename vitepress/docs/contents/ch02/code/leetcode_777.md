@@ -1,3 +1,4 @@
+```c++
 class Solution {
  public:
   bool canTransform(string start, string end) {
@@ -19,3 +20,4 @@ class Solution {
     return true;
   }
 };
+```

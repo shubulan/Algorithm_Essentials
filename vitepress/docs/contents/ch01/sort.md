@@ -140,6 +140,13 @@ public:
     }
 };
 ```
+## 排序题目
+* [大统领投票](https://oj.haizeix.com/problem/380)
+  * [code](./code_sort/380.oj)
+* [谁拿了最多奖学金](https://oj.haizeix.com/problem/381)
+  * [code](./code_sort/381.oj)
+* [明明的随机数](https://www.luogu.com.cn/problem/P1059)
+  * [排序与去重](./code_sort/P1059)
 
 ## 排序与贪心
 > 排序问题通常跟贪心问题结合在一起。因为贪心就是有序的选择。
