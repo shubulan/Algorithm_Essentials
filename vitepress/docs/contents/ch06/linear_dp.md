@@ -6,7 +6,10 @@ head:
 ---
 # 线性dp
 > 线性 dp 指的是问题可以通过直观的一维或者二维的递推来理解和解决
-
+## 最大子数组和模型
+* [最大子数组和](https://leetcode.cn/problems/maximum-subarray/description/)
+* [坏掉的项链 Broken Necklace](https://www.luogu.com.cn/problem/P1203)
+    * [code](../luogu/dynamic_programming/P1203.md)
 
 ## 数字三角形模型
 * [数字三角形](https://www.acwing.com/problem/content/900/)

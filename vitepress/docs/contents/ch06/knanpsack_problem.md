@@ -34,6 +34,10 @@ int rec(int i, int j) { // 从 i 开始选，背包承重还剩 j
 * 初始状态：全是 0
 * 时间复杂度：$O(nW)$
 
+例题：
+* [开心的金明](https://www.luogu.com.cn/problem/P1060)
+    * [code](../luogu/dynamic_programming/P1060)
+
 ### 废铁版-超重物品
 > 又重又不值钱
 转换状态定义
@@ -42,6 +46,10 @@ int rec(int i, int j) { // 从 i 开始选，背包承重还剩 j
 > 又重又值钱，就是个数不多
 折半查找
 
+### 其他变体
+> 价值和体积一样
+* [装箱问题](https://www.luogu.com.cn/problem/P1049)
+    * [code](../luogu/dynamic_programming/P1049)
 
 ## 完全背包问题
 > 有 $n$ 种物品，每种物品都有无限多个。质量分别是 $w_i$，价值分为 $v_i$。背包承重为 $W$，求背包可以装的最大价值 $val$
