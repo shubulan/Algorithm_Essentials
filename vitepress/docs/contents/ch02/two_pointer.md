@@ -77,6 +77,109 @@
 
 代表算法：
 * 回文串的判定
+* [两数之和 II - 输入有序数组](https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/description/?envType=study-plan-v2&envId=top-interview-150)
+```c++
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& numbers, int target) {
+        int n = numbers.size();
+        for (int i = 0, j = n - 1; i < n; i++) {
+            if (numbers[i] + numbers[j] == target) {
+                return {i + 1, j + 1};
+            }
+            while (i < j && numbers[i] + numbers[j] > target) {
+                if (i < --j && numbers[i] + numbers[j] == target) {
+                    return {i + 1, j + 1};
+                }
+            }
+        }
+        return {0, 0};
+    }
+};
+```
+* [盛最多水的容器](https://leetcode.cn/problems/container-with-most-water/description)
+```c++
+class Solution {
+public:
+    int maxArea(vector<int>& height) {
+        int ans = -0x3f3f3f3f;
+        int n = height.size();
+        for (int i = 0, j = n - 1; i < j; i++) {
+            ans = max(ans, (j - i) * min(height[i], height[j]));
+            while (i < j && height[j] < height[i]) {
+                j--;
+                ans = max(ans, (j - i) * min(height[i], height[j]));
+            }
+        }
+        return ans;
+    }
+};
+```
+* [进阶：三数之和](https://leetcode.cn/problems/3sum/description)
+
+::: code-group
+```c++ [哈希表]
+class Solution {
+public:
+    vector<vector<int>> threeSum(vector<int>& nums) {
+        unordered_map<int, int> h;
+        sort(nums.begin(), nums.end());
+        int n = nums.size();
+        for (auto c:nums) h[c]++;
+        vector<vector<int>> ans;
+        
+        for (int i = 0; i < n; i++) {
+            if (i && nums[i] == nums[i - 1]) continue;
+            h[nums[i]]--;
+            for (int j = i + 1; j < n; j++) {
+                if (j != i + 1 && nums[j] == nums[j - 1]) continue;
+                h[nums[j]]--;
+                int x = -(nums[i] + nums[j]);
+                if (x >= nums[j] && h[x] > 0) {
+                    ans.push_back({nums[i], nums[j], x});
+                }
+                h[nums[j]]++;
+            }
+            h[nums[i]]++;
+        }
+        return ans;
+    }
+};
+```
+
+```c++ [两数之和]
+class Solution {
+public:
+    vector<vector<int>> threeSum(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+        int n = nums.size();
+        vector<vector<int>> ans;
+        for (int i = 0; i < n; i++) {
+            if (i && nums[i] == nums[i - 1]) continue;
+            int target = -nums[i];
+            for (int j = i + 1, k = n - 1; j < k; j++) {
+                if (j != i + 1 && nums[j] == nums[j - 1]) continue;
+                // cout << nums[i] << " " << nums[j] << " " << nums[k] << endl;
+                int s = nums[j] + nums[k];
+                if (s == target) {
+                    ans.push_back({nums[i], nums[j], nums[k]});
+                }
+                if (s < target) continue;
+                while (j < k && nums[k] + nums[j] > target) {
+                    k--;
+                    if (j == k) break;
+                    int s = nums[j] + nums[k];
+                    if (s == target) {
+                        ans.push_back({nums[i], nums[j], nums[k]});
+                    }
+                }
+            }
+        }
+        return ans;
+    }
+};
+```
+:::
 
 ## 双数组
 * [在LR字符串中交换相邻字符](https://leetcode.cn/problems/swap-adjacent-in-lr-string/solutions/1/by-ac_oier-ye71/)
