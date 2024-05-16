@@ -37,6 +37,7 @@ export default defineConfig({
             { text: '指数型枚举', link: '/contents/ch00/exponential_enumeration'},
             { text: '组合型枚举', link: '/contents/ch00/combinatorial_enumeration'},
             { text: '排列型枚举', link: '/contents/ch00/permutation_enumeration'},
+            { text: '深度优先：暴力搜图', link: '/contents/ch00/dfs'},
             { text: '广度优先：无权图的最短路', link: '/contents/ch00/bfs'},
           ]
         },

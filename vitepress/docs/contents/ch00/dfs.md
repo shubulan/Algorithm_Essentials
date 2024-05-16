@@ -8,6 +8,131 @@
 * 如果再考虑一些剪枝技巧，效率还是蛮高
 * [code](../acwing/acwing.843.md)
 
+## 表格问题
+* [单词搜索](https://leetcode.cn/problems/word-search-ii/description/?envType=study-plan-v2&envId=top-interview-150)
+* 这题相当暴力
+* 带限制的搜索
+::: code-group
+```c++ [暴力]
+class Solution {
+public:
+    int n, m;
+    vector<string> res;
+    string cur;
+    set<string> w;
+    vector<vector<int>> vs;
+    vector<vector<char>>* pb;
+    vector<string> findWords(vector<vector<char>>& board, vector<string>& words) {
+        n = board.size(), m = board[0].size();
+        pb = &board;
+        vs.resize(n);
+        for (auto &v : vs) v.resize(m);
+        w.insert(words.begin(), words.end());
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                dfs(i, j, 0);
+            }
+        }
+        return res;
+    }
+    void dfs(int x, int y, int wc) {
+        
+        // cout << cur << endl;
+        if (wc == 10) {
+            return;
+        }
+        vector<vector<char>>& board = *pb;
+        cur += board[x][y];
+        vs[x][y] = true;
+        if (w.count(cur)) {
+            res.push_back(cur);
+            w.erase(cur);
+        }
+        int dx[] = {0, -1, 0, 1};
+        int dy[] = {-1, 0, 1, 0};
+        
+        for (int i = 0; i < 4; i++) {
+            int nx = x + dx[i];
+            int ny = y + dy[i];
+            if (nx < 0 || ny < 0 || nx >= n || ny >= m) continue;
+            if (vs[nx][ny]) continue;
+            dfs(nx, ny, wc + 1);
+        }
+        cur.pop_back();
+        vs[x][y] = false;
+    }
+
+};
+```
+```c++ [trie 树]
+class Solution {
+public:
+    int n, m;
+    vector<string> res;
+    string cur;
+    vector<vector<int>> vs;
+    vector<vector<char>>* pb;
+    struct Node {
+        bool flag = {0};
+        Node *children[26] = {0};
+    };
+    Node root;
+    void add(string s) {
+        Node *p = &root;
+        for (int i = 0; i < s.size(); i++) {
+            int idx = s[i] - 'a';
+            if (!p->children[idx]) {
+                p->children[idx] = new Node;
+            }
+            p = p->children[idx];
+        }
+        p->flag = true;
+    }
+    vector<string> findWords(vector<vector<char>>& board, vector<string>& words) {
+        n = board.size(), m = board[0].size();
+        pb = &board;
+        vs.resize(n);
+        for (auto &v : vs) v.resize(m);
+        for (auto &s : words) add(s);
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                dfs(i, j, &root);
+            }
+        }
+        return res;
+    }
+    void dfs(int x, int y, Node *p) {
+        vector<vector<char>>& board = *pb;
+        int idx = board[x][y] - 'a';
+        if (!p->children[idx]) return;
+        Node *cp = p->children[idx];
+        cur += board[x][y];
+        vs[x][y] = true;
+        if (cp->flag) {
+            res.push_back(cur);
+            cp->flag = false;
+        }
+        int dx[] = {0, -1, 0, 1};
+        int dy[] = {-1, 0, 1, 0};
+        
+        for (int i = 0; i < 4; i++) {
+            int nx = x + dx[i];
+            int ny = y + dy[i];
+            if (nx < 0 || ny < 0 || nx >= n || ny >= m) continue;
+            if (vs[nx][ny]) continue;
+            dfs(nx, ny, cp);
+        }
+        cur.pop_back();
+        vs[x][y] = false;
+    }
+
+};
+```
+
+:::
+
+
+
 ## 相关练习
 
 * [1718. 构建字典序最大的可行序列](https://leetcode.cn/problems/construct-the-lexicographically-largest-valid-sequence/description/)
