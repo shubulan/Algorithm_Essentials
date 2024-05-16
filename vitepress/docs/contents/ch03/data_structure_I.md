@@ -3,8 +3,10 @@
 > 数据结构的第一部分，简单好写的数据结构
 [[toc]]
 ## 栈
-### 理解
-例题：
+* 栈最好用vector实现，不要傻乎乎的非用 stack
+* 匹配解析类的问题，往往需要在遍历完之后，再执行依次操作
+
+代表例题：
 * [使括号有效的最少添加](https://leetcode.cn/problems/minimum-add-to-make-parentheses-valid/)
   * 可以用栈理解，没必要用栈实现
 ```c++
@@ -53,6 +55,41 @@ public:
     }
 };
 ```
+* [最小栈](https://leetcode.cn/problems/min-stack/description/?envType=study-plan-v2&envId=top-interview-150)
+    * 栈可以同时维护其他信息
+```c++
+class MinStack {
+public:
+    MinStack() {
+    }
+    
+    void push(int val) {
+        st.push(val);
+        min_st.push((min_st.empty() || val <  min_st.top()) ? val : min_st.top());
+    }
+    
+    void pop() {
+        st.pop();
+        min_st.pop();
+    }
+    
+    int top() {
+        return st.top();
+    }
+    
+    int getMin() {
+        return min_st.top();
+    }
+private:
+    stack<int> st;
+    stack<int> min_st;
+};
+```
+* 表达式求值类
+    * [逆波兰表达式求值](https://leetcode.cn/problems/evaluate-reverse-polish-notation)
+        * [code](./code/leetcode_150.md)
+    * [基本计算器](https://leetcode.cn/problems/basic-calculator)
+        * [code](./code/leetcode_224.md)
 
 ## 堆
 ### stl:优先队列

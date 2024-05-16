@@ -1,5 +1,50 @@
 # ch06 贪心算法
 
+## 思考每一个极值
+    * [完成所有交易的初始最少钱数](https://leetcode.cn/problems/minimum-money-required-before-transactions/description/)
+```c++
+class Solution {
+public:
+    using LL = long long;
+    long long minimumMoney(vector<vector<int>>& transactions) {
+        LL totCost = 0;
+        for (auto & vec: transactions) {
+            int a = vec[0], b = vec[1];
+            if (a > b) {
+                totCost += a - b;
+            }
+        }
+        LL res = 0;
+        for (auto & vec: transactions) {
+            int a = vec[0], b = vec[1];
+            if (a > b) {
+                res = max(res, totCost - (a - b) + a);
+            } else {
+                res = max(res, totCost + a);
+            }
+        }
+
+        return res;
+    }
+};
+```
+
+## 思考最终状态
+    * [你可以工作的最大周数](https://leetcode.cn/problems/maximum-number-of-weeks-for-which-you-can-work/description/)
+```c++
+class Solution {
+public:
+    long long numberOfWeeks(vector<int>& milestones) {
+        long long s = 0, mx = -1;
+        for (long long c : milestones) {
+            s += c;
+            mx = max(mx, c);
+        }
+        return mx <= (s - mx + 1) ? s : 2 * (s - mx) + 1;
+    }
+};
+```
+
 ## 中位数贪心
 > 这个最好列一下公式，然后分析一下公式
 要点：

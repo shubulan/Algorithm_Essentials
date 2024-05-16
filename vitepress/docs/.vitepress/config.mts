@@ -106,7 +106,7 @@ export default defineConfig({
           text: '贪心算法',
           collapsed: true,
           items: [
-            { text: '中位数贪心', link: '/contents/ch07/README' },
+            { text: '贪心思想', link: '/contents/ch07/README' },
           ]
         },
         {
