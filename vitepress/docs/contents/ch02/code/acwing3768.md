@@ -1,3 +1,4 @@
+```c++
 #include <iostream>
 #include <map>
 #include <set>
@@ -31,3 +32,4 @@ int main() {
   cout << res << endl;
   return 0;
 }
+```

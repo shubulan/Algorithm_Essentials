@@ -1,3 +1,5 @@
+
+```c++
 #include <iostream>
 #include <map>
 #include <set>
@@ -57,7 +59,9 @@ int main() {
   cout << l << endl;
   return 0;
 }
+```
 
+```c++
 /**
  * @brief 
  * 字符串哈希
@@ -118,3 +122,4 @@ int main()
 
     return 0;
 }
+```

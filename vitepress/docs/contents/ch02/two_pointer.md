@@ -71,6 +71,9 @@
 
 再附一个 0x3f 的[滑动窗口题目单](https://leetcode.cn/circle/discuss/0viNMK/)
 
+* [字符串删减](https://www.acwing.com/problem/content/3771/)
+    * [code](./code/acwing3768.md)
+
 ## 对向双指针
 要点：
 * 两个指针从数组的两头向中间移动

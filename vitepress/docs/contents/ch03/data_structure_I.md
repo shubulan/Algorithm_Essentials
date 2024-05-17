@@ -2,6 +2,13 @@
 
 > 数据结构的第一部分，简单好写的数据结构
 [[toc]]
+
+## 二叉树
+* [树的遍历](https://www.acwing.com/problem/content/1499/)
+    * [code](code/acwing1497)
+
+* [数的直径]()
+
 ## 栈
 * 栈最好用vector实现，不要傻乎乎的非用 stack
 * 匹配解析类的问题，往往需要在遍历完之后，再执行依次操作
@@ -154,7 +161,7 @@ public:
 
 ## 并查集
 > 模板
-```
+```c++
 int p[N];
 int find(int x) { return p[x] == x ? x : p[x] = find(p[x]); }
 void unite(int x, int y) {
@@ -166,14 +173,14 @@ for (int i = 0; i <= n; i++) p[i] = i;
 ```
 > 并查集有两种思路
 * 数据结构：维护不相交的集合
-    * 例题：
-```
+* 例题：[打击犯罪](https://www.acwing.com/problem/content/description/1253/)
+    * [code](code/acwing1251.md)
 
-```
+
 * 添加约束：将必须同时满足的状态放在一起
     * [AcWing 240. 食物链](https://www.acwing.com/activity/content/code/content/7207951/) 
     * 将 `X 是动物 a 时， Y 必须是什么动物` 这种约束放在一个集合里
-```
+```c++
   while (K--) {
     int d, x, y;
     cin >> d >> x >> y;
@@ -204,6 +211,9 @@ for (int i = 0; i <= n; i++) p[i] = i;
 
 ## 哈希表
 > 哈希没什么好讲的，主要说一下字符串哈希
+### 哈希表的应用
+* [笨拙的手指](https://www.acwing.com/problem/content/2060/)
+    * [code](code/acwing2058.md)
 
 ### 字符串哈希
 * 字符串哈希相当于把字符串看做 base 很大的数字

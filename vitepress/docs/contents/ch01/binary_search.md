@@ -251,9 +251,37 @@ public:
 * [复制书稿](https://oj.haizeix.com/problem/395)
   * [code](./code_binary_search/395.oj.md)
 
+### 最小化最大值
+
+* [我在哪？](https://www.acwing.com/problem/content/1462/)
+  * [code](./code_binary_search/acwing1460)
+
+### 最大化平均值：浮点二分答案
+* [最大化平均值](https://blog.csdn.net/karry_zzj/article/details/70232097)
+```c++
+
+bool C(double x) {
+  for (int i = 0; i < n; i++) {
+    y[i] = v[i] - x * w[i];
+  }
+  sort(y, y + n);
+}
+
+void solve() {
+  double lb = 0, ub = inf;
+  for (int i = 0; i < 100; i++) {
+    double mid = (lb + ub) / 2;
+    if (C(mid)) lb = mid;
+    else ub = mid;
+  }
+}
+
+```
+
 ### 二分查找值
 * [吃瓜群众](https://oj.haizeix.com/problem/386)
   * [code](./code_binary_search/386.oj.md)
+
 
 
 

@@ -43,6 +43,8 @@ public:
     }
 };
 ```
+* [截断数组](https://www.acwing.com/problem/content/3959/)
+    * [code](./code/acwing3956)
 
 ## 一维差分
 要点：
@@ -51,7 +53,7 @@ public:
 * 需要在后面留一个位置
 * [2381. 字母移位 II](https://leetcode.cn/problems/shifting-letters-ii/description/)
 
-```
+```c++
 class Solution {
 public:
     string shiftingLetters(string s, vector<vector<int>>& shifts) {
@@ -76,6 +78,8 @@ public:
 };
 
 ```
+* [改变数组元素](https://www.acwing.com/problem/content/description/3732/)
+    * [code](./code/acwing3729)
 
 ## 二维前缀和
 要点：
