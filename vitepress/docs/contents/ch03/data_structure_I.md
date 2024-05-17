@@ -5,9 +5,48 @@
 
 ## 二叉树
 * [树的遍历](https://www.acwing.com/problem/content/1499/)
-    * [code](code/acwing1497)
+    * [code](./code/acwing1497)
 
-* [数的直径]()
+* [二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree/description/)
+```c++
+class Solution {
+public:
+    int res = 0;
+    int diameterOfBinaryTree(TreeNode* root) {
+        dfs(root);
+        return res;
+    }
+
+    int dfs(TreeNode *root) {
+        if (!root) return -1;
+
+        int l = dfs(root->left);
+        int r = dfs(root->right);
+        res = max(res, l + r + 2);
+
+        return 1 + max(l, r);
+    }
+};
+```
+* [二叉树中的最大路径和](https://leetcode.cn/problems/binary-tree-maximum-path-sum/description/)
+```c++
+class Solution {
+public:
+    int res = -0x3f3f3f3f;
+    int maxPathSum(TreeNode* root) {
+        dfs(root);
+        return res;
+    }
+    int dfs(TreeNode* root) {
+        if (!root) return 0;
+        int val = root->val;
+        int l = max(dfs(root->left), 0);
+        int r = max(dfs(root->right), 0);
+        res = max(res, val + l + r);
+        return val + max(l, r);
+    }
+};
+```
 
 ## 栈
 * 栈最好用vector实现，不要傻乎乎的非用 stack
@@ -174,7 +213,7 @@ for (int i = 0; i <= n; i++) p[i] = i;
 > 并查集有两种思路
 * 数据结构：维护不相交的集合
 * 例题：[打击犯罪](https://www.acwing.com/problem/content/description/1253/)
-    * [code](code/acwing1251.md)
+    * [code](./code/acwing1251.md)
 
 
 * 添加约束：将必须同时满足的状态放在一起
@@ -213,7 +252,7 @@ for (int i = 0; i <= n; i++) p[i] = i;
 > 哈希没什么好讲的，主要说一下字符串哈希
 ### 哈希表的应用
 * [笨拙的手指](https://www.acwing.com/problem/content/2060/)
-    * [code](code/acwing2058.md)
+    * [code](./code/acwing2058.md)
 
 ### 字符串哈希
 * 字符串哈希相当于把字符串看做 base 很大的数字
