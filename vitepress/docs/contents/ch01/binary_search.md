@@ -35,6 +35,8 @@ return false
 * 二分有很多种写法，这里只写一种
 * upper_bound 和 lower_bound 不可以相互相互转换，因此两种写法都要记忆
 * **真正做题时，有可能会有边界检查问题，这个无法避免**
+* [数的范围](https://www.acwing.com/problem/content/791/)
+  * [code](../acwing/acwing.789.md)
 ::: code-group
 ```c++ [找最后一个1]
 // [1, 1, 1, 1, 0, 0, 0, 0] 找最后一个 1： upper_bound
@@ -148,6 +150,8 @@ public:
 ## 浮点数二分
 要点：
  * 用的不多，注意循环条件是精度，写起来比较简答
+* [数的三次方根](https://www.acwing.com/problem/content/792/)
+  * [code](../acwing/acwing.790.md)
 ```c++
 while (r - l > 1e-6) {
   double mid = (l + r) / 2;

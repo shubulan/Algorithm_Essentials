@@ -2,7 +2,9 @@
 > 组合型枚举相当于指数型枚举固定了答案的长度
 
 ## 递归实现
-### [选数](https://www.luogu.com.cn/problem/P1036)
+* [模板题：组合的输出](https://www.luogu.com.cn/problem/P1157)
+  * [code](./code_brute_enumeration/P1157.md)
+* [模板题：选数](https://www.luogu.com.cn/problem/P1036)
 * k 为所选长度
 * [code](./code_brute_enumeration/P1036.md)
 ```c++
@@ -19,6 +21,7 @@ void dfs(int i, int s, int sum) {
 }
 ```
 ## 全排列实现
+> 可以使用next_permutation来实现。这个思想就很接近二进制枚举了，而且速度不慢
 * 类位运算
 * [code](./code_brute_enumeration/P1036.md)
 ```c++

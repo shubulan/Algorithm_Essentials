@@ -48,3 +48,9 @@ public:
 
 ### [数字阶乘和](https://pe-cn.github.io/34/)
 * [code](./code_brute_enumeration/34.euler)
+
+### 几何
+* [三角形： 小 Y 拼木棒](https://www.luogu.com.cn/problem/P3799)
+    * [code](./code_brute_enumeration/P3799.md)
+* [统计方形（数据加强版）](https://www.luogu.com.cn/problem/P2241)
+    * [code](./code_brute_enumeration/P2241.md)

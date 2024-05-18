@@ -1,5 +1,7 @@
 # GYL_刷题笔记
 
+* [gitPages 地址](https://shubulan.github.io/Algorithm_Essentials/)
+
 > 知识点分类来自[洛谷官方题单](https://www.luogu.com.cn/training/list)
 ## 入门
   > 学习新语言时可以用来练习语法

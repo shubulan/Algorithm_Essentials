@@ -10,7 +10,8 @@
 * 所以选哪个都行，但是如果选 $i$ 作为 分割点会无限递归
 * 当仅有两个元素时，中间的数选择的是左边 0 号元素。所以 i 会留在 l 的位置。j 也会留在 l 的位置。
 * 此时选择 i 作为分割点，右半边是 $[i, r] == [l, r]$， 所以会发生死递归
-
+* [快速排序](https://www.acwing.com/problem/content/787/)
+  * [code](../acwing/acwing.785)
 ```c++
 void qsort(int* arr, int l, int r) {
   if (l >= r) return;
@@ -31,7 +32,9 @@ void qsort(int* arr, int l, int r) {
 
 ## 变体: 第 k 个值
 要点：递归结束条件还是挺巧妙的
-```
+* [第k个数](https://www.acwing.com/problem/content/788/)
+  * [code](../acwing/acwing.786)
+```c++
 int kth_num(int *arr, int l, int k, int r) {
   if (l == r) {
     return arr[l];
@@ -54,13 +57,15 @@ int kth_num(int *arr, int l, int k, int r) {
 ## 归并排序
 要点：
 * 归并排序是分治思想的典型应用，在归并的过程中，很像线段树的合并两段信息
+* 本质上是分治算法思想
 * 归并排序也是一种双指针
 * 归并排序需要额外的空间
 * 归并有两种写法：
   * 三个循环写法：保证两数组都有值才比较
   * 一个循环写法：将某个数组为空纳入判断条件，默认++另一个数组
 * 作用：求逆序对
-
+* [归并排序](https://www.acwing.com/problem/content/789/)
+  * [code](../acwing/acwing.789)
 ::: code-group
 ```c++ [三个循环]
 void merge_sort(int* arr, int l, int r) {
@@ -100,8 +105,12 @@ void merge_sort(int* arr, int l, int r) {
 }
 ```
 :::
+### 应用
+1. 求逆序对
+* [逆序对的数量](https://www.acwing.com/problem/content/790/)
+  * [code](../acwing/acwing.788)
 
-* 例题 [2426. 满足不等式的数对数目](https://leetcode.cn/problems/number-of-pairs-satisfying-inequality/)
+* [2426. 满足不等式的数对数目](https://leetcode.cn/problems/number-of-pairs-satisfying-inequality/)
   * 求逆序对的变体。
   * 求逆序对还可以用树状数组 + 二分来求解，时间复杂度 $O(nlog(n)log(n))$
 

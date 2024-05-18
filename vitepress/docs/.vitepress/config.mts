@@ -58,6 +58,7 @@ export default defineConfig({
             { text: '思维题', link: '/contents/ch02/think_problem' },
             { text: '双指针', link: '/contents/ch02/two_pointer' },
             { text: '位运算', link: '/contents/ch02/bitwise_operation' },
+            { text: '离散化', link: '/contents/ch02/discretization' },
             { text: '模拟', link: '/contents/ch02/' },
             { text: '构造', link: '/contents/ch02/' },
           ]
@@ -82,6 +83,7 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: '基本数学问题', link: '/contents/ch05/README' },
+            { text: '高精度计算', link: '/contents/ch05/bignum' },
           ]
         },
         {

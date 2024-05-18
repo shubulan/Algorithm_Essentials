@@ -8,8 +8,12 @@
 * 快速求一段区间的和
 * 一般需要数组从 1 开始，因为要计算 [0, k] 区间，需要 pre_sum[k] - pre_sum[-1]，无法统一处理
 * leetcode 不会给你空一位 0 出来，所以要自己映射好索引
+* [模板：前缀和](https://www.acwing.com/problem/content/797/)
+    * [code](../acwing/acwing.795)
+
+### 应用题
 * [2602. 使数组元素全部相等的最少操作次数](https://leetcode.cn/problems/minimum-operations-to-make-all-array-elements-equal/) 二分 + 前缀和
-```
+```c++
 class Solution {
 public:
     vector<long long> minOperations(vector<int>& nums, vector<int>& queries) {
@@ -51,6 +55,10 @@ public:
 * 用于将一个区间的数全加一个定值 c
 * 需要与前缀和结合起来，但不需要在前面留 0 
 * 需要在后面留一个位置
+* [模板：差分](https://www.acwing.com/problem/content/799/)
+    * [code](../acwing/acwing.797.md)
+
+### 应用
 * [2381. 字母移位 II](https://leetcode.cn/problems/shifting-letters-ii/description/)
 
 ```c++
@@ -87,16 +95,22 @@ public:
 * 二维前缀和也需要留出第一行和第一列来，因为计算需要上一行
 * 实现比较简单，就搁置吧
 
-
+* [模板：子矩阵的和](https://www.acwing.com/problem/content/798/)
+    * [code](../acwing/acwing.796)
 
 ## 二维差分
+
 要点：
 * 比较难想，需要背公式
+* [模板题:地毯](https://www.luogu.com.cn/problem/P3397)
+    * [code](./code/P3397.md)
+* [模板题：差分矩阵](https://www.acwing.com/problem/content/800/)
+    * [code](../acwing/acwing.798.md)
 * 仍然需要空出第一行和第一列来
 * leetcode 有时候会帮你空出第一行和第一列
 * [2250. 统计包含每个点的矩形数目](https://leetcode.cn/problems/count-number-of-rectangles-containing-each-point/description/) 本题结合了离散化和二维差分
 
-```
+```c++
 class Solution {
 public:
     vector<int> countRectangles(vector<vector<int>>& rectangles, vector<vector<int>>& points) {

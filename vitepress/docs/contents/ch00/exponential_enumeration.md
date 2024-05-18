@@ -34,3 +34,8 @@ for (int s = 0; i < (1 << n); i++) {
 ```
 ## 位运算实现2
 > 枚举 S 代表的集合的所有子集 [见 位运算](../ch02//bitwise_operation)
+
+## 应用
+
+* [P2089 烤鸡](https://www.luogu.com.cn/problem/P2089)
+    * [code](./code_brute_enumeration/P2089.md)

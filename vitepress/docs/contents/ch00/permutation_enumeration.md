@@ -4,11 +4,13 @@
 获取全排列的复杂度就有n!如果用next_permutation，需要再乘以n。
 10!就已经到300w的量级了。所以数据量不会大一般就1~10.
 
-模板题目: [全排列问题](https://www.luogu.com.cn/problem/P1706)
 
 ## dfs 实现
-
-* [code](./code_brute_enumeration/P1706)
+模板题目:
+* [全排列问题](https://www.luogu.com.cn/problem/P1706)
+  * [code](./code_brute_enumeration/P1706.md)
+* [排列数字](https://www.acwing.com/problem/content/844/)
+  * [code](../acwing/acwing.842.md)
 
 ## 标准库实现
 

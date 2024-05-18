@@ -14,8 +14,9 @@
 * 枚举左端点 i，将右端点 j 移动到极限，形成区间[i, j)
 * 更新答案，更新 i = j,继续遍历下一个区间
 * [AcWing 803. 区间合并](https://www.acwing.com/problem/content/805/)
+    * [code](../acwing/acwing.803.md)
 * 合并相交的区间
-```
+```c++
   for (int i = 0, j = 0; i < n; i++, i = j) { // 更新左端点为 j
     int r = arr[i].second;
     while (j < n && arr[j].first <= r) { // j 向右移动到极限
@@ -34,9 +35,9 @@
     * 直接将右端点加入窗口
     * 移动左端点到窗口刚好符合要求，形成区间$[i, j]$
     * **问题在于移除左端点后，能否简单的判断区间是否符合要求**
-* [799. 最长连续不重复子序列](799. 最长连续不重复子序列)
-
-```
+* [799. 最长连续不重复子序列](https://www.acwing.com/problem/content/801/)
+    * [code](../acwing/acwing.799.md)
+```c++
   unordered_map<int, int> mp;
   for (int i = 0, j = 0; j < n; j++) {
     mp[arr[j]]++;
@@ -53,7 +54,7 @@
 >   * 而能不能加入窗口，可能需要先加入才能判断
 >   * 如果真的不能加入窗口，还得把它移出去
 >   * 如果不加入窗口，就能判断是否能加入窗口，枚举左端点也行
-```
+```c++
   unordered_map<int, int> mp;
   for (int i = 0, j = 0; i < n; i++) { 
     while (j < n && mp[arr[j]] == 0) // 能加入窗口就加入
@@ -71,8 +72,13 @@
 
 再附一个 0x3f 的[滑动窗口题目单](https://leetcode.cn/circle/discuss/0viNMK/)
 
+## 应用
 * [字符串删减](https://www.acwing.com/problem/content/3771/)
     * [code](./code/acwing3768.md)
+* [数组元素的目标和](https://www.acwing.com/problem/content/description/802/)
+    * [code](../acwing/acwing.800.md)
+* [判断子序列](https://www.acwing.com/problem/content/2818/)
+    * [code](../acwing/acwing.2816.md)
 
 ## 对向双指针
 要点：
