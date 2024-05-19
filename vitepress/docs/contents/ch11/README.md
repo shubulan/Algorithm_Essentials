@@ -56,7 +56,7 @@
 * 判断垂直
 * 求矩形面积
 * 向量求和
-```
+```c++
 // 方式一
 class Solution {
 public:
@@ -148,6 +148,10 @@ public:
 };
 
 ```
+
+### 矩形重合判定
+* [Blocked Billboard B](https://www.luogu.com.cn/problem/P4122)
+    * [code](./code/P4122.md)
 
 
 

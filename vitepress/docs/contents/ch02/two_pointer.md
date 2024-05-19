@@ -16,7 +16,7 @@
 * [AcWing 803. 区间合并](https://www.acwing.com/problem/content/805/)
     * [code](../acwing/acwing.803.md)
 * 合并相交的区间
-```c++
+```c++ 
   for (int i = 0, j = 0; i < n; i++, i = j) { // 更新左端点为 j
     int r = arr[i].second;
     while (j < n && arr[j].first <= r) { // j 向右移动到极限
@@ -26,6 +26,10 @@
     cnt++; // 更新答案
   }
 ```
+* 计算区间合并后的覆盖长度
+* [P1496 火烧赤壁](https://www.luogu.com.cn/problem/P1496)
+    * [code：计算合并区间的长度/离散化差分](./code/P1496.md)
+        
 
 ## 滑动窗口
 要点：
@@ -79,6 +83,13 @@
     * [code](../acwing/acwing.800.md)
 * [判断子序列](https://www.acwing.com/problem/content/2818/)
     * [code](../acwing/acwing.2816.md)
+
+## 双范围双指针
+* [P1102 A-B 数对](https://www.luogu.com.cn/problem/P1102)
+    * 一个指针指向一个数，另外两个指针确定一个范围，然后更新答案
+    * [code](./code/P1102.md)
+
+
 
 ## 对向双指针
 要点：

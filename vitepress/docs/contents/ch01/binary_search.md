@@ -20,6 +20,9 @@ while (l <= r) {
 }
 return false
 ```
+### 应用
+* [P1918 保龄球](https://www.luogu.com.cn/problem/P1918)
+  * [code](../luogu/P1918.md)
 
 ## 二分答案与范围查找：upper_bound 与 lower_bound
 > 使用场景：

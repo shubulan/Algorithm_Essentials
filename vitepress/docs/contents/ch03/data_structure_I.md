@@ -214,7 +214,8 @@ for (int i = 0; i <= n; i++) p[i] = i;
 * 数据结构：维护不相交的集合
 * 例题：[打击犯罪](https://www.acwing.com/problem/content/description/1253/)
     * [code](./code/acwing1251.md)
-
+* 例题：[P1551 亲戚](https://www.luogu.com.cn/problem/P1551)
+    * [code](./code/P1551.md)
 
 * 添加约束：将必须同时满足的状态放在一起
     * [AcWing 240. 食物链](https://www.acwing.com/activity/content/code/content/7207951/) 
@@ -253,6 +254,8 @@ for (int i = 0; i <= n; i++) p[i] = i;
 ### 哈希表的应用
 * [笨拙的手指](https://www.acwing.com/problem/content/2060/)
     * [code](./code/acwing2058.md)
+* [P3405 [USACO16DEC] Cities and States S](https://www.luogu.com.cn/problem/P3405)
+    * [code](./code/P3405.md)
 
 ### 字符串哈希
 * 字符串哈希相当于把字符串看做 base 很大的数字
@@ -260,7 +263,7 @@ for (int i = 0; i <= n; i++) p[i] = i;
 * 需要一个函数：获取 $[l, r]$ 的哈希值
 * 字符串哈希数组从 1 开始
 
-1. 模板
+模板
 * 初始化
 ```c++
 const int P = 13331;

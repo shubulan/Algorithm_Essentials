@@ -84,6 +84,7 @@ export default defineConfig({
           items: [
             { text: '基本数学问题', link: '/contents/ch05/README' },
             { text: '高精度计算', link: '/contents/ch05/bignum' },
+            { text: '计算几何', link: '/contents/ch05/bignum' },
           ]
         },
         {
@@ -116,6 +117,7 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: '线段树', link: '/contents/ch08/seg_tree' },
+            { text: '分块算法', link: '/contents/ch08/blocks' },
           ]
         },
         {
@@ -130,6 +132,13 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: '空', link: '/contents/ch02/sort' },
+          ]
+        },
+        {
+          text: '计算几何',
+          collapsed: true,
+          items: [
+            { text: '计算几何', link: '/contents/ch11/README' },
           ]
         },
         {
