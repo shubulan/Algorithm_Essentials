@@ -1,4 +1,5 @@
-#include <iostream>
+```c++
+include <iostream>
 #include <cstring>
 #include <algorithm>
 const int N = 100005, mod = 1e9 + 7;
@@ -32,3 +33,4 @@ int main() {
   }
   return 0;
 }
+```

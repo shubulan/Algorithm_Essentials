@@ -31,38 +31,39 @@ f(i)(z) = f(i)(z) + 1 (自己单成一个集合)
 
 代码如下
 */
-
+```c++
 class Solution {
- public:
-  int primes[10] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29};
-  int pc = 10, mod = 1e9 + 7;
-  int squareFreeSubsets(vector<int>& nums) {
-    unordered_map<int, int> mmap;
-    for (auto x : nums) {
-      int y = 0, flag = 0;
-      for (int i = 0; i < pc; i++) {
-        int p = primes[i], ct = 0;
-        while (x % p == 0) x /= p, ct++;
-        if (ct >= 2) {
-          flag = 1;
-          break;
+public:
+    int primes[10] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29};
+    int mod = 1e9+7;
+    int squareFreeSubsets(vector<int>& nums) {
+        vector<int> f(1 << 10);
+        for (auto x : nums) {
+            int flag = 0, s = 0;
+            for (int i = 0; i < 10; i++) {
+                int p = primes[i], cnt = 0;
+                while (x % p == 0) cnt++, x /= p;
+                if (cnt > 1) {
+                    flag = true;
+                    break;
+                }
+                s |= (cnt << i);
+            }
+            if (flag) continue;
+            int is = ~s & ((1 << 10) - 1);
+            int sub = is;
+            do {
+                f[sub | s] += f[sub];
+                f[sub | s] %= mod;
+                sub = (sub - 1) & is;
+            } while (sub != is);
+            f[s]++;
         }
-        y |= (ct << i);
-      }
-      if (flag) continue;
-
-      for (int i = (1 << pc) - 1; i >= 0; i--) {
-        if (i & y) continue;
-        mmap[i | y] += mmap[i];
-        mmap[i | y] %= mod;
-      }
-      mmap[y]++;
+        int res = 0;
+        for (int i = 0; i < 1 << 10; i++) {
+            res = (res + f[i]) % mod;
+        }
+        return res;
     }
-    int res = 0;
-    for (auto& x : mmap) {
-      res += x.second;
-      res %= mod;
-    }
-    return res;
-  }
 };
+```

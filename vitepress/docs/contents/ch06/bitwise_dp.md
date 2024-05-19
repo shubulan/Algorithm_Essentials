@@ -6,7 +6,7 @@
 * 递推公式
 [3116. 单面值组合的第 K 小金额](https://leetcode.cn/problems/kth-smallest-amount-with-single-denomination-combination/description/)
 计算所有子集的 最小公倍数
-```
+```c++
 class Solution {
 public:
     using LL = long long;
@@ -41,7 +41,7 @@ public:
 [1986. 完成任务的最少工作时间段](https://leetcode.cn/problems/minimum-number-of-work-sessions-to-finish-the-tasks/description/)
 
 dp[S][j] 表示 S 集合表示的任务，最少需要多少时间段
-```
+```c++
 class Solution {
 public:
     int minSessions(vector<int> &tasks, int sessionTime) {
@@ -68,6 +68,10 @@ public:
     }
 };
 ```
+* 类背包模型
+[6364. 无平方子集计数](https://leetcode.cn/problems/count-the-number-of-square-free-subsets/description/)
+    [code](../leetcode/leetcode_6364.md)
+
 * 图论
 [最短 Hamiton 路径](../acwing/acwing.91)
 

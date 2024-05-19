@@ -1,19 +1,83 @@
 # ch05 数学 I
 
-## 数学 I
 > 常用的数学技巧
 
-### 质数
+## 质数
+> 素数判定
 
-### 约数
+> 分解质因数
 
-### 快速幂
+> 筛质数
 
-### 欧几里得
+## 约数
+> 求约束
 
-### 组合数
+> 约数个数
 
-### 容斥原理
+> 约数之和
+
+> 最大公约数
+* gcd 函数
+```c++
+int gcd(int a, int b) {
+    if (!b) {
+        return a;
+    }
+    return gcd(b, a % b);
+}
+
+int gcd(vector<int>& nums) {
+    int r = 0;
+    for (auto x : nums) r = gcd(r, x);
+    return r;
+}
+
+```
+> 最小公倍数
+
+## 拓展欧几里得:裴蜀定理
+
+* [检查「好数组」](https://leetcode.cn/problems/check-if-it-is-a-good-array/description/)
+```c++
+class Solution {
+ public:
+  bool isGoodArray(vector<int>& nums) {
+    for (int i = 0, a = 0; i < nums.size(); i++) {
+      a = gcd(a, nums[i]);
+      if (a == 1) return true;
+    }
+    return false;
+  }
+};
+```
+## 欧拉函数
+> phi(n) = [1, n]中，与n互素的数的个数。
+> 作为对比：约数数量是 [1, n]中，可以整除 n 的数的个数。
+
+## 快速幂
+> 模板
+
+## 逆元
+> 费马小定理
+
+> 拓展欧几里得
+
+## 中国剩余定理
+> 同余方程组的公式解
+
+
+## 组合数
+> 组合数I
+
+> [组合数II](https://www.acwing.com/problem/content/888/)
+数量级变大
+[code](../acwing/acwing.886.md)
+
+> 组合数III
+
+> 组合数IV
+
+## 容斥原理
 > 容斥原理在求所有集合的并的大小的时候，比较有用，常用数论中的计数问题
 > 和 最小公倍数、质数等关系较大
 \[
@@ -24,7 +88,7 @@
 * 状压 dp 预处理集合的最小公倍数技巧
 * 计算二级制位 1 的个数 `__builtin_popcount(x)`
 * 二分答案
-```
+```c++
 class Solution {
 public:
     using LL = long long;
@@ -56,12 +120,14 @@ public:
 ```
 
 
-### 博弈论
+## 博弈论
 
-#### 公平组合游戏-Nim游戏
+### 公平组合游戏-Nim游戏
 > 谁在最后无法操作了，谁输
+* [NIM游戏](.https://www.acwing.com/problem/content/893/)
+    * [code](../acwing/acwing.891.md)
 
-#### 其他博弈
+### 其他博弈
 > 谁在最后得的分值高，谁输
 
 > 所以这类问题需要优化选择顺序，使各自的分值最高
@@ -71,7 +137,7 @@ public:
     * 每一个节点，枚举自己可能的选择，然后让 A 的分值最大
     * 该 B 选择时，同理需要让 B 的分值最大
     * 例题: [1690. 石子游戏 VII](https://leetcode.cn/problems/stone-game-vii/description/)
-```
+```c++
 class Solution {
 public:
     int stoneGameVII(vector<int>& stones) {
@@ -99,7 +165,7 @@ public:
 * 贪心
     * A B 双方均按照一定的顺序选择，就是最优
     * 例题：[1686. 石子游戏 VI](https://leetcode.cn/problems/stone-game-vi/description/)
-```
+```c++
 class Solution {
 public:
     int stoneGameVI(vector<int>& aliceValues, vector<int>& bobValues) {
