@@ -124,7 +124,7 @@ public:
 
 ### 公平组合游戏-Nim游戏
 > 谁在最后无法操作了，谁输
-* [NIM游戏](.https://www.acwing.com/problem/content/893/)
+* [NIM游戏](https://www.acwing.com/problem/content/893/)
     * [code](../acwing/acwing.891.md)
 
 ### 其他博弈
