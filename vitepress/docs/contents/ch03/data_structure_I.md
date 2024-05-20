@@ -223,14 +223,20 @@ for (int i = 0; i <= n; i++) p[i] = i;
 
 ```
 > 并查集有两种思路
-* 数据结构：维护不相交的集合
+### 数据结构：维护不相交的集合
 * 例题：[打击犯罪](https://www.acwing.com/problem/content/description/1253/)
     * [code](./code/acwing1251.md)
 * 例题：[P1551 亲戚](https://www.luogu.com.cn/problem/P1551)
     * [code](./code/P1551.md)
+* 例题：[P1536 村村通](https://www.luogu.com.cn/problem/P1536)
+    * [code](../luogu/P1536.md)
+* [P1621 集合](https://www.luogu.com.cn/problem/P1621)
+    * [code](../luogu/set/P1621.md)
 
-* 添加约束：将必须同时满足的状态放在一起
-    * [AcWing 240. 食物链](https://www.acwing.com/activity/content/code/content/7207951/) 
+### 添加约束：将必须同时满足的状态放在一起
+* [[NOIP2010 提高组] 关押罪犯](https://www.luogu.com.cn/problem/P1525)
+    * [code](../luogu/GraphTheory/P1525.md)
+* [AcWing 240. 食物链](https://www.acwing.com/activity/content/code/content/7207951/) 
     * 将 `X 是动物 a 时， Y 必须是什么动物` 这种约束放在一个集合里
 ```c++
   while (K--) {
@@ -291,6 +297,8 @@ ULL get(int l, int r) { // [l, r] 的哈希值
     return h[r] - h[l - 1] * p[r - l + 1];
 }
 ```
+* [我在哪？](https://www.acwing.com/problem/content/1462/)
+  * [code](../ch01/code_binary_search/acwing1460.md)
 例题：
 [3008. 找出数组中的美丽下标 II](https://leetcode.cn/problems/find-beautiful-indices-in-the-given-array-ii/description/)
 ```c++

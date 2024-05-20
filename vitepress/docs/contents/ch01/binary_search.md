@@ -120,6 +120,9 @@ public:
 ### map 的 lower_bound/upper_bound
 作用：
   * 能在一边插入删除，一边二分查找很有用
+
+* [【深基17.例5】木材仓库](https://www.luogu.com.cn/problem/P5250)
+  [code](../luogu/P5250.md)
   * 例题：[1488. 避免洪水泛滥](https://leetcode.cn/problems/avoid-flood-in-the-city/description/) 使用 set 边插入/移除，边二分
 ```c++
 class Solution {

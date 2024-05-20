@@ -12,7 +12,6 @@
 > }
 > ```
 
-1. [P1102 A-B 数对](P1102.cpp)
 2. [P1147 连续自然数和](linear/P1147.cpp)
 
 3. [P3143 [USACO16OPEN] Diamond Collector S](linear/P3143.cpp) 贪心陷阱
