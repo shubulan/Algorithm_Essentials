@@ -17,7 +17,7 @@
 * [HJ28 素数伴侣](https://www.nowcoder.com/practice/b9eae162e02f4f928eac37d7699b352e?tpId=37&tqId=21251&rp=1&ru=/exam/oj/ta&qru=/exam/oj/ta&sourceUrl=%2Fexam%2Foj%2Fta%3FtpId%3D37&difficulty=5&judgeStatus=undefined&tags=&title=)
 * 素数伴侣必然一个奇数，一个偶数。我们可以通过奇偶性将节点分为两部分
 
-```
+```c++
 #include <algorithm>
 #include <cassert>
 #include <cmath>

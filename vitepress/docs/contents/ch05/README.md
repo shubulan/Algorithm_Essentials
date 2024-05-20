@@ -67,15 +67,36 @@ class Solution {
 
 
 ## 组合数
-> 组合数I
+> [组合数I]
+    * [code](../acwing/acwing.885.cpp)
+* 打表，杨辉三角递推
+```c++
+//可以打表
+// f[i][j] == C(j, i)，表示i个里面挑j个
+int f[2000][2000];
+//利用公式打标，只能计算2000x2000的数，多了不行。
+for (int i = 0; i <= n; i++) {
+  for (int j = 0; j <= i; j++) {
+    if (!j) a[i][j] = 1;
+    else a[i][j] = (a[i - 1][j] + a[i - 1][j - 1]) % mod;
+  }
+}
+```
 
 > [组合数II](https://www.acwing.com/problem/content/888/)
-数量级变大
+* 数量级变大，通过逆元来求 C(m, n) = n ! / (m! * (n-m)!)
+* 求逆元用快速幂
 [code](../acwing/acwing.886.md)
 
 > 组合数III
+> 当 mod 会变化时，没有固定的逆元了，因此用卢卡斯定理
+* [code](../acwing/acwing.887.md)
 
 > 组合数IV
+> 不取模了，要具体值。使用大整数算法。
+* [code](../acwing/acwing.888.md)
+* [P3807 【模板】卢卡斯定理/Lucas 定理](https://www.luogu.com.cn/problem/P3807)
+    *[code](../luogu/math/P3807.cpp)
 
 ## 容斥原理
 > 容斥原理在求所有集合的并的大小的时候，比较有用，常用数论中的计数问题
