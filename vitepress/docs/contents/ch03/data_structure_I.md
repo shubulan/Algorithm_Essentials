@@ -137,6 +137,16 @@ private:
     * [基本计算器](https://leetcode.cn/problems/basic-calculator)
         * [code](./code/leetcode_224.md)
 
+## 单调队列
+* [P1886 滑动窗口 /【模板】单调队列](https://www.luogu.com.cn/problem/P1886)
+    * [P1886 滑动窗口 /【模板】单调队列](../luogu/linear/P1886.md)
+* [P2032 扫描](https://www.luogu.com.cn/problem/P2032)
+    * [code](../luogu/linear/P2032.md)
+* [P1440 求m区间内的最小值](https://www.luogu.com.cn/problem/P1440)
+    * [code](../luogu/linear/P1440.md)
+
+
+
 ## 堆
 ### stl:优先队列
 > 大部分场景下使用 stl 提供的优先队列即可。即使是 dijkstra 算法，也可以用重复加入的方式来解决。

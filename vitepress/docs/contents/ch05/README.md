@@ -68,7 +68,7 @@ class Solution {
 
 ## 组合数
 > [组合数I]
-    * [code](../acwing/acwing.885.cpp)
+    * [code](../acwing/acwing.885.md)
 * 打表，杨辉三角递推
 ```c++
 //可以打表
@@ -96,7 +96,7 @@ for (int i = 0; i <= n; i++) {
 > 不取模了，要具体值。使用大整数算法。
 * [code](../acwing/acwing.888.md)
 * [P3807 【模板】卢卡斯定理/Lucas 定理](https://www.luogu.com.cn/problem/P3807)
-    *[code](../luogu/math/P3807.cpp)
+    *[code](../luogu/math/P3807.md)
 
 ## 容斥原理
 > 容斥原理在求所有集合的并的大小的时候，比较有用，常用数论中的计数问题

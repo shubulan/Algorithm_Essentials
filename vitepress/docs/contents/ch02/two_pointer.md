@@ -8,6 +8,10 @@
 ## 贪心思想
 贪心的思想在于，i 移动过后，j 的合适位置不可能在 j 已经扫描过的地方，也就是说 j 是单调的。
 
+## 简单的双指针
+* [P1147 连续自然数和](https://www.luogu.com.cn/problem/P1147)
+    * [](../luogu/linear/P1147.md)
+
 
 ## 连续分割区间段
 要点：
@@ -67,6 +71,9 @@
     mp[arr[i]]--;
   }
 ```
+* [P3143 [USACO16OPEN] Diamond Collector S](https://www.luogu.com.cn/problem/P3143)
+    * 稍复杂的双指针
+    * [code](../luogu/linear/P3143.md)
 
 ## 枚举右端点
 以枚举右端点思考的原因是，左端点的移动可以利用右端点扫过的信息。对以下算法的思考与实现都有帮助
