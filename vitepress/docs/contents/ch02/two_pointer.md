@@ -83,7 +83,12 @@
 
 再附一个 0x3f 的[滑动窗口题目单](https://leetcode.cn/circle/discuss/0viNMK/)
 
+## 双指针计数
+* [2444. 统计定界子数组的数目](https://leetcode.cn/problems/count-subarrays-with-fixed-bounds/)
+
 ## 应用
+* [904. 水果成篮](https://leetcode.cn/problems/fruit-into-baskets/)
+
 * [字符串删减](https://www.acwing.com/problem/content/3771/)
     * [code](./code/acwing3768.md)
 * [数组元素的目标和](https://www.acwing.com/problem/content/description/802/)

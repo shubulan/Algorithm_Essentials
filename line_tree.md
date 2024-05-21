@@ -36,7 +36,6 @@
 [oj222. 练习题1：线段树模板(一)](https://oj.haizeix.com/problem/222)[源码](./data_structure/1.HZOJ222.cpp)
 
 
-
 ## 三、进阶版线段树 区间修改 懒标记 
 1. 优化掉l,r
 2. 可以用区间更新，区间查询
