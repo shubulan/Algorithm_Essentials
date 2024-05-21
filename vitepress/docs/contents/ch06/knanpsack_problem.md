@@ -107,6 +107,9 @@ $O(nVlog(s)))$
 ## 有依赖的背包
 
 ## 求方案数
+### 0-1 背包求方案数
+* [小A点菜](https://www.luogu.com.cn/problem/P1164)
+    * [code](../luogu/Recursion/P1164.md) 背包计数问题
 ### 多重背包问题求方案数
 * [2585. 获得分数的方法数](https://leetcode.cn/problems/number-of-ways-to-earn-points/description/)
 要点：

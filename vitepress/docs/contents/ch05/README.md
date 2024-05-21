@@ -98,6 +98,10 @@ for (int i = 0; i <= n; i++) {
 * [P3807 【模板】卢卡斯定理/Lucas 定理](https://www.luogu.com.cn/problem/P3807)
     *[code](../luogu/math/P3807.md)
 
+## 卡特兰数
+* [栈](https://www.luogu.com.cn/problem/P1044)
+    * [code](../luogu/Recursion/P1044.md)
+
 ## 容斥原理
 > 容斥原理在求所有集合的并的大小的时候，比较有用，常用数论中的计数问题
 > 和 最小公倍数、质数等关系较大
