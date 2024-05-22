@@ -54,6 +54,26 @@ int rec(int i, int j) { // 从 i 开始选，背包承重还剩 j
 * [NASA的食物计划](https://www.luogu.com.cn/problem/P1507)
     * [code](../luogu/dynamic_programming/P1507)
 
+### 应用
+* [1262. 可被三整除的最大和](https://leetcode.cn/problems/greatest-sum-divisible-by-three/description/)
+```c++
+class Solution {
+public:
+    int maxSumDivThree(vector<int>& nums) {
+        vector<int> f1{0, -1 - 300000, -2 - 3000000};
+        for (auto x : nums) {
+            vector<int> f2(f1);
+            for (int i = 0; i < 3; i++) {
+                int idx = (f1[i] + x) % 3 + 3;
+                f2[idx % 3] = max(f1[idx % 3], f1[i] + x);
+            }
+            f1 = std::move(f2);
+        }
+        return f1[0];
+    }
+};
+```
+
 ## 完全背包问题
 > 有 $n$ 种物品，每种物品都有无限多个。质量分别是 $w_i$，价值分为 $v_i$。背包承重为 $W$，求背包可以装的最大价值 $val$
 * 状态定义：f[i][j]表示 前 i(从 1 计数) 个物品中，取出总体积 <= j 的物品的最大价值

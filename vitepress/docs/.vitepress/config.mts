@@ -75,7 +75,7 @@ export default defineConfig({
           text: '搜索技巧与图论',
           collapsed: true,
           items: [
-            { text: '最短路径', link: '/contents/ch04/README' },
+            { text: '最短路径', link: '/contents/ch04/shortest_path' },
           ]
         },
         {

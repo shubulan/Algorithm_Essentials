@@ -118,3 +118,8 @@ void floyd(int n) {
 ### 应用
 * [P1119 灾后重建](https://www.luogu.com.cn/problem/P1119)
     * [code](../luogu/GraphTheory/P1119.md)
+
+## 最长路
+> 正权变负权，使用 bellman-ford 算法
+* [P1807 最长路](https://www.luogu.com.cn/problem/P1807)
+    * [code](../luogu/GraphTheory/P1807.md)
