@@ -42,10 +42,10 @@ export default defineConfig({
           ]
         },
         {
-          text: '基本算法',
+          text: '基本思想',
           collapsed: true,
           items: [
-            { text: '排序算法', link: '/contents/ch01/sort' },
+            { text: '顺序', link: '/contents/ch01/sort' },
             { text: '递归与分治', link: '/contents/ch01/binary_search' },
             { text: '二分算法', link: '/contents/ch01/binary_search' },
           ]
@@ -60,7 +60,7 @@ export default defineConfig({
             { text: '位运算', link: '/contents/ch02/bitwise_operation' },
             { text: '离散化', link: '/contents/ch02/discretization' },
             { text: '模拟', link: '/contents/ch02/' },
-            { text: '构造', link: '/contents/ch02/' },
+            { text: '构造', link: '/contents/ch02/make_up.md' },
           ]
         },
         {

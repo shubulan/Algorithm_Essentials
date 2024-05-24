@@ -1,4 +1,4 @@
-# sec01 排序
+# sec01 顺序思想
 [[toc]]
 
 ## 快速排序
@@ -105,6 +105,8 @@ void merge_sort(int* arr, int l, int r) {
 }
 ```
 :::
+
+
 ### 应用
 1. 求逆序对
 * [逆序对的数量](https://www.acwing.com/problem/content/790/)
