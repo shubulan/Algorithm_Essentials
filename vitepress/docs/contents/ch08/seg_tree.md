@@ -24,6 +24,10 @@ head:
 [oj222. 练习题1：线段树模板(一)](https://oj.haizeix.com/problem/222)
   * [code](./data_structure/1.HZOJ222.md)
 
+### 应用
+* [物块放置查询](https://leetcode.cn/problems/block-placement-queries/description/)
+  * [code](./data_structure/leetcode_100314.md)
+
 ## 四、进阶版线段树 区间修改 懒标记 
 1. 优化掉l,r
 2. 可以用区间更新，区间查询
