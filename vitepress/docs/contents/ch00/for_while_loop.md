@@ -2,6 +2,32 @@
 
 > 遍历是循环中最重要的思想。循环是最基础的遍历方式，往往用于线性表的遍历，俗称‘扫描一遍’
 
+
+## 简单循环
+* [3或5的倍数](http://pe-cn.github.io/1/)
+
+* [偶斐波那契数](http://pe-cn.github.io/2/)
+
+* [最大回文乘积](http://pe-cn.github.io/4/)
+    * 回文数判断
+    * [code](./code_brute_enumeration/4.euler.md)
+
+## 斜向循环
+* [方阵中的最大乘积](http://pe-cn.github.io/11/)
+    * 方向数组
+## 需要估算枚举范围
+* [全数字的乘积](http://pe-cn.github.io/32/)
+    * 枚举边界，计算10进制数个数
+    * [code](./code_brute_enumeration/32.euler.md)
+
+* [各位数字的五次幂](http://pe-cn.github.io/30/) 
+    * 估算枚举上界
+    * [code](./code_brute_enumeration/30.euler.md)
+
+* [数字阶乘和](http://pe-cn.github.io/34/)
+    * 估算枚举上界
+    * [code](./code_brute_enumeration/34.euler.md)
+
 ## 字符串
 ### [93. 复原 IP 地址](https://leetcode.cn/problems/restore-ip-addresses/description/)
 * 通过尾后位置分割数组
@@ -35,19 +61,7 @@ public:
 };
 ```
 
-## 数字问题
-> 来自 [Euler 计划](https://pe-cn.github.io/)
 
-### [各位数字的五次幂](https://pe-cn.github.io/30/)
-
-* 一点点数字处理技巧 
-* [code](./code_brute_enumeration/30.euler)
-
-### [全数字的乘积](https://pe-cn.github.io/32/)
-* [code](./code_brute_enumeration/32.euler)
-
-### [数字阶乘和](https://pe-cn.github.io/34/)
-* [code](./code_brute_enumeration/34.euler)
 
 ### 几何
 * [三角形： 小 Y 拼木棒](https://www.luogu.com.cn/problem/P3799)

@@ -136,7 +136,7 @@ public:
 ## 其他练习
 
 * [1718. 构建字典序最大的可行序列](https://leetcode.cn/problems/construct-the-lexicographically-largest-valid-sequence/description/)
-```
+```c++
 class Solution {
 public:
     vector<int> res;
@@ -174,5 +174,26 @@ public:
         return false;
     }
 };
-
 ```
+
+## 图搜索
+* [404. 01迷宫简易版](https://oj.haizeix.com/problem/404)
+    * 瓷砖问题的升级版
+    * [code](./code_brute_enumeration/404.oj.md)
+
+* [405. 01迷宫](https://oj.haizeix.com/problem/405)
+    * 限制步数的搜索问题
+
+* [535. 瓷砖](https://oj.haizeix.com/problem/535)
+    * 连通图的深度优先遍历
+    * [code](./code_brute_enumeration/535.oj.md)
+* [397. 僵尸来袭](https://oj.haizeix.com/problem/397)
+    * 非连通图的深度优先遍历 ，求联通分量个数
+    * [code](./code_brute_enumeration/397.oj.md)
+
+* [536. 最大黑色区域](https://oj.haizeix.com/problem/536)
+    * 求最大的连通分量
+
+* [396. 填涂颜色](https://oj.haizeix.com/problem/396)
+    * 地图涂色的技巧 ，也可以广搜，主要是涂颜色
+    * [code](./code_brute_enumeration/396.oj.md)

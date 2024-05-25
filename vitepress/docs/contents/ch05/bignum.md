@@ -47,7 +47,8 @@ vector<int> sub(const vector<int>& A, const vector<int>& B) {
 ## 高精度加减法的应用
 
 * [安全系统](https://www.luogu.com.cn/problem/P2638)
-    * [code](../luogu/P2638)
+  * 前缀和
+  * [code](../luogu/P2638)
 
 ## 高精度乘法
 * [高精度乘法](https://www.acwing.com/problem/content/795/)
@@ -89,5 +90,27 @@ vector<int> div(vector<int>& A, int b, int& r) {
   while (res.size() > 1 && res.back() == 0) res.pop_back();
   return res;
 }
-
 ```
+
+## 相关题目
+* [大和](http://pe-cn.github.io/13/)
+  * [code](../luogu/math/high-precision/euler13.md)
+* [1000位斐波那契数](http://pe-cn.github.io/25/)
+  * 两个数字来回倒的编程技巧
+  * [code](../luogu/math/high-precision/25.euler.md)
+
+* [幂的数字和](http://pe-cn.github.io/16/)
+  * [code](../luogu/math/high-precision/16.euler.md)
+
+* [幂的数字和](http://pe-cn.github.io/16/)
+  * [code](../luogu/math/high-precision/16.euler.md)
+
+* [阶乘数字和](http://pe-cn.github.io/20/)
+  * [code](../luogu/math/high-precision/20.euler.md)
+* [英文名得分](https://pe-cn.github.io/22/)
+
+
+### 除法
+* [475. 大整数除法](https://oj.haizeix.com/problem/475)
+
+* [476. 高精度取余2](https://oj.haizeix.com/problem/476)

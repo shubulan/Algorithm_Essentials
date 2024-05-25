@@ -55,3 +55,8 @@ head:
 * [难度练习](https://huxulm.github.io/lc-rating/zen)
 * [分数查询](https://zerotrac.github.io/leetcode_problem_rating/#/)
 * [0x3f 题单](https://leetcode.cn/u/endlesscheng/)
+
+## OJ/题目来源 平台
+* [欧拉计划](http://pe-cn.github.io/)
+> 中文站，看题目，有时候数组会排版错位，此时转去英文站
+> https://projecteuler.net/archives英文站，注册账号可以测试答案

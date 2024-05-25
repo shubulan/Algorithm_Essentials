@@ -155,3 +155,6 @@ public:
 
 
 
+## 直线
+* [P2789 直线交点数](https://www.luogu.com.cn/problem/P2789)
+    * [code](../luogu/math/P2789.md)

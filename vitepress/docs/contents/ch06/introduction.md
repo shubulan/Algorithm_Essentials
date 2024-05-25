@@ -81,3 +81,14 @@ head:
 
 难点四：动态规划的优化
 前三点想清楚了之后，优化是不难的。但也有个别变态的问题，例如：多重背包问题的单调队列优化
+
+## 递推入门
+
+* [最长考拉兹序列](http://pe-cn.github.io/14/)
+    * [code](./code/euler14.md)
+
+* [网格路径](https://pe-cn.github.io/15/)
+    * [code](./code/15.euler.md)
+
+* [最大路径和 I](https://pe-cn.github.io/18/)
+    * [code](./code/18.euler.md)

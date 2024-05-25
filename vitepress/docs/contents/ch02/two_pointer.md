@@ -74,6 +74,8 @@
 * [P3143 [USACO16OPEN] Diamond Collector S](https://www.luogu.com.cn/problem/P3143)
     * 稍复杂的双指针
     * [code](../luogu/linear/P3143.md)
+### 定长滑动窗口
+* [连续数字最大乘积](https://pe-cn.github.io/8/)
 
 ## 枚举右端点
 以枚举右端点思考的原因是，左端点的移动可以利用右端点扫过的信息。对以下算法的思考与实现都有帮助

@@ -86,7 +86,8 @@ do {
 
 ## 或的性质
 > 越或越大
-
+* [6360. 最小无法得到的或值](https://leetcode.cn/problems/minimum-impossible-or/description/)
+   > 加深对二进制数与或运算的理解
 
 ## 异或的性质
 > 

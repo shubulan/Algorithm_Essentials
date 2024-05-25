@@ -1,6 +1,37 @@
 # ch05 数学 I
 
 > 常用的数学技巧
+## 进制
+* [双进制回文数](https://pe-cn.github.io/36/)
+   * 前导零问题
+   * [code](../luogu/math/basic/33.euler.md)
+
+* [P1143 进制转换](https://www.luogu.com.cn/problem/P1143)
+    * 2 到 16进制相互转换
+    * [code](../luogu/math/P1143.md)
+
+* [P1017 [NOIP2000 提高组] 进制转换](https://www.luogu.com.cn/problem/P1469)
+    * 负进制转换
+    * [code](../luogu/math/P1017.md)
+
+## 乘法原理
+* [安全系统](https://www.luogu.com.cn/problem/P2638)
+  * 前缀和、大整数
+  * [code](../luogu/P2638.md)
+
+## 位运算
+* [P1100 高低位交换](https://www.luogu.com.cn/problem/P1100)
+    * [code](../luogu/math/P1100.md)
+* [P1469 找筷子](https://www.luogu.com.cn/problem/P1469)
+    * [code](../luogu/math/P1469.md)
+
+## 计数问题
+> 往往排序后更好解决
+* [P1866 编号](https://www.luogu.com.cn/problem/P1866)
+    * [code](../luogu/math/P1866.md)
+
+* [P3913 车的攻击](https://www.luogu.com.cn/problem/P3913)
+    * [code](../luogu/math/P3913.md)
 
 ## 质数
 > 素数判定
@@ -8,9 +39,19 @@
 > 分解质因数
 
 > 筛质数
+* [P3383 【模板】线性筛素数](https://www.luogu.com.cn/problem/P3383)
+    * [code](../luogu/math/P3383.md)
+
+## 筛法
+* [P1621 集合](https://www.luogu.com.cn/problem/P1621)
+    * [code](../luogu/set/P1621.md)
 
 ## 约数
-> 求约束
+> 求约数
+* [消去数字的分数](https://pe-cn.github.io/33/)
+   * [code](../luogu/math/basic/36.euler.md)
+* [P1403 \[AHOI2005\]约数研究](https://www.luogu.com.cn/problem/P3383)
+    * [code](../luogu/math/P1403.md)
 
 > 约数个数
 
@@ -33,7 +74,21 @@ int gcd(vector<int>& nums) {
 }
 
 ```
+* [P2660 zzc 种田](https://www.luogu.com.cn/problem/P2660)
+    * [code](../luogu/math/P2660.md)
+
+* [P1572 计算分数](https://www.luogu.com.cn/problem/P1572)
+    * [code](../luogu/math/P1572.md)
+
 > 最小公倍数
+* [P1029 \[NOIP2001 普及组\] 最大公约数和最小公倍数问题](https://www.luogu.com.cn/problem/P1029)
+    * [code](../luogu/math/P1029.md)
+
+* [P4057 \[Code+#1\]晨跑](https://www.luogu.com.cn/problem/P4057)
+    * [code](../luogu/math/P4057.md)
+
+* [P2651 添加括号III](https://www.luogu.com.cn/problem/P2651)
+    * [code](../luogu/math/P2651.md)
 
 ## 拓展欧几里得:裴蜀定理
 
