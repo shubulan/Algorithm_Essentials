@@ -68,6 +68,7 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: '简单数据结构', link: '/contents/ch03/data_structure_I' },
+            { text: '数据结构进阶 I', link: '/contents/ch03/data_structure_II' },
             { text: '单调栈与单调队列', link: '/contents/ch03/monotonic_queue_stack' },
           ]
         },

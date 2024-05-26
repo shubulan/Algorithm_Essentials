@@ -4,17 +4,31 @@ head:
     - rel: stylesheet
       href: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css
 ---
-# sec 01 线段树与树状数组
+# 线段树与树状数组
 
 ## 一、问题背景
+> 线段树数据结构的思维切入点是分治思想。本质上是分治算法，将两段相邻区间进行归并
 积性函数的区间的修改与查询，
 1. 单点修改，区间查询（基础版）
-2. 区间修改，区间查询（进阶版）
-本质上是分治算法，将两段相邻区间进行归并
+2. 区间修改，区间查询（懒标记版）
+
+
 
 ## 二、存储方式：
-正常计算是2n，但要是用完全二叉树来存储的话，得开到 $4n$
-完全二叉树：要开4n空间
+* 一个数组想完整的表示在完全二叉树的叶子节点层的话，需要将数组长度 $n$ 上取整到 2 的幂次。计算方式为 $1 << bit\_len$
+* 线段树的节点个数为 = $2 \times (1 << bit\_len) - 1$
+* 为了方便计算，一般取 1 号空间为根节点，放过 0 号空间，所以通常表示线段树的数组长度为
+  * $2 \times (1 << bit\_len)$ 即 $2 << bit\_len$
+```c++
+void init(int n) { // 数组空间长度
+    int bit_len = 0, n_ = n;
+    while (n_) { // bit_len = 32 - __builtin_clz(n) // 计算二进制位长度
+        n_ /= 2;
+        bit_len++;
+    }
+    dat.resize(2 << bit_len); // 上取整空间
+}
+```
 
 ## 三、基础版线段树
 * 在 $O(log(n))$ 的时间复杂度下，
@@ -27,6 +41,8 @@ head:
 ### 应用
 * [物块放置查询](https://leetcode.cn/problems/block-placement-queries/description/)
   * [code](./data_structure/leetcode_100314.md)
+* [打家劫舍进阶：不包含相邻元素的子序列的最大和](https://leetcode.cn/problems/maximum-sum-of-subsequence-with-non-adjacent-elements/description/)
+  * [code](./data_structure/leetcode_100306.md)
 
 ## 四、进阶版线段树 区间修改 懒标记 
 1. 优化掉l,r

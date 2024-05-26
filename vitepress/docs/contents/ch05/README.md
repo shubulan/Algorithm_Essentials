@@ -48,11 +48,24 @@
 
 ## 约数
 > 求约数
+```c++
+// 求约数模板
+vector<int> get_divisors(intn) {
+    vector<int> res;
+    for (int i = 1; i <= n / i; i++) {
+        if (n % i) continue;
+        res.push_back(i);
+        if (i != n / i) res.push_back(n / i);
+    }
+    return res;
+}
+```
 * [消去数字的分数](https://pe-cn.github.io/33/)
    * [code](../luogu/math/basic/36.euler.md)
 * [P1403 \[AHOI2005\]约数研究](https://www.luogu.com.cn/problem/P3383)
     * [code](../luogu/math/P1403.md)
-
+* [优质数对的总数 II](https://leetcode.cn/problems/find-the-number-of-good-pairs-ii/description/)
+    * [code](./code/leetcode100321.md)
 > 约数个数
 
 > 约数之和

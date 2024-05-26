@@ -6,6 +6,9 @@ head:
 ---
 # 线性dp
 > 线性 dp 指的是问题可以通过直观的一维或者二维的递推来理解和解决
+
+[[toc]]
+
 ## 最大子数组和模型
 * [最大子数组和](https://leetcode.cn/problems/maximum-subarray/description/)
 * [坏掉的项链 Broken Necklace](https://www.luogu.com.cn/problem/P1203)
@@ -18,6 +21,10 @@ head:
     * 数字三角形求方案数 
     * [code](../luogu/dynamic_programming/P1002)
 
+## 子序列模型
+* [打家劫舍](https://leetcode.cn/problems/house-robber/description/)
+    * [线段树进阶：不包含相邻元素的子序列的最大和](https://leetcode.cn/problems/maximum-sum-of-subsequence-with-non-adjacent-elements/description/)
+
 ## 最长上升子序列
 * [最长上升子序列](https://www.acwing.com/problem/content/897/)
 * [最长上升子序列 II](https://www.acwing.com/activity/content/problem/content/1004/)
@@ -26,6 +33,7 @@ head:
 ## 最长公共子序列
 * [最长公共子序列](https://www.acwing.com/problem/content/899/)
     * [code](../acwing/acwing.902.md)
+
 
 ## 最短编辑距离
 * [最短编辑距离](https://www.acwing.com/problem/content/904/)
