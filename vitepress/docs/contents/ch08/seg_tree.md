@@ -4,7 +4,12 @@ head:
     - rel: stylesheet
       href: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css
 ---
+
 # 线段树与树状数组
+## 引入
+> 分治思想
+[最大子段和](https://leetcode.cn/problems/maximum-subarray/description/)
+  * [code](./code/leetcode53.md)
 
 ## 一、问题背景
 > 线段树数据结构的思维切入点是分治思想。本质上是分治算法，将两段相邻区间进行归并

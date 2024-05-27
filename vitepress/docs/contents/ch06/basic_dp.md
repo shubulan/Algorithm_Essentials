@@ -1,4 +1,5 @@
 # 动态规划入门
+* [灵神动态规划题单](https://leetcode.cn/circle/discuss/tXLS3i/)
 
 ## 递推问题
 
@@ -32,3 +33,42 @@ public:
 
 * [数的计算](https://www.luogu.com.cn/problem/P1028) 
     * [code](../luogu/Recursion/P1028.md) 简单线性记忆化递归和递推关系推导
+
+### 爬楼梯
+> 考虑最后一级台阶是从谁爬上来的
+* [组合总和 Ⅳ](https://leetcode.cn/problems/combination-sum-iv/)
+```c++
+class Solution {
+public:
+    int combinationSum4(vector<int>& nums, int target) {
+        vector<unsigned> f(target + 1);
+        f[0] = 1;
+        for (int i = 1; i <= target; i++) {
+            for (auto x :nums) {
+                if (i >= x) f[i] += f[i - x];
+            }
+        }
+        return f[target];
+    }
+};
+```
+* [2466. 统计构造好字符串的方案数](https://leetcode.cn/problems/count-ways-to-build-good-strings/)
+```c++
+class Solution {
+public:
+    int combinationSum4(vector<int>& nums, int target) {
+        vector<unsigned> f(target + 1);
+        f[0] = 1;
+        for (int i = 1; i <= target; i++) {
+            for (auto x :nums) {
+                if (i >= x) f[i] += f[i - x];
+            }
+        }
+        return f[target];
+    }
+};
+```
+* [2266. 统计打字方案数](https://leetcode.cn/problems/count-number-of-texts/description/)
+```
+
+```
